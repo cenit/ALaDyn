@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir -p build ; cd build
+cmake .. "-DUSE_SCALASCA:BOOL=TRUE"
+cmake --build . --target install
+cd ..

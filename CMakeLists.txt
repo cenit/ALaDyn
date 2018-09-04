@@ -75,6 +75,39 @@ else ()
   endif ()
 endif ()
 
+if(USE_SCALASCA)
+  set(CMAKE_C_COMPILER ./alias_scalasca_c)
+  set(CMAKE_CXX_COMPILER ./alias_scalasca_cxx)
+  set(CMAKE_Fortran_COMPILER ./alias_scalasca_fortran)
+
+  file(WRITE alias_scalasca_c
+"#!/bin/bash
+scalasca -instrument mpicc  \"$@\"
+")
+  file(WRITE alias_scalasca_cxx
+"#!/bin/bash
+scalasca -instrument mpicxx  \"$@\"
+")
+  file(WRITE alias_scalasca_fortran
+"#!/bin/bash
+scalasca -instrument mpifort  \"$@\"
+")
+
+  file(INSTALL alias_scalasca_c
+        DESTINATION ${CMAKE_SOURCE_DIR}
+        PERMISSIONS OWNER_READ OWNER_EXECUTE )
+  file(INSTALL alias_scalasca_cxx
+        DESTINATION ${CMAKE_SOURCE_DIR}
+        PERMISSIONS OWNER_READ OWNER_EXECUTE )
+  file(INSTALL alias_scalasca_fortran
+        DESTINATION ${CMAKE_SOURCE_DIR}
+        PERMISSIONS OWNER_READ OWNER_EXECUTE )
+
+  file(REMOVE alias_scalasca_c)
+  file(REMOVE alias_scalasca_cxx)
+  file(REMOVE alias_scalasca_fortran)
+endif(USE_SCALASCA)
+
 if(FORCE_STATIC_LINK)
   string(APPEND CMAKE_Fortran_LINK_FLAGS " -static")
 endif()
