@@ -14,6 +14,7 @@ environment:
     BASH: C:\cygwin64\bin\bash -c
   - platform: MSYS64
     COMPILER: msys2
+    GENERATOR: "MinGW Makefiles"
     BASH: C:\msys64\usr\bin\bash -lc
 
 matrix:
@@ -126,7 +127,8 @@ build_script:
   - if [%COMPILER%]==[pgi]    cmake -G "%GENERATOR%" "-DCMAKE_TOOLCHAIN_FILE=C:\Tools\vcpkg\scripts\buildsystems\vcpkg.cmake" "-DVCPKG_TARGET_TRIPLET=%VCPKG_DEFAULT_TRIPLET%" "-DCMAKE_BUILD_TYPE=Release" ..
   - if [%COMPILER%]==[pgi]    cmake --build . --target install
 
-  - if [%COMPILER%]==[msys2]  %BASH% 'cmake -G "MinGW Makefiles" "-DCMAKE_BUILD_TYPE=Release" ..'
+  - if [%COMPILER%]==[msys2]  cmake -G "%GENERATOR%" "-DCMAKE_BUILD_TYPE=Release" ..
+
   - if [%COMPILER%]==[cygwin] %BASH% 'cmake -G "Unix Makefiles" "-DCMAKE_BUILD_TYPE=Release" ..'
   - if [%COMPILER%]==[cygwin] %BASH% 'cmake --build . --target install'
 
