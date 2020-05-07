@@ -30,6 +30,8 @@ install:
   #initial setup
   - if [%COMPILER%]==[cygwin] SET "PATH=C:\cygwin64\bin;C:\cygwin64\usr\bin;%PATH%"
   - if [%COMPILER%]==[cygwin] SET PATH=%PATH:C:\Program Files\Git\usr\bin;=%
+  - if [%COMPILER%]==[msys2]  SET "PATH=C:\msys64\bin\;C:\msys64\usr\bin\;%PATH%"
+  - if [%COMPILER%]==[msys2]  SET PATH=%PATH:C:\Program Files\Git\usr\bin;=%
   - if [%COMPILER%]==[pgi] cinst cmake git 7zip
   - if [%COMPILER%]==[pgi] SET "PATH=C:\Program Files\CMake\bin;%PATH%"
   - if [%COMPILER%]==[pgi] call "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64
