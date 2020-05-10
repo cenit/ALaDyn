@@ -88,9 +88,11 @@ install:
   - if [%COMPILER%]==[pgi] curl --location --referer "http://www.pgroup.com/products/community.htm" "https://www.pgroup.com/support/downloader.php?file=pgi-community-windows-x64" -o pgiws64-1910.exe
   - if [%COMPILER%]==[pgi] %WORKSPACE%\pgiws64-1910.exe /s /f1"%WORKSPACE%\setup.iss"
 
-  # MPI runtime for MS-MPI 10 (vcpkg)
-  - ps: if($env:COMPILER -eq "pgi") { Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisetup.exe -OutFile $env:WORKSPACE\msmpisetup.exe }
-  - if [%COMPILER%]==[pgi] %WORKSPACE%\msmpisetup.exe -unattend
+  # MPI runtime for MS-MPI 10
+  - Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisetup.exe -OutFile $env:WORKSPACE\msmpisetup.exe }
+  - %WORKSPACE%\msmpisetup.exe -unattend
+  - Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisdk.msi -OutFile $env:WORKSPACE\msmpisdk.exe }
+  - %WORKSPACE%\msmpisdk.exe -unattend
 
   - if [%COMPILER%]==[pgi] cd C:\Tools\vcpkg
   - if [%COMPILER%]==[pgi] git pull
@@ -98,10 +100,7 @@ install:
   - cd %WORKSPACE%\
   - if [%COMPILER%]==[pgi] vcpkg integrate install
   - if [%COMPILER%]==[pgi] vcpkg install fftw3
-
   #- if [%COMPILER%]==[pgi] vcpkg install msmpi    # MS-MPI 10 SDK, requires update on vcpkg
-  #- ps: if($env:COMPILER -eq "pgi") { Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisdk.msi -OutFile $env:WORKSPACE\msmpisdk.exe }
-  #- if [%COMPILER%]==[pgi] %WORKSPACE%\msmpisdk.exe -unattend
 
   #download & install libs for cygwin
   - cd %WORKSPACE%
