@@ -100,8 +100,9 @@
 #  License text for the above reference.)
 
 # include this to handle the QUIETLY and REQUIRED arguments
-include(FindPackageHandleStandardArgs.cmake)
-include(GetPrerequisites.cmake)
+# Since we are prepending this folder to the common cmake folder, we need to use full path!
+include(${CMAKE_ROOT}/Modules/FindPackageHandleStandardArgs.cmake)
+include(${CMAKE_ROOT}/Modules/GetPrerequisites.cmake)
 
 #
 # This part detects MPI compilers, attempting to wade through the mess of compiler names in
