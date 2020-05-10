@@ -3,7 +3,10 @@ project(ALaDyn)
 enable_language(Fortran)
 enable_language(CXX)
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/Modules/" ${CMAKE_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
+if(MSYS)
+  set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake/msys2/" ${CMAKE_MODULE_PATH})
+endif()
 
 # uncomment the following definition to enable GDB attach to debug while running
 # add_definitions(-DENABLE_GDB_ATTACH)
