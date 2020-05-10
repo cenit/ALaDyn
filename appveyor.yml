@@ -89,10 +89,10 @@ install:
   - if [%COMPILER%]==[pgi] %WORKSPACE%\pgiws64-1910.exe /s /f1"%WORKSPACE%\setup.iss"
 
   # MPI runtime for MS-MPI 10
-  - ps: Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisetup.exe -OutFile $env:WORKSPACE\msmpisetup.exe
-  - ps: .\${env:WORKSPACE}\msmpisetup.exe -unattend
-  - ps: Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisdk.msi -OutFile $env:WORKSPACE\msmpisdk.exe
-  - ps: .\${env:WORKSPACE}\msmpisdk.exe -unattend
+  - ps: Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisetup.exe -OutFile msmpisetup.exe
+  - msmpisetup.exe -unattend
+  - ps: Invoke-WebRequest https://download.microsoft.com/download/a/5/2/a5207ca5-1203-491a-8fb8-906fd68ae623/msmpisdk.msi -OutFile msmpisdk.exe
+  - msmpisdk.exe -unattend
 
   # Download a FindMPI module which should be compatible with mingw-w64-x86_64-msmpi
   - ps: if($env:COMPILER -eq "msys2") { Invoke-WebRequest https://raw.githubusercontent.com/ElmerCSC/elmerfem/devel/cmake/Modules/FindMPI.cmake -OutFile c:\projects\aladyn\cmake\Modules\FindMPI.cmake }
