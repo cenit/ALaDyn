@@ -4,14 +4,14 @@ clone_folder: c:\projects\aladyn
 environment:
   WORKSPACE: C:\projects
   matrix:
-  - platform: PGI1910
-    COMPILER: pgi
-    GENERATOR: "NMake Makefiles"
-    VCPKG_DEFAULT_TRIPLET: x64-windows
-  - platform: Cygwin64
-    COMPILER: cygwin
-    CYGWIN_NOWINPATH: yes
-    BASH: C:\cygwin64\bin\bash -c
+  #- platform: PGI1910
+  #  COMPILER: pgi
+  #  GENERATOR: "NMake Makefiles"
+  #  VCPKG_DEFAULT_TRIPLET: x64-windows
+  #- platform: Cygwin64
+  #  COMPILER: cygwin
+  #  CYGWIN_NOWINPATH: yes
+  #  BASH: C:\cygwin64\bin\bash -c
   - platform: MSYS64
     COMPILER: msys2
     BASH: C:\msys64\usr\bin\bash -lc
