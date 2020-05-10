@@ -129,7 +129,7 @@ build_script:
   - if [%COMPILER%]==[pgi]    cmake -G "%GENERATOR%" "-DCMAKE_TOOLCHAIN_FILE=C:\Tools\vcpkg\scripts\buildsystems\vcpkg.cmake" "-DVCPKG_TARGET_TRIPLET=%VCPKG_DEFAULT_TRIPLET%" "-DCMAKE_BUILD_TYPE=Release" ..
   - if [%COMPILER%]==[pgi]    cmake --build . --target install
 
-  - if [%COMPILER%]==[msys2]  %BASH% "cmake -G \"MSYS Makefiles\" -DCMAKE_PREFIX_PATH:PATH=\"c:/msys64/mingw64/bin;c:/msys64/mingw64/lib\" -DCMAKE_BUILD_TYPE=Release /c/projects/aladyn"
+  - if [%COMPILER%]==[msys2]  %BASH% "cmake -G \"MSYS Makefiles\" -DFORCE_OLD_MPI:BOOL=TRUE -DCMAKE_BUILD_TYPE=Release /c/projects/aladyn"
   - if [%COMPILER%]==[msys2]  %BASH% "cmake --build $(pwd) --target install"
 
   - if [%COMPILER%]==[cygwin] %BASH% 'cmake -G "Unix Makefiles" "-DCMAKE_BUILD_TYPE=Release" ..'
