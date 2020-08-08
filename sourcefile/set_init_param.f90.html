@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>set_init_param.f90 &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>set_init_param.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 1.2% of total for source files.">303 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/set_init_param.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">set_init_param.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/set_init_param.html">set_init_param</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/set_init_param.f90.html#src">set_init_param.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~set_init_param.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefileset_init_paramf90EfferentGraph" width="641pt" height="254pt"
+ viewBox="0.00 0.00 641.00 254.23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph" class="graph" transform="scale(.9028 .9028) rotate(0) translate(4 277.6008)">
+<title>sourcefile~~set_init_param.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-277.6008 706,-277.6008 706,4 -4,4"/>
+<!-- sourcefile~set_init_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~set_init_param.f90</title>
+<polygon fill="none" stroke="#000000" points="702,-106 591,-106 591,-82 702,-82 702,-106"/>
+<text text-anchor="middle" x="646.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">set_init_param.f90</text>
+</g>
+<!-- sourcefile~ionz_data.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~ionz_data.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/ionz_data.f90.html" xlink:title="ionz_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="226.5,-267 142.5,-267 142.5,-243 226.5,-243 226.5,-267"/>
+<text text-anchor="middle" x="184.5" y="-252.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ionz_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~ionz_data.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~ionz_data.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M497.5,-256C409.0151,-282.6032 299.9909,-273.4257 236.7473,-264.2622"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="237.0317,-260.7657 226.6221,-262.7381 235.9897,-267.6877 237.0317,-260.7657"/>
+</g>
+<!-- sourcefile~common_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~common_param.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node3"><a xlink:href=".././sourcefile/common_param.f90.html" xlink:title="common_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="394,-186 273,-186 273,-162 394,-162 394,-186"/>
+<text text-anchor="middle" x="333.5" y="-171.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">common_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M641.0111,-106.0512C624.8944,-139.5807 573.9816,-233.0057 497.5,-256"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M497.5,-256C449.9838,-270.2858 449.0218,-215.8545 404,-195 399.6653,-192.9921 395.0921,-191.1227 390.4427,-189.394"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="391.439,-186.0348 380.8442,-186.0443 389.1325,-192.6439 391.439,-186.0348"/>
+</g>
+<!-- sourcefile~control_bunch_input.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~control_bunch_input.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node4"><a xlink:href=".././sourcefile/control_bunch_input.f90.html" xlink:title="control_bunch_input.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="404,-228 263,-228 263,-204 404,-204 404,-228"/>
+<text text-anchor="middle" x="333.5" y="-213.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">control_bunch_input.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~control_bunch_input.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~control_bunch_input.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M497.5,-256C475.0074,-262.7624 416.3902,-245.3763 375.7018,-231.4299"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="376.628,-228.0464 366.0332,-228.0658 374.3276,-234.6576 376.628,-228.0464"/>
+</g>
+<!-- sourcefile~grid_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~grid_param.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node5"><a xlink:href=".././sourcefile/grid_param.f90.html" xlink:title="grid_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="380.5,-106 286.5,-106 286.5,-82 380.5,-82 380.5,-106"/>
+<text text-anchor="middle" x="333.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M590.9025,-94C534.674,-94 448.1513,-94 391.1864,-94"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="390.9078,-90.5001 380.9078,-94 390.9077,-97.5001 390.9078,-90.5001"/>
+</g>
+<!-- sourcefile~code_util.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~code_util.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node6"><a xlink:href=".././sourcefile/code_util.f90.html" xlink:title="code_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="538,-66 457,-66 457,-42 538,-42 538,-66"/>
+<text text-anchor="middle" x="497.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">code_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~code_util.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~code_util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M601.7951,-81.9987C584.884,-77.4588 565.5207,-72.2606 548.1056,-67.5854"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="548.6758,-64.1146 538.1103,-64.9021 546.8609,-70.8752 548.6758,-64.1146"/>
+</g>
+<!-- sourcefile~phys_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~phys_param.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node7"><a xlink:href=".././sourcefile/phys_param.f90.html" xlink:title="phys_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="546.5,-24 448.5,-24 448.5,0 546.5,0 546.5,-24"/>
+<text text-anchor="middle" x="497.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">phys_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~phys_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~phys_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M631.0064,-81.9954C613.3499,-68.7226 583.2692,-47.3272 555,-33 551.4748,-31.2134 547.7604,-29.5027 543.9862,-27.8835"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="545.1372,-24.5734 534.5549,-24.0563 542.505,-31.0597 545.1372,-24.5734"/>
+</g>
+<!-- sourcefile~set_grid_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node8" class="node">
+<title>sourcefile~set_grid_param.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node8"><a xlink:href=".././sourcefile/set_grid_param.f90.html" xlink:title="set_grid_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="555,-146 440,-146 440,-122 555,-122 555,-146"/>
+<text text-anchor="middle" x="497.5" y="-131.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">set_grid_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_init_param.f90&#45;&gt;sourcefile~set_grid_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~set_init_param.f90&#45;&gt;sourcefile~set_grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M601.7951,-106.0013C586.2489,-110.1748 568.6302,-114.9046 552.3579,-119.273"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="551.1812,-115.9649 542.4307,-121.9381 552.9962,-122.7256 551.1812,-115.9649"/>
+</g>
+<!-- sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node10" class="node">
+<title>sourcefile~precision_def.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node10"><a xlink:href=".././sourcefile/precision_def.f90.html" xlink:title="precision_def.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="106,-166 0,-166 0,-142 106,-142 106,-166"/>
+<text text-anchor="middle" x="53" y="-151.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~ionz_data.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~ionz_data.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M163.3408,-242.9172C156.3963,-238.7262 148.7358,-233.856 142,-229 117.41,-211.2725 91.0756,-188.5654 73.4863,-172.8032"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="75.8246,-170.1989 66.0578,-166.0927 71.1322,-175.3933 75.8246,-170.1989"/>
+</g>
+<!-- sourcefile~common_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~common_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M292.86,-186.0609C250.6533,-198.4526 189.9877,-215.8319 184.5,-215"/>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M184.5,-215C145.497,-209.0872 104.9559,-187.5454 79.3831,-171.7307"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="80.9885,-168.6043 70.6693,-166.203 77.2387,-174.5153 80.9885,-168.6043"/>
+</g>
+<!-- sourcefile~control_bunch_input.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~control_bunch_input.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M262.6852,-219.6642C237.8405,-219.8578 209.8206,-218.8386 184.5,-215"/>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M286.2342,-104.1103C239.5405,-114.0983 167.8201,-129.4396 116.2404,-140.4726"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="115.2531,-137.1046 106.2064,-142.6189 116.7173,-143.9497 115.2531,-137.1046"/>
+</g>
+<!-- sourcefile~struct_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node11" class="node">
+<title>sourcefile~struct_def.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node11"><a xlink:href=".././sourcefile/struct_def.f90.html" xlink:title="struct_def.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="227,-106 142,-106 142,-82 227,-82 227,-106"/>
+<text text-anchor="middle" x="184.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">struct_def.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M286.3555,-94C270.8291,-94 253.4619,-94 237.5276,-94"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="237.2972,-90.5001 227.2972,-94 237.2972,-97.5001 237.2972,-90.5001"/>
+</g>
+<!-- sourcefile~code_util.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~code_util.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M456.679,-52.5598C423.4702,-51.7347 375.4114,-51.3276 333.5,-54"/>
+</g>
+<!-- sourcefile~phys_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~phys_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M465.4081,-24.0266C432.7603,-35.3494 380.4304,-51.0075 333.5,-54"/>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M333.5,-54C248.1443,-59.4426 220.1432,-38.2314 142,-73 111.5712,-86.5388 84.5284,-114.6243 68.4535,-133.8904"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="65.6321,-131.8131 62.0622,-141.7884 71.0736,-136.2166 65.6321,-131.8131"/>
+</g>
+<!-- sourcefile~set_grid_param.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge17" class="edge">
+<title>sourcefile~set_grid_param.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M448.2946,-146.0013C430.8605,-150.2535 411.0584,-155.0833 392.8683,-159.5199"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="391.8397,-156.1681 382.9539,-161.9381 393.4985,-162.9688 391.8397,-156.1681"/>
+</g>
+<!-- sourcefile~set_grid_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge16" class="edge">
+<title>sourcefile~set_grid_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M448.2946,-121.9987C430.1399,-117.5707 409.4176,-112.5165 390.6216,-107.9321"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="391.2447,-104.4815 380.7001,-105.5122 389.5859,-111.2822 391.2447,-104.4815"/>
+</g>
+<!-- sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_node9" class="node">
+<title>sourcefile~mpi_var.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~EfferentGraph_node9"><a xlink:href=".././sourcefile/mpi_var.f90.html" xlink:title="mpi_var.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="222,-186 147,-186 147,-162 222,-162 222,-186"/>
+<text text-anchor="middle" x="184.5" y="-171.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_var.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~set_grid_param.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~set_grid_param.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M439.7948,-135.7733C392.1039,-137.9321 322.7693,-142.6712 263,-153 252.8865,-154.7477 242.1817,-157.198 232.0382,-159.8105"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="230.8836,-156.496 222.1246,-162.4569 232.6891,-163.2592 230.8836,-156.496"/>
+</g>
+<!-- sourcefile~mpi_var.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge18" class="edge">
+<title>sourcefile~mpi_var.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M146.8174,-168.2688C137.2701,-166.8167 126.7508,-165.2169 116.3135,-163.6294"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="116.7787,-160.16 106.3661,-162.1165 115.7261,-167.0804 116.7787,-160.16"/>
+</g>
+<!-- sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~set_init_param.f90~~EfferentGraph_edge19" class="edge">
+<title>sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M157.889,-106.1419C138.0153,-115.2097 110.6408,-127.7 88.8408,-137.6468"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="87.2163,-134.5408 79.5714,-141.8762 90.122,-140.9093 87.2163,-134.5408"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefileset_init_paramf90EfferentGraph = svgPanZoom('#sourcefileset_init_paramf90EfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+    
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~set_init_param.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefileset_init_paramf90AfferentGraph" width="344pt" height="32pt"
+ viewBox="0.00 0.00 344.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~set_init_param.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>sourcefile~~set_init_param.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 340,-28 340,4 -4,4"/>
+<!-- sourcefile~set_init_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~set_init_param.f90</title>
+<polygon fill="none" stroke="#000000" points="111,-24 0,-24 0,0 111,0 111,-24"/>
+<text text-anchor="middle" x="55.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">set_init_param.f90</text>
+</g>
+<!-- sourcefile~start_all.f90 -->
+<g id="sourcefile~~set_init_param.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~start_all.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/start_all.f90.html" xlink:title="start_all.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="224,-24 147,-24 147,0 224,0 224,-24"/>
+<text text-anchor="middle" x="185.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">start_all.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~start_all.f90&#45;&gt;sourcefile~set_init_param.f90 -->
+<g id="sourcefile~~set_init_param.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~start_all.f90&#45;&gt;sourcefile~set_init_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M146.8477,-12C138.7785,-12 130.0572,-12 121.3162,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="121.084,-8.5001 111.0839,-12 121.0839,-15.5001 121.084,-8.5001"/>
+</g>
+<!-- sourcefile~aladyn.f90 -->
+<g id="sourcefile~~set_init_param.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~aladyn.f90</title>
+<g id="a_sourcefile~~set_init_param.f90~~AfferentGraph_node3"><a xlink:href=".././sourcefile/aladyn.f90.html" xlink:title="ALaDyn.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="336,-24 260,-24 260,0 336,0 336,-24"/>
+<text text-anchor="middle" x="298" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ALaDyn.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~start_all.f90 -->
+<g id="sourcefile~~set_init_param.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~start_all.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M259.9126,-12C251.7553,-12 243.0272,-12 234.5231,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="234.3146,-8.5001 224.3146,-12 234.3145,-15.5001 234.3146,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/set_init_param.html">set_init_param</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/set_init_param.f90.html#src">set_init_param.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-2"></a><span class="c">!                            Copyright 2008-2020  The ALaDyn Collaboration                            !</span>
+<a name="ln-3"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-4"></a>
+<a name="ln-5"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-6"></a><span class="c">!  This file is part of ALaDyn.                                                                       !</span>
+<a name="ln-7"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-8"></a><span class="c">!  ALaDyn is free software: you can redistribute it and/or modify                                     !</span>
+<a name="ln-9"></a><span class="c">!  it under the terms of the GNU General Public License as published by                               !</span>
+<a name="ln-10"></a><span class="c">!  the Free Software Foundation, either version 3 of the License, or                                  !</span>
+<a name="ln-11"></a><span class="c">!  (at your option) any later version.                                                                !</span>
+<a name="ln-12"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-13"></a><span class="c">!  ALaDyn is distributed in the hope that it will be useful,                                          !</span>
+<a name="ln-14"></a><span class="c">!  but WITHOUT ANY WARRANTY; without even the implied warranty of                                     !</span>
+<a name="ln-15"></a><span class="c">!  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                      !</span>
+<a name="ln-16"></a><span class="c">!  GNU General Public License for more details.                                                       !</span>
+<a name="ln-17"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-18"></a><span class="c">!  You should have received a copy of the GNU General Public License                                  !</span>
+<a name="ln-19"></a><span class="c">!  along with ALaDyn.  If not, see &lt;http://www.gnu.org/licenses/&gt;.                                    !</span>
+<a name="ln-20"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a> <span class="k">module </span><span class="n">set_init_param</span>
+<a name="ln-23"></a>
+<a name="ln-24"></a>  <span class="k">use </span><span class="n">code_util</span>
+<a name="ln-25"></a>  <span class="k">use </span><span class="n">phys_param</span>
+<a name="ln-26"></a>  <span class="k">use </span><span class="n">common_param</span>
+<a name="ln-27"></a>  <span class="k">use </span><span class="n">grid_param</span><span class="p">,</span> <span class="n">only</span><span class="p">:</span> <span class="n">nx_stretch</span><span class="p">,</span> <span class="n">ny_stretch</span><span class="p">,</span> <span class="n">nz_stretch</span>
+<a name="ln-28"></a>  <span class="k">use </span><span class="n">set_grid_param</span>
+<a name="ln-29"></a>  <span class="k">use </span><span class="n">ionz_data</span>
+<a name="ln-30"></a>  <span class="k">use </span><span class="n">control_bunch_input</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a>  <span class="k">implicit none</span>
+<a name="ln-33"></a>
+<a name="ln-34"></a><span class="k"> contains</span>
+<a name="ln-35"></a>
+<a name="ln-36"></a><span class="k">  subroutine </span><span class="n">set_initial_param</span>
+<a name="ln-37"></a>
+<a name="ln-38"></a>   <span class="c">! sets general parameters and grid depending on initial conditions</span>
+<a name="ln-39"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span>
+<a name="ln-40"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">gvol</span><span class="p">,</span> <span class="n">gvol_inv</span><span class="p">,</span> <span class="n">nm_fact</span><span class="p">,</span> <span class="n">ncell</span>
+<a name="ln-41"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">aph_fwhm</span><span class="p">,</span> <span class="n">c1_fact</span><span class="p">,</span> <span class="n">c2_fact</span>
+<a name="ln-42"></a>   <span class="c">!================== grid dimension definition ==============</span>
+<a name="ln-43"></a>   <span class="n">ndim</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-44"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ny</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">ndim</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-45"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">nz</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">ndim</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-46"></a>   <span class="c">!===========time integrator schemes</span>
+<a name="ln-47"></a>   <span class="n">t_ord</span> <span class="o">=</span> <span class="n">lpf_ord</span>
+<a name="ln-48"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">t_ord</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="n">der_ord</span> <span class="o">=</span> <span class="n">t_ord</span>
+<a name="ln-49"></a>   <span class="c">!===================================</span>
+<a name="ln-50"></a>   <span class="n">nx_loc</span> <span class="o">=</span> <span class="n">nx</span><span class="o">/</span><span class="n">nprocx</span>
+<a name="ln-51"></a>   <span class="n">ny_loc</span> <span class="o">=</span> <span class="n">ny</span><span class="o">/</span><span class="n">nprocy</span>
+<a name="ln-52"></a>   <span class="n">nz_loc</span> <span class="o">=</span> <span class="n">nz</span><span class="o">/</span><span class="n">nprocz</span>
+<a name="ln-53"></a>   <span class="n">sh_targ</span> <span class="o">=</span> <span class="n">ny</span><span class="o">/</span><span class="mi">2</span> <span class="o">-</span> <span class="n">ny_targ</span><span class="o">/</span><span class="mi">2</span>
+<a name="ln-54"></a>   <span class="n">nx_stretch</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-55"></a>   <span class="n">stretch</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-56"></a>   <span class="n">ny_stretch</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-57"></a>   <span class="n">nz_stretch</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-58"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="n">str_flag</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-59"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">model_id</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">)</span> <span class="n">str_flag</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-60"></a>   <span class="c">!===================</span>
+<a name="ln-61"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">str_flag</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span> <span class="c">!size_of_stretch defined in phys_param module =&gt; common_param</span>
+<a name="ln-62"></a>    <span class="n">stretch</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-63"></a>    <span class="n">ny_stretch</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="kt">real</span><span class="p">(</span><span class="n">ny</span><span class="p">,</span> <span class="n">dp</span><span class="p">)</span><span class="o">*</span><span class="n">size_of_stretch_along_y</span><span class="p">)</span> <span class="c">!set to ny/6</span>
+<a name="ln-64"></a>   <span class="k">end if</span>
+<a name="ln-65"></a><span class="k">   if</span> <span class="p">(</span><span class="n">str_flag</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-66"></a><span class="k">    </span><span class="n">stretch</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-67"></a>    <span class="n">ny_stretch</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="kt">real</span><span class="p">(</span><span class="n">ny</span><span class="p">,</span> <span class="n">dp</span><span class="p">)</span><span class="o">*</span><span class="mf">1.5</span><span class="o">*</span><span class="n">size_of_stretch_along_y</span><span class="p">)</span> <span class="c">!set to ny/4</span>
+<a name="ln-68"></a>   <span class="k">end if</span>
+<a name="ln-69"></a><span class="k">   </span><span class="n">nz_stretch</span> <span class="o">=</span> <span class="n">ny_stretch</span>
+<a name="ln-70"></a>   <span class="n">loc_nyc_max</span> <span class="o">=</span> <span class="n">loc_ygr_max</span>
+<a name="ln-71"></a>   <span class="n">loc_nzc_max</span> <span class="o">=</span> <span class="n">loc_zgr_max</span>
+<a name="ln-72"></a>   <span class="n">loc_nxc_max</span> <span class="o">=</span> <span class="n">loc_xgr_max</span>
+<a name="ln-73"></a>   <span class="c">!=========Sets grid data=============</span>
+<a name="ln-74"></a>   <span class="n">gvol_inv</span> <span class="o">=</span> <span class="mf">1.</span>
+<a name="ln-75"></a>   <span class="n">gvol</span> <span class="o">=</span> <span class="mf">1.</span>
+<a name="ln-76"></a>   <span class="n">dx</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">k0</span>
+<a name="ln-77"></a>   <span class="k">call </span><span class="n">set_grid</span><span class="p">(</span><span class="n">nx</span><span class="p">,</span> <span class="n">ny</span><span class="p">,</span> <span class="n">nz</span><span class="p">,</span> <span class="n">ibx</span><span class="p">,</span> <span class="n">nx_stretch</span><span class="p">,</span> <span class="n">ny_stretch</span><span class="p">,</span> <span class="n">k0</span><span class="p">,</span> <span class="n">yx_rat</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-78"></a>                 <span class="n">zx_rat</span><span class="p">)</span>
+<a name="ln-79"></a>   <span class="n">dt</span> <span class="o">=</span> <span class="n">cfl</span><span class="o">*</span><span class="n">dx</span>
+<a name="ln-80"></a>   <span class="k">select case</span> <span class="p">(</span><span class="n">ndim</span><span class="p">)</span>
+<a name="ln-81"></a>   <span class="k">case</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-82"></a>    <span class="n">dt</span> <span class="o">=</span> <span class="n">cfl</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">dx_inv</span><span class="o">*</span><span class="n">dx_inv</span><span class="p">)</span>
+<a name="ln-83"></a>    <span class="n">gvol_inv</span> <span class="o">=</span> <span class="n">dx_inv</span><span class="o">*</span><span class="n">dx_inv</span><span class="o">*</span><span class="n">dx_inv</span>
+<a name="ln-84"></a>   <span class="k">case</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-85"></a>    <span class="n">dt</span> <span class="o">=</span> <span class="n">cfl</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">dx_inv</span><span class="o">*</span><span class="n">dx_inv</span> <span class="o">+</span> <span class="n">dy_inv</span><span class="o">*</span><span class="n">dy_inv</span><span class="p">)</span>
+<a name="ln-86"></a>    <span class="n">gvol_inv</span> <span class="o">=</span> <span class="n">dx_inv</span><span class="o">*</span><span class="n">dy_inv</span><span class="o">*</span><span class="n">dy_inv</span>
+<a name="ln-87"></a>   <span class="k">case</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-88"></a>    <span class="n">dt</span> <span class="o">=</span> <span class="n">cfl</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">dx_inv</span><span class="o">*</span><span class="n">dx_inv</span> <span class="o">+</span> <span class="n">dy_inv</span><span class="o">*</span><span class="n">dy_inv</span> <span class="o">+</span> <span class="n">dz_inv</span><span class="o">*</span><span class="n">dz_inv</span><span class="p">)</span>
+<a name="ln-89"></a>    <span class="n">gvol_inv</span> <span class="o">=</span> <span class="n">dx_inv</span><span class="o">*</span><span class="n">dy_inv</span><span class="o">*</span><span class="n">dz_inv</span>
+<a name="ln-90"></a>   <span class="k">end select</span>
+<a name="ln-91"></a><span class="k">   </span><span class="n">gvol</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">gvol_inv</span>
+<a name="ln-92"></a>   <span class="n">djc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">dx</span>
+<a name="ln-93"></a>   <span class="n">djc</span><span class="p">(</span><span class="mi">2</span><span class="p">:</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-94"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-95"></a><span class="k">    </span><span class="n">djc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">dx</span>
+<a name="ln-96"></a>    <span class="n">djc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">dy</span>
+<a name="ln-97"></a>   <span class="k">end if</span>
+<a name="ln-98"></a><span class="k">   if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-99"></a><span class="k">    </span><span class="n">djc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">dx</span><span class="o">/</span><span class="mf">3.</span>
+<a name="ln-100"></a>    <span class="n">djc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">dy</span><span class="o">/</span><span class="mf">3.</span>
+<a name="ln-101"></a>    <span class="n">djc</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">dz</span><span class="o">/</span><span class="mf">3.</span>
+<a name="ln-102"></a>   <span class="k">end if</span>
+<a name="ln-103"></a><span class="k">   </span><span class="n">ymin_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-104"></a>   <span class="n">ymax_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">ny</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-105"></a>   <span class="n">zmin_t</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-106"></a>   <span class="n">zmax_t</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">nz</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-107"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-108"></a><span class="k">    </span><span class="n">ymin_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">sh_targ</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-109"></a>    <span class="n">ymax_t</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">ny</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">sh_targ</span><span class="p">)</span>
+<a name="ln-110"></a>   <span class="k">end if</span>
+<a name="ln-111"></a><span class="k">   if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-112"></a><span class="k">    </span><span class="n">zmin_t</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">sh_targ</span><span class="p">)</span>
+<a name="ln-113"></a>    <span class="n">zmax_t</span> <span class="o">=</span> <span class="n">z</span><span class="p">(</span><span class="n">nz</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">-</span> <span class="n">sh_targ</span><span class="p">)</span>
+<a name="ln-114"></a>   <span class="k">end if</span>
+<a name="ln-115"></a>   <span class="c">!======================================</span>
+<a name="ln-116"></a>   <span class="n">hybrid</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-117"></a>   <span class="n">high_gamma</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-118"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">gam_min</span> <span class="o">&gt;</span> <span class="mf">1.0</span><span class="p">)</span> <span class="n">high_gamma</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-119"></a>   <span class="n">test</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-120"></a>   <span class="n">part</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-121"></a>   <span class="n">lp_active</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-122"></a>   <span class="n">lp_inject</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-123"></a>   <span class="n">ionization</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-124"></a>   <span class="n">charge_cons</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-125"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">iform</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="n">charge_cons</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-126"></a>   <span class="n">inject_beam</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-127"></a>   <span class="n">beam</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-128"></a>   <span class="n">relativistic</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-129"></a>   <span class="n">ions</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-130"></a>   <span class="n">envelope</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-131"></a>   <span class="n">circ_lp</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-132"></a>   <span class="n">plane_wave</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-133"></a>   <span class="n">Two_color</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-134"></a>   <span class="n">wake</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-135"></a>   <span class="n">solid_target</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-136"></a>   <span class="n">channel</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-137"></a>   <span class="n">nm_fact</span> <span class="o">=</span> <span class="mf">1.</span>
+<a name="ln-138"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">nsp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="n">ions</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-139"></a>   <span class="n">lp_active</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-140"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ibeam</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">hybrid</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-141"></a><span class="c">!============================================</span>
+<a name="ln-142"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">iby</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">plane_wave</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-143"></a>   <span class="n">mod_ord</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-144"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">model_id</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="n">lin_lp</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-145"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">model_id</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="n">circ_lp</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-146"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">model_id</span> <span class="o">==</span> <span class="mi">4</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-147"></a><span class="k">    </span><span class="n">mod_ord</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-148"></a>    <span class="n">envelope</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-149"></a>   <span class="k">end if</span>
+<a name="ln-150"></a><span class="k">   </span><span class="n">relativistic</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-151"></a>   <span class="n">nfield</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-152"></a>   <span class="n">curr_ndim</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-153"></a>   <span class="n">nbfield</span> <span class="o">=</span> <span class="mi">4</span>
+<a name="ln-154"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-155"></a><span class="k">    </span><span class="n">nfield</span> <span class="o">=</span> <span class="mi">6</span>
+<a name="ln-156"></a>    <span class="n">curr_ndim</span> <span class="o">=</span> <span class="n">ndim</span>
+<a name="ln-157"></a>    <span class="n">nbfield</span> <span class="o">=</span> <span class="mi">6</span>
+<a name="ln-158"></a>   <span class="k">end if</span>
+<a name="ln-159"></a><span class="k">   if</span> <span class="p">(</span><span class="n">circ_lp</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-160"></a><span class="k">    </span><span class="n">nfield</span> <span class="o">=</span> <span class="mi">6</span>
+<a name="ln-161"></a>    <span class="n">curr_ndim</span> <span class="o">=</span> <span class="mi">3</span>
+<a name="ln-162"></a>   <span class="k">end if</span>
+<a name="ln-163"></a><span class="k">   if</span> <span class="p">(</span><span class="n">lp_offset</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="n">Two_color</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-164"></a>   <span class="c">!===============================</span>
+<a name="ln-165"></a>   <span class="c">! Multispecies target with max 3 ionic species (nsp=4)</span>
+<a name="ln-166"></a>   <span class="c">!=================</span>
+<a name="ln-167"></a>   <span class="c">!========================== particle on cells</span>
+<a name="ln-168"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span>
+<a name="ln-169"></a>    <span class="n">mp_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">np_per_xc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">np_per_yc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-170"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="n">mp_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">np_per_xc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">np_per_yc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">np_per_zc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-171"></a>   <span class="k">end do</span>
+<a name="ln-172"></a><span class="k">   </span><span class="n">j0_norm</span> <span class="o">=</span> <span class="mf">1.</span>
+<a name="ln-173"></a>   <span class="n">nref</span> <span class="o">=</span> <span class="n">mp_per_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-174"></a>   <span class="n">ratio_mpc</span> <span class="o">=</span> <span class="mf">1.</span>
+<a name="ln-175"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-176"></a><span class="k">    </span><span class="n">j0_norm</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="kt">real</span><span class="p">(</span><span class="n">nref</span><span class="p">,</span> <span class="n">dp</span><span class="p">)</span>
+<a name="ln-177"></a>    <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">6</span>
+<a name="ln-178"></a>     <span class="n">ratio_mpc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-179"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">ratio_mpc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="kt">real</span><span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">dp</span><span class="p">)</span><span class="o">/</span> <span class="p">&amp;</span>
+<a name="ln-180"></a>                                            <span class="kt">real</span><span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">dp</span><span class="p">)</span>
+<a name="ln-181"></a>    <span class="k">end do</span>
+<a name="ln-182"></a><span class="k">   end if</span>
+<a name="ln-183"></a><span class="k">   </span><span class="n">ratio_mpfluid</span> <span class="o">=</span> <span class="mf">1.0</span>
+<a name="ln-184"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">hybrid</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-185"></a><span class="k">    </span><span class="n">ratio_mpfluid</span> <span class="o">=</span> <span class="mf">0.1</span>
+<a name="ln-186"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">ratio_mpfluid</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-187"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">ny_targ</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="n">ratio_mpfluid</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-188"></a>   <span class="k">end if</span>
+<a name="ln-189"></a><span class="k">   </span><span class="n">j0_norm</span> <span class="o">=</span> <span class="n">j0_norm</span><span class="o">*</span><span class="n">ratio_mpfluid</span>
+<a name="ln-190"></a>   <span class="c">!========================== multispecies</span>
+<a name="ln-191"></a>   <span class="c">! mass-charge parameters four species: three ion species+ electrons</span>
+<a name="ln-192"></a>   <span class="c">! Ions charges defined by initial conditions.</span>
+<a name="ln-193"></a>   <span class="n">unit_charge</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">electron_charge_norm</span>
+<a name="ln-194"></a>   <span class="n">unit_charge</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">ion_min</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">proton_charge_norm</span>
+<a name="ln-195"></a>   <span class="n">unit_charge</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">ion_min</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">proton_charge_norm</span>
+<a name="ln-196"></a>   <span class="n">unit_charge</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">ion_min</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">proton_charge_norm</span>
+<a name="ln-197"></a>   <span class="c">!=================================</span>
+<a name="ln-198"></a>   <span class="n">mass</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">electron_mass_norm</span>
+<a name="ln-199"></a>   <span class="n">mass</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">mass_number</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">proton_mass_norm</span>
+<a name="ln-200"></a>   <span class="n">mass</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">mass_number</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">proton_mass_norm</span>
+<a name="ln-201"></a>   <span class="n">mass</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">mass_number</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">proton_mass_norm</span>
+<a name="ln-202"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span>
+<a name="ln-203"></a>    <span class="n">mass_rat</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">mass</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-204"></a>    <span class="n">charge_to_mass</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">unit_charge</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">mass_rat</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-205"></a>   <span class="k">end do</span>
+<a name="ln-206"></a><span class="k">   </span><span class="n">lorentz_fact</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">mass_rat</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">4</span><span class="p">)</span> <span class="c">!for (E,B) fields in mc2/e/l0(mu) unit</span>
+<a name="ln-207"></a>   <span class="n">e0</span> <span class="o">=</span> <span class="n">electron_mass</span>
+<a name="ln-208"></a>   <span class="c">!=====================================</span>
+<a name="ln-209"></a>   <span class="c">! Check species molecular number</span>
+<a name="ln-210"></a>   <span class="c">!=====================================</span>
+<a name="ln-211"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">nsp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-212"></a><span class="k">    do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsp</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-213"></a>     <span class="k">call </span><span class="n">set_atoms_per_molecule</span><span class="p">(</span><span class="n">atomic_number</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">n_mol_atoms</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-214"></a>     <span class="c">!Defined in ionz_data module</span>
+<a name="ln-215"></a>    <span class="k">end do</span>
+<a name="ln-216"></a><span class="k">   end if</span>
+<a name="ln-217"></a>   <span class="c">!======================================</span>
+<a name="ln-218"></a>   <span class="c">! Set ionization param</span>
+<a name="ln-219"></a>   <span class="c">! WARNING  ion ordering in input data must set ionizing species first</span>
+<a name="ln-220"></a>   <span class="c">!==========================================================</span>
+<a name="ln-221"></a>   <span class="c">!wgh_ion=j0_norm</span>
+<a name="ln-222"></a>   <span class="n">nsp_ionz</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-223"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">nsp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-224"></a><span class="k">    do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsp</span> <span class="o">-</span> <span class="mi">1</span> <span class="c">!index of ionizing ion species 2,.. nsp_ionz &lt;= nsp</span>
+<a name="ln-225"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">ion_min</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">ion_max</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="n">nsp_ionz</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-226"></a>    <span class="k">end do</span>
+<a name="ln-227"></a><span class="k">    </span><span class="n">nsp_ionz</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nsp_ionz</span><span class="p">,</span> <span class="n">nsp</span><span class="p">)</span>
+<a name="ln-228"></a>    <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span>
+<a name="ln-229"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">mass_number</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mf">1.</span><span class="p">)</span> <span class="k">call </span><span class="n">set_atomic_weight</span><span class="p">(</span><span class="n">atomic_number</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-230"></a>                                                     <span class="n">mass_number</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+<a name="ln-231"></a>    <span class="k">end do</span>
+<a name="ln-232"></a><span class="k">    if</span> <span class="p">(</span><span class="n">ionz_lev</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">ionization</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-233"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">ionization</span><span class="p">)</span> <span class="k">call </span><span class="n">set_ionization_coeff</span><span class="p">(</span><span class="n">atomic_number</span><span class="p">,</span> <span class="n">nsp_ionz</span><span class="p">)</span>
+<a name="ln-234"></a>    <span class="c">!uses ion index 1,2,,,nsp-1</span>
+<a name="ln-235"></a>    <span class="n">wgh_ion</span> <span class="o">=</span> <span class="n">concentration</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="kt">real</span><span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">dp</span><span class="p">))</span>
+<a name="ln-236"></a>    <span class="c">!if(ion_min(1)&gt;1)wgh_ion=1./(real(ion_min(1),dp)*real(mp_per_cell(2),dp))</span>
+<a name="ln-237"></a>   <span class="k">end if</span>
+<a name="ln-238"></a>   <span class="c">!=======Moving window</span>
+<a name="ln-239"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">w_speed</span> <span class="o">&lt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-240"></a><span class="k">    </span><span class="n">vbeam</span> <span class="o">=</span> <span class="o">-</span><span class="n">w_speed</span>
+<a name="ln-241"></a>    <span class="n">comoving</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-242"></a>   <span class="k">else</span>
+<a name="ln-243"></a><span class="k">    </span><span class="n">comoving</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-244"></a>    <span class="n">vbeam</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-245"></a>   <span class="k">end if</span>
+<a name="ln-246"></a>   <span class="c">!====================================</span>
+<a name="ln-247"></a>   <span class="c">! Code units for background plasma number density</span>
+<a name="ln-248"></a>   <span class="c">! Enter n0_ref= in 10^18/cc= 10^6/mu^3 units (reference_density)</span>
+<a name="ln-249"></a>   <span class="c">! l_u =1mu</span>
+<a name="ln-250"></a>   <span class="c">! omp^2_norm=(l_u/c)^2*[4*pi *n0_ref*e^2/m_e]=4*pi*rc0*n0_ref</span>
+<a name="ln-251"></a>   <span class="c">! rc0= class elect. radius in 10^{-9}[mu] units</span>
+<a name="ln-252"></a>   <span class="c">! l_u^2*rc0  in 10^{-9} [mu^3]</span>
+<a name="ln-253"></a>   <span class="c">!======================================================</span>
+<a name="ln-254"></a>   <span class="n">ompe</span> <span class="o">=</span> <span class="mf">4.</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">rc0</span><span class="o">*</span><span class="p">(</span><span class="n">reference_density</span><span class="o">*</span><span class="mf">1.e-6</span><span class="p">)</span>         <span class="c">!squared adimensional unit frequency at reference_density=1.e+06/mu^3</span>
+<a name="ln-255"></a>   <span class="n">ompe</span> <span class="o">=</span> <span class="mf">1.e-03</span><span class="o">*</span><span class="n">ompe</span>
+<a name="ln-256"></a>   <span class="c">!==========================================</span>
+<a name="ln-257"></a>   <span class="n">np_per_cell</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-258"></a>   <span class="c">!=======================</span>
+<a name="ln-259"></a>   <span class="n">n_plasma</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-260"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">nsp</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-261"></a><span class="k">    do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsp</span> <span class="o">-</span> <span class="mi">1</span>
+<a name="ln-262"></a>     <span class="n">n_plasma</span> <span class="o">=</span> <span class="n">n_plasma</span> <span class="o">+</span> <span class="n">concentration</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">n_mol_atoms</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">ion_min</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-263"></a>    <span class="k">end do</span>
+<a name="ln-264"></a><span class="k">    if</span> <span class="p">(</span><span class="n">n_plasma</span> <span class="o">&lt;</span> <span class="nb">epsilon</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-265"></a><span class="k">     </span><span class="n">np_per_xc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-266"></a>     <span class="n">np_per_yc</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-267"></a>     <span class="n">n_plasma</span> <span class="o">=</span> <span class="n">zero_dp</span>
+<a name="ln-268"></a>    <span class="k">end if</span>
+<a name="ln-269"></a><span class="k">   else if</span> <span class="p">(</span><span class="n">nsp</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-270"></a><span class="k">    </span><span class="n">n_plasma</span> <span class="o">=</span> <span class="n">one_dp</span>
+<a name="ln-271"></a>   <span class="k">end if</span>
+<a name="ln-272"></a><span class="k">   </span><span class="n">ncrit</span> <span class="o">=</span> <span class="n">pi</span><span class="o">/</span><span class="p">(</span><span class="n">rc0</span><span class="o">*</span><span class="n">lam0</span><span class="o">*</span><span class="n">lam0</span><span class="p">)</span>
+<a name="ln-273"></a>   <span class="c">!critical density in unit nc=10^21/cm^3=10^9/mu^3</span>
+<a name="ln-274"></a>   <span class="c">! 1.e-03*ncrit    in unit reference_density</span>
+<a name="ln-275"></a>   <span class="n">nm_fact</span> <span class="o">=</span> <span class="n">ncrit</span><span class="o">*</span><span class="p">(</span><span class="mf">1.e+3</span><span class="p">)</span>
+<a name="ln-276"></a>   <span class="c">! nm_fact critical density in (10^6/mu^3) units</span>
+<a name="ln-277"></a>   <span class="c">! n0_ref*n_plasma electron density in 10^6/mu^3</span>
+<a name="ln-278"></a>   <span class="c">! (reference_density) units</span>
+<a name="ln-279"></a>   <span class="n">n_over_nc</span> <span class="o">=</span> <span class="mf">1.e-03</span><span class="o">*</span><span class="n">n_plasma</span><span class="o">*</span><span class="n">n0_ref</span><span class="o">/</span><span class="n">ncrit</span>
+<a name="ln-280"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">n_over_nc</span> <span class="o">&gt;</span> <span class="mf">1.</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-281"></a><span class="k">    </span><span class="n">solid_target</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-282"></a>   <span class="k">else</span>
+<a name="ln-283"></a><span class="k">    </span><span class="n">wake</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-284"></a>   <span class="k">end if</span>
+<a name="ln-285"></a>   <span class="c">!==========================</span>
+<a name="ln-286"></a>   <span class="c">! Target parameters  using n_over_nc</span>
+<a name="ln-287"></a>   <span class="c">!===================================</span>
+<a name="ln-288"></a>   <span class="c">! Laser/envelope parameters</span>
+<a name="ln-289"></a>   <span class="c">!E=in unit mc^2/(e*l0)=[TV/m]/E0; E0*E in [TV/m]=[MV/mu] unit</span>
+<a name="ln-290"></a>   <span class="c">!E0(A,phi) in MV unit</span>
+<a name="ln-291"></a>   <span class="n">oml</span> <span class="o">=</span> <span class="n">pi2</span><span class="o">/</span><span class="n">lam0</span> <span class="c">!laser frequency in unit c/l0</span>
+<a name="ln-292"></a>   <span class="n">om1</span> <span class="o">=</span> <span class="n">pi2</span><span class="o">/</span><span class="n">lam1</span> <span class="c">!laser frequency in unit c/l0</span>
+<a name="ln-293"></a>   <span class="n">lp_amp</span> <span class="o">=</span> <span class="n">a0</span><span class="o">*</span><span class="n">oml</span>
+<a name="ln-294"></a>   <span class="n">lp1_amp</span> <span class="o">=</span> <span class="n">a1</span><span class="o">*</span><span class="n">om1</span> <span class="c">!field in unit 0.51 MV/m</span>
+<a name="ln-295"></a>   <span class="n">lp_max</span> <span class="o">=</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">lp_amp</span>
+<a name="ln-296"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">Two_color</span><span class="p">)</span> <span class="n">lp_max</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">lp_max</span><span class="p">,</span> <span class="mf">1.5</span><span class="o">*</span><span class="n">lp1_amp</span><span class="p">)</span>
+<a name="ln-297"></a>   <span class="c">!=============================</span>
+<a name="ln-298"></a>   <span class="n">nc0</span> <span class="o">=</span> <span class="n">oml</span><span class="o">*</span><span class="n">oml</span> <span class="c">!nc0=(2*pi/lam0)** 2</span>
+<a name="ln-299"></a>   <span class="c">!===============================</span>
+<a name="ln-300"></a>   <span class="c">! Parabolic plasma channel profile const  r_c=w0_y matched condition</span>
+<a name="ln-301"></a>   <span class="n">chann_fact</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-302"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">r_c</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-303"></a><span class="k">    </span><span class="n">channel</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-304"></a>    <span class="n">c1_fact</span> <span class="o">=</span> <span class="n">w0_y</span><span class="o">*</span><span class="n">w0_y</span><span class="o">/</span><span class="p">(</span><span class="n">r_c</span><span class="o">*</span><span class="n">r_c</span><span class="p">)</span>
+<a name="ln-305"></a>    <span class="n">c2_fact</span> <span class="o">=</span> <span class="n">lam0</span><span class="o">*</span><span class="n">lam0</span><span class="o">/</span><span class="p">(</span><span class="n">r_c</span><span class="o">*</span><span class="n">r_c</span><span class="p">)</span>
+<a name="ln-306"></a>    <span class="n">chann_fact</span> <span class="o">=</span> <span class="n">c1_fact</span><span class="o">*</span><span class="n">c2_fact</span><span class="o">/</span><span class="p">(</span><span class="n">pi</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">n_over_nc</span><span class="p">)</span>
+<a name="ln-307"></a>   <span class="k">end if</span>
+<a name="ln-308"></a>   <span class="c">!========== Laser parameters</span>
+<a name="ln-309"></a>   <span class="n">lp_intensity</span> <span class="o">=</span> <span class="mf">1.37</span><span class="o">*</span><span class="p">(</span><span class="n">a0</span><span class="o">/</span><span class="n">lam0</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">a0</span><span class="o">/</span><span class="n">lam0</span><span class="p">)</span> <span class="c">!in units 10^18 W/cm^2</span>
+<a name="ln-310"></a>   <span class="n">lp_rad</span> <span class="o">=</span> <span class="n">w0_y</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="nb">log</span><span class="p">(</span><span class="mf">2.</span><span class="p">))</span> <span class="c">!FWHM focal spot</span>
+<a name="ln-311"></a>   <span class="n">zr</span> <span class="o">=</span> <span class="n">pi</span><span class="o">*</span><span class="n">w0_y</span><span class="o">*</span><span class="n">w0_y</span><span class="o">/</span><span class="n">lam0</span>
+<a name="ln-312"></a>   <span class="n">lp1_rad</span> <span class="o">=</span> <span class="n">w1_y</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="nb">log</span><span class="p">(</span><span class="mf">2.</span><span class="p">))</span> <span class="c">!FWHM focal spot</span>
+<a name="ln-313"></a>   <span class="n">zr1</span> <span class="o">=</span> <span class="n">pi</span><span class="o">*</span><span class="n">w1_y</span><span class="o">*</span><span class="n">w1_y</span><span class="o">/</span><span class="n">lam1</span>
+<a name="ln-314"></a>   <span class="n">lp_pow</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">pi</span><span class="o">*</span><span class="n">lp_intensity</span><span class="o">*</span><span class="n">w0_y</span><span class="o">*</span><span class="n">w0_y</span> <span class="c">!in units 10^10 W</span>
+<a name="ln-315"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span> <span class="n">lp_pow</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">dy</span><span class="o">*</span><span class="n">lp_intensity</span><span class="o">*</span><span class="n">w0_y</span> <span class="c">!in units 10^10 W</span>
+<a name="ln-316"></a>   <span class="n">lp_pow</span> <span class="o">=</span> <span class="mf">0.01</span><span class="o">*</span><span class="n">lp_pow</span> <span class="c">!in TW= 1.e-03[J/fs]  units</span>
+<a name="ln-317"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">plane_wave</span><span class="p">)</span> <span class="k">then</span> <span class="c">!plane LP wave</span>
+<a name="ln-318"></a>    <span class="n">lp_pow</span> <span class="o">=</span> <span class="mf">0.01</span><span class="o">*</span><span class="n">lp_intensity</span><span class="o">*</span><span class="n">ly_box</span><span class="o">*</span><span class="n">lz_box</span> <span class="c">!in TW = 10^{-3}J/fs</span>
+<a name="ln-319"></a>    <span class="n">zr</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-320"></a>   <span class="k">end if</span>
+<a name="ln-321"></a>   <span class="c">!======= Defines scales (w0_x,w1_x) in longitudinal (t-x) pulse profile</span>
+<a name="ln-322"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">g_prof</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-323"></a><span class="k">    </span><span class="n">aph_fwhm</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="nb">log</span><span class="p">(</span><span class="mf">2.</span><span class="p">))</span>
+<a name="ln-324"></a>   <span class="k">else</span>
+<a name="ln-325"></a><span class="k">    </span><span class="n">aph_fwhm</span> <span class="o">=</span> <span class="mf">2.</span><span class="o">*</span><span class="nb">acos</span><span class="p">(</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">0.5</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="mf">2.</span><span class="p">)))</span><span class="o">/</span><span class="n">pi</span>
+<a name="ln-326"></a>    <span class="c">!aph_fwhm=2.*acos(sqrt(sqrt(0.5*sqrt(2.))))/pi this is only valid for cos^4 pulse shape</span>
+<a name="ln-327"></a>   <span class="k">end if</span>
+<a name="ln-328"></a><span class="k">   </span><span class="n">lx_fwhm</span> <span class="o">=</span> <span class="n">tau_fwhm</span><span class="o">*</span><span class="n">speed_of_light</span> <span class="c">! In micron unit</span>
+<a name="ln-329"></a>   <span class="n">w0_x</span> <span class="o">=</span> <span class="n">lx_fwhm</span><span class="o">/</span><span class="n">aph_fwhm</span>
+<a name="ln-330"></a>   <span class="n">w1_x</span> <span class="o">=</span> <span class="n">speed_of_light</span><span class="o">*</span><span class="n">tau1_fwhm</span><span class="o">/</span><span class="n">aph_fwhm</span>
+<a name="ln-331"></a>   <span class="c">!=================</span>
+<a name="ln-332"></a>   <span class="n">lp_energy</span> <span class="o">=</span> <span class="mf">1.e-03</span><span class="o">*</span><span class="n">tau_fwhm</span><span class="o">*</span><span class="n">lp_pow</span>
+<a name="ln-333"></a>   <span class="n">energy_in_targ</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-334"></a>   <span class="n">el_lp</span> <span class="o">=</span> <span class="n">lam0</span>
+<a name="ln-335"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">n_over_nc</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-336"></a><span class="k">    </span><span class="n">p_c</span> <span class="o">=</span> <span class="mf">0.0174</span><span class="o">/</span><span class="n">n_over_nc</span> <span class="c">!Critical power in TW</span>
+<a name="ln-337"></a>    <span class="n">lambda_p</span> <span class="o">=</span> <span class="n">lam0</span><span class="o">/</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">n_over_nc</span><span class="p">)</span>
+<a name="ln-338"></a>    <span class="n">el_lp</span> <span class="o">=</span> <span class="n">lambda_p</span><span class="o">/</span><span class="n">pi2</span>
+<a name="ln-339"></a>    <span class="n">el_d</span> <span class="o">=</span> <span class="n">t0_pl</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">el_lp</span> <span class="c">!Debye length t0_pl(1)= V_T/c at t=0</span>
+<a name="ln-340"></a>    <span class="n">omega_p</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="n">el_lp</span>
+<a name="ln-341"></a>   <span class="k">end if</span>
+<a name="ln-342"></a><span class="k">   </span><span class="n">bet0</span> <span class="o">=</span> <span class="mf">0.0</span>
+<a name="ln-343"></a>   <span class="n">lpvol</span> <span class="o">=</span> <span class="n">el_lp</span><span class="o">*</span><span class="n">el_lp</span><span class="o">*</span><span class="n">el_lp</span>
+<a name="ln-344"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">nsb</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">inject_beam</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-345"></a>   <span class="c">!=====================</span>
+<a name="ln-346"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">inject_beam</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-347"></a>    <span class="c">!ON input phase space coordinates, beam size,</span>
+<a name="ln-348"></a>    <span class="c">!         total macro-particle number nb_tot(1), total charge (pC)</span>
+<a name="ln-349"></a>    <span class="c">!====================================</span>
+<a name="ln-350"></a>    <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsb</span>
+<a name="ln-351"></a>     <span class="n">jb_norm</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.</span>
+<a name="ln-352"></a>     <span class="n">gam0</span> <span class="o">=</span> <span class="n">gam</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c">!the initial gamma factor</span>
+<a name="ln-353"></a>     <span class="n">u0_b</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">gam0</span><span class="o">*</span><span class="n">gam0</span> <span class="o">-</span> <span class="mf">1.</span><span class="p">)</span> <span class="c">!the uniform beam x-momentum</span>
+<a name="ln-354"></a>     <span class="n">bet0</span> <span class="o">=</span> <span class="n">u0_b</span><span class="o">/</span><span class="n">gam0</span> <span class="c">!the uniform beam velocity</span>
+<a name="ln-355"></a>     <span class="c">!==================</span>
+<a name="ln-356"></a>     <span class="n">b_charge</span> <span class="o">=</span> <span class="n">nb_tot</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">e_charge</span> <span class="c">!the charge of bunch macro-particle</span>
+<a name="ln-357"></a>     <span class="n">np_per_nmacro</span> <span class="o">=</span> <span class="n">bunch_charge</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="n">b_charge</span> <span class="c">!real particles/macro particles=real charge/macro charge</span>
+<a name="ln-358"></a>     <span class="c">!===============</span>
+<a name="ln-359"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-360"></a><span class="k">      </span><span class="n">bunch_volume</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">pi2</span><span class="o">*</span><span class="n">sxb</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">syb</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">dy</span> <span class="c">!the bunch volume (mu^3) in 2D Gaussian</span>
+<a name="ln-361"></a>     <span class="k">else</span>
+<a name="ln-362"></a><span class="k">      </span><span class="n">bunch_volume</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">pi2</span><span class="o">*</span><span class="nb">sqrt</span><span class="p">(</span><span class="n">pi2</span><span class="p">)</span><span class="o">*</span><span class="n">sxb</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">syb</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">syb</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c">!the bunch volume (mu^3) in 3D Gussian bunch</span>
+<a name="ln-363"></a>     <span class="k">end if</span>
+<a name="ln-364"></a><span class="k">     </span><span class="n">rhob</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">bunch_charge</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">e_charge</span><span class="o">*</span><span class="n">bunch_volume</span><span class="p">(</span><span class="n">i</span><span class="p">))</span> <span class="c">!physical bunch density (1/mu^3)</span>
+<a name="ln-365"></a>
+<a name="ln-366"></a>     <span class="n">rhob</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="mf">1.e-06</span><span class="o">*</span><span class="n">rhob</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="n">n0_ref</span> <span class="c">!ratio beam density/background plasma density</span>
+<a name="ln-367"></a>     <span class="n">ncell</span> <span class="o">=</span> <span class="n">bunch_volume</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">gvol_inv</span>
+<a name="ln-368"></a>     <span class="n">nb_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">nb_tot</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="n">ncell</span><span class="p">)</span>
+<a name="ln-369"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">nb_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="n">jb_norm</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">rhob</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">/</span><span class="n">nb_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="c">!</span>
+<a name="ln-370"></a>    <span class="k">end do</span>
+<a name="ln-371"></a><span class="k">   end if</span>
+<a name="ln-372"></a>   <span class="c">!===================================</span>
+<a name="ln-373"></a>   <span class="c">!  SET PARAM all cases</span>
+<a name="ln-374"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">hybrid</span><span class="p">)</span> <span class="n">nfcomp</span> <span class="o">=</span> <span class="n">curr_ndim</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-375"></a>   <span class="n">nsp_run</span> <span class="o">=</span> <span class="n">nsp</span>
+<a name="ln-376"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">wake</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-377"></a><span class="k">    </span><span class="n">nsp_run</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">!only electrons running</span>
+<a name="ln-378"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">dmodel_id</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="n">wgh_ion</span> <span class="o">=</span> <span class="n">np1</span><span class="o">*</span><span class="n">wgh_ion</span>
+<a name="ln-379"></a>   <span class="k">end if</span>
+<a name="ln-380"></a>   <span class="c">!==============  in 2D dz=dy mp_per_cell =mp_x*mp_y,  mp_z=1</span>
+<a name="ln-381"></a>   <span class="n">np_per_cell</span> <span class="o">=</span> <span class="n">nm_fact</span><span class="o">*</span><span class="n">n_over_nc</span><span class="o">*</span><span class="n">gvol</span> <span class="c">!here the real particle number per cell</span>
+<a name="ln-382"></a>   <span class="c">!===========================</span>
+<a name="ln-383"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-384"></a><span class="k">    </span><span class="n">nmacro</span> <span class="o">=</span> <span class="n">nref</span><span class="o">*</span><span class="n">gvol_inv</span>
+<a name="ln-385"></a>    <span class="n">macro_charge</span> <span class="o">=</span> <span class="n">np_per_cell</span><span class="o">*</span><span class="n">e_charge</span> <span class="c">!real charge [in pC units]/cell</span>
+<a name="ln-386"></a>    <span class="c">!===========================================</span>
+<a name="ln-387"></a>    <span class="c">!all parameters to be multiplied by the macro weight= j0_norm=1/mp_per_cell</span>
+<a name="ln-388"></a>    <span class="c">!==========================</span>
+<a name="ln-389"></a>    <span class="c">! j0_norm*np_percell = number of real particles for each</span>
+<a name="ln-390"></a>    <span class="c">! macroparticle</span>
+<a name="ln-391"></a>    <span class="c">!========================</span>
+<a name="ln-392"></a>    <span class="n">nmacro</span> <span class="o">=</span> <span class="n">nref</span><span class="o">*</span><span class="kt">real</span><span class="p">(</span><span class="n">nx</span><span class="o">*</span><span class="n">ny</span><span class="o">*</span><span class="n">nz</span><span class="p">,</span> <span class="n">dp</span><span class="p">)</span>
+<a name="ln-393"></a>    <span class="c">! here the total initial nmacro particles</span>
+<a name="ln-394"></a>   <span class="k">end if</span>
+<a name="ln-395"></a>   <span class="c">!========================= Memory allocation</span>
+<a name="ln-396"></a>   <span class="n">nx_alloc</span> <span class="o">=</span> <span class="nb">nint</span><span class="p">(</span><span class="n">dx_inv</span><span class="o">*</span><span class="nb">sum</span><span class="p">(</span><span class="n">lpx</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="mi">5</span><span class="p">)))</span>
+<a name="ln-397"></a>   <span class="n">nx_alloc</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nx_loc</span><span class="p">,</span> <span class="n">nx_alloc</span><span class="p">)</span>
+<a name="ln-398"></a>   <span class="n">npt_buffer</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-399"></a>   <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsp</span>
+<a name="ln-400"></a>    <span class="n">npt_buffer</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">nx_alloc</span><span class="o">*</span><span class="n">ny_loc</span><span class="o">*</span><span class="n">nz_loc</span><span class="o">*</span><span class="n">mp_per_cell</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<a name="ln-401"></a>   <span class="k">end do</span>
+<a name="ln-402"></a>   <span class="c">!===============================</span>
+<a name="ln-403"></a>   <span class="c">!density per macroparticle: np_per_nmacro=nm_fact*n_over_nc/nmacro</span>
+<a name="ln-404"></a>
+<a name="ln-405"></a>   <span class="c">!np_per_nmacro= electron density over el_macro density</span>
+<a name="ln-406"></a>   <span class="c">!multiplied by nb_over_np gives the bunch elecron density over bunch macro</span>
+<a name="ln-407"></a>   <span class="c">!under the condition :np_per_cell is the same for plasma and bunch macro</span>
+<a name="ln-408"></a>   <span class="c">!-----------------------------</span>
+<a name="ln-409"></a>   <span class="n">pot_ndim</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-410"></a>   <span class="n">nd2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">curr_ndim</span>
+<a name="ln-411"></a>   <span class="n">nj_dim</span> <span class="o">=</span> <span class="n">curr_ndim</span>
+<a name="ln-412"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">envelope</span><span class="p">)</span> <span class="n">nj_dim</span> <span class="o">=</span> <span class="n">curr_ndim</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-413"></a>
+<a name="ln-414"></a>  <span class="k">end subroutine</span>
+<a name="ln-415"></a>
+<a name="ln-416"></a><span class="k"> end module</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-08-08 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

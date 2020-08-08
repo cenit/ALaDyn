@@ -1,0 +1,1504 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>stretched_grid &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>stretched_grid 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.4% of total for modules and submodules.">96 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/stretched_grid.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/stretched_grid.f90.html'>stretched_grid.f90</a></li>
+    
+  
+     <li class="active">stretched_grid</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#variable-y_params">y_params</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#variable-z_params">z_params</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#variable-symm_center">SYMM_CENTER</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-0">Derived Types</a></h3></div>
+  <div id="types-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#type-str_params">str_params</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-0">Functions</a></h3></div>
+  <div id="funcs-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-invert_stretched_grid">invert_stretched_grid</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-invert_uniform_grid">invert_uniform_grid</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-0">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-0" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-map2dy_part_sind">map2dy_part_sind</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-map2dz_part_sind">map2dz_part_sind</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-map3d_part_sind">map3d_part_sind</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/common_param.html'>common_param</a></li>
+    
+    <li><a href='../module/grid_param.html'>grid_param</a></li>
+    
+    <li><a href='../module/mpi_var.html'>mpi_var</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~stretched_grid~~UsesGraph Pages: 1 -->
+<svg id="modulestretched_gridUsesGraph" width="454pt" height="127pt"
+ viewBox="0.00 0.00 454.00 127.47" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~stretched_grid~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 123.4657)">
+<title>module~~stretched_grid~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-123.4657 450,-123.4657 450,4 -4,4"/>
+<!-- module~stretched_grid -->
+<g id="module~~stretched_grid~~UsesGraph_node1" class="node">
+<title>module~stretched_grid</title>
+<polygon fill="none" stroke="#000000" points="446,-64 357,-64 357,-40 446,-40 446,-64"/>
+<text text-anchor="middle" x="401.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">stretched_grid</text>
+</g>
+<!-- module~grid_param -->
+<g id="module~~stretched_grid~~UsesGraph_node2" class="node">
+<title>module~grid_param</title>
+<g id="a_module~~stretched_grid~~UsesGraph_node2"><a xlink:href=".././module/grid_param.html" xlink:title="grid_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="308,-106 234,-106 234,-82 308,-82 308,-106"/>
+<text text-anchor="middle" x="271" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_param</text>
+</a>
+</g>
+</g>
+<!-- module~stretched_grid&#45;&gt;module~grid_param -->
+<g id="module~~stretched_grid~~UsesGraph_edge1" class="edge">
+<title>module~stretched_grid&#45;&gt;module~grid_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M364.1039,-64.0355C349.7701,-68.6487 333.2285,-73.9724 318.1009,-78.8411"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="316.8484,-75.5673 308.4015,-81.9627 318.993,-82.2307 316.8484,-75.5673"/>
+</g>
+<!-- module~mpi_var -->
+<g id="module~~stretched_grid~~UsesGraph_node3" class="node">
+<title>module~mpi_var</title>
+<g id="a_module~~stretched_grid~~UsesGraph_node3"><a xlink:href=".././module/mpi_var.html" xlink:title="mpi_var">
+<polygon fill="#337ab7" stroke="#337ab7" points="180,-64 125,-64 125,-40 180,-40 180,-64"/>
+<text text-anchor="middle" x="152.5" y="-49.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_var</text>
+</a>
+</g>
+</g>
+<!-- module~stretched_grid&#45;&gt;module~mpi_var -->
+<g id="module~~stretched_grid~~UsesGraph_edge2" class="edge">
+<title>module~stretched_grid&#45;&gt;module~mpi_var</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M356.9838,-52C309.4562,-52 234.9602,-52 190.2175,-52"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="190.0595,-48.5001 180.0595,-52 190.0594,-55.5001 190.0595,-48.5001"/>
+</g>
+<!-- module~common_param -->
+<g id="module~~stretched_grid~~UsesGraph_node4" class="node">
+<title>module~common_param</title>
+<g id="a_module~~stretched_grid~~UsesGraph_node4"><a xlink:href=".././module/common_param.html" xlink:title="common_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="321,-24 221,-24 221,0 321,0 321,-24"/>
+<text text-anchor="middle" x="271" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">common_param</text>
+</a>
+</g>
+</g>
+<!-- module~stretched_grid&#45;&gt;module~common_param -->
+<g id="module~~stretched_grid~~UsesGraph_edge3" class="edge">
+<title>module~stretched_grid&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M362.3457,-39.9987C349.1755,-35.9618 334.3071,-31.4045 320.4502,-27.1571"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="321.1644,-23.7154 310.5777,-24.1311 319.1129,-30.4081 321.1644,-23.7154"/>
+</g>
+<!-- module~precision_def -->
+<g id="module~~stretched_grid~~UsesGraph_node5" class="node">
+<title>module~precision_def</title>
+<g id="a_module~~stretched_grid~~UsesGraph_node5"><a xlink:href=".././module/precision_def.html" xlink:title="precision_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-85 0,-85 0,-61 84,-61 84,-85"/>
+<text text-anchor="middle" x="42" y="-70.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def</text>
+</a>
+</g>
+</g>
+<!-- module~grid_param&#45;&gt;module~precision_def -->
+<g id="module~~stretched_grid~~UsesGraph_edge4" class="edge">
+<title>module~grid_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M237.311,-106.0004C206.4414,-115.2784 159.6516,-124.9969 120,-115 101.1043,-110.2361 81.806,-99.8995 67.1323,-90.6734"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="68.9261,-87.6647 58.6384,-85.1321 65.1013,-93.5275 68.9261,-87.6647"/>
+</g>
+<!-- module~struct_def -->
+<g id="module~~stretched_grid~~UsesGraph_node6" class="node">
+<title>module~struct_def</title>
+<g id="a_module~~stretched_grid~~UsesGraph_node6"><a xlink:href=".././module/struct_def.html" xlink:title="struct_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="185,-106 120,-106 120,-82 185,-82 185,-106"/>
+<text text-anchor="middle" x="152.5" y="-91.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">struct_def</text>
+</a>
+</g>
+</g>
+<!-- module~grid_param&#45;&gt;module~struct_def -->
+<g id="module~~stretched_grid~~UsesGraph_edge5" class="edge">
+<title>module~grid_param&#45;&gt;module~struct_def</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M233.831,-94C221.6346,-94 207.9816,-94 195.3966,-94"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="195.1318,-90.5001 185.1318,-94 195.1317,-97.5001 195.1318,-90.5001"/>
+</g>
+<!-- module~mpi_var&#45;&gt;module~precision_def -->
+<g id="module~~stretched_grid~~UsesGraph_edge6" class="edge">
+<title>module~mpi_var&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M124.9012,-57.245C115.6002,-59.0126 104.8906,-61.0479 94.324,-63.0561"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="93.4584,-59.6578 84.2878,-64.9634 94.7654,-66.5348 93.4584,-59.6578"/>
+</g>
+<!-- module~common_param&#45;&gt;module~precision_def -->
+<g id="module~~stretched_grid~~UsesGraph_edge7" class="edge">
+<title>module~common_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M220.7002,-13.6975C190.8482,-15.8366 152.5901,-20.5764 120,-31 101.8032,-36.82 82.9007,-46.8808 68.2618,-55.6964"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="66.3992,-52.7331 59.7424,-60.9755 70.0863,-58.6833 66.3992,-52.7331"/>
+</g>
+<!-- module~struct_def&#45;&gt;module~precision_def -->
+<g id="module~~stretched_grid~~UsesGraph_edge8" class="edge">
+<title>module~struct_def&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M119.944,-87.8129C111.8033,-86.2658 102.8669,-84.5675 94.0402,-82.89"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="94.6471,-79.4428 84.1694,-81.0141 93.3401,-86.3197 94.6471,-79.4428"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~stretched_grid~~UsedByGraph Pages: 1 -->
+<svg id="modulestretched_gridUsedByGraph" width="641pt" height="133pt"
+ viewBox="0.00 0.00 641.00 132.56" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~stretched_grid~~UsedByGraph" class="graph" transform="scale(.839 .839) rotate(0) translate(4 154)">
+<title>module~~stretched_grid~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-154 760,-154 760,4 -4,4"/>
+<!-- module~stretched_grid -->
+<g id="module~~stretched_grid~~UsedByGraph_node1" class="node">
+<title>module~stretched_grid</title>
+<polygon fill="none" stroke="#000000" points="89,-87 0,-87 0,-63 89,-63 89,-87"/>
+<text text-anchor="middle" x="44.5" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">stretched_grid</text>
+</g>
+<!-- module~grid_part_lib -->
+<g id="module~~stretched_grid~~UsedByGraph_node2" class="node">
+<title>module~grid_part_lib</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node2"><a xlink:href=".././module/grid_part_lib.html" xlink:title="grid_part_lib">
+<polygon fill="#337ab7" stroke="#337ab7" points="204,-87 125,-87 125,-63 204,-63 204,-87"/>
+<text text-anchor="middle" x="164.5" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_lib</text>
+</a>
+</g>
+</g>
+<!-- module~grid_part_lib&#45;&gt;module~stretched_grid -->
+<g id="module~~stretched_grid~~UsedByGraph_edge1" class="edge">
+<title>module~grid_part_lib&#45;&gt;module~stretched_grid</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M124.8749,-75C116.6316,-75 107.8059,-75 99.1312,-75"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="99.061,-71.5001 89.061,-75 99.061,-78.5001 99.061,-71.5001"/>
+</g>
+<!-- module~grid_part_util -->
+<g id="module~~stretched_grid~~UsedByGraph_node3" class="node">
+<title>module~grid_part_util</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node3"><a xlink:href=".././module/grid_part_util.html" xlink:title="grid_part_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="483.5,-108 401.5,-108 401.5,-84 483.5,-84 483.5,-108"/>
+<text text-anchor="middle" x="442.5" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_util</text>
+</a>
+</g>
+</g>
+<!-- module~grid_part_util&#45;&gt;module~grid_part_lib -->
+<g id="module~~stretched_grid~~UsedByGraph_edge2" class="edge">
+<title>module~grid_part_util&#45;&gt;module~grid_part_lib</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M401.4801,-92.9014C351.7799,-89.147 268.0765,-82.8241 214.607,-78.7851"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="214.5705,-75.2724 204.3352,-78.0091 214.0432,-82.2525 214.5705,-75.2724"/>
+</g>
+<!-- module~grid_part_connect -->
+<g id="module~~stretched_grid~~UsedByGraph_node4" class="node">
+<title>module~grid_part_connect</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node4"><a xlink:href=".././module/grid_part_connect.html" xlink:title="grid_part_connect">
+<polygon fill="#337ab7" stroke="#337ab7" points="349,-67 240,-67 240,-43 349,-43 349,-67"/>
+<text text-anchor="middle" x="294.5" y="-52.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_connect</text>
+</a>
+</g>
+</g>
+<!-- module~grid_part_connect&#45;&gt;module~grid_part_lib -->
+<g id="module~~stretched_grid~~UsedByGraph_edge3" class="edge">
+<title>module~grid_part_connect&#45;&gt;module~grid_part_lib</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M239.7451,-63.4238C231.2599,-64.7292 222.5358,-66.0714 214.1708,-67.3583"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="213.5373,-63.9145 204.1858,-68.8945 214.6017,-70.8331 213.5373,-63.9145"/>
+</g>
+<!-- module~curr_and_fields_util -->
+<g id="module~~stretched_grid~~UsedByGraph_node5" class="node">
+<title>module~curr_and_fields_util</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node5"><a xlink:href=".././module/curr_and_fields_util.html" xlink:title="curr_and_fields_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="500,-66 385,-66 385,-42 500,-42 500,-66"/>
+<text text-anchor="middle" x="442.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">curr_and_fields_util</text>
+</a>
+</g>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~grid_part_connect -->
+<g id="module~~stretched_grid~~UsedByGraph_edge6" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~grid_part_connect</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M384.8555,-54.3895C376.5464,-54.4456 367.9476,-54.5037 359.5073,-54.5608"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="359.2967,-51.062 349.3206,-54.6296 359.344,-58.0618 359.2967,-51.062"/>
+</g>
+<!-- module~pic_out_util -->
+<g id="module~~stretched_grid~~UsedByGraph_node6" class="node">
+<title>module~pic_out_util</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node6"><a xlink:href=".././module/pic_out_util.html" xlink:title="pic_out_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="637.5,-150 564.5,-150 564.5,-126 637.5,-126 637.5,-150"/>
+<text text-anchor="middle" x="601" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out_util</text>
+</a>
+</g>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~grid_part_util -->
+<g id="module~~stretched_grid~~UsedByGraph_edge4" class="edge">
+<title>module~pic_out_util&#45;&gt;module~grid_part_util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M564.2385,-128.2588C543.2078,-122.686 516.5095,-115.6113 493.4776,-109.5083"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="494.0867,-106.0489 483.5238,-106.8707 492.2937,-112.8154 494.0867,-106.0489"/>
+</g>
+<!-- module~init_beam_part_distrib -->
+<g id="module~~stretched_grid~~UsedByGraph_node7" class="node">
+<title>module~init_beam_part_distrib</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node7"><a xlink:href=".././module/init_beam_part_distrib.html" xlink:title="init_beam_part_distrib">
+<polygon fill="#337ab7" stroke="#337ab7" points="666,-108 536,-108 536,-84 666,-84 666,-108"/>
+<text text-anchor="middle" x="601" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_beam_part_distrib</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~grid_part_util -->
+<g id="module~~stretched_grid~~UsedByGraph_edge5" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~grid_part_util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M535.6169,-96C521.7558,-96 507.3105,-96 494.049,-96"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="493.7012,-92.5001 483.7012,-96 493.7012,-99.5001 493.7012,-92.5001"/>
+</g>
+<!-- module~pic_evolve -->
+<g id="module~~stretched_grid~~UsedByGraph_node8" class="node">
+<title>module~pic_evolve</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node8"><a xlink:href=".././module/pic_evolve.html" xlink:title="pic_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="635.5,-66 566.5,-66 566.5,-42 635.5,-42 635.5,-66"/>
+<text text-anchor="middle" x="601" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_evolve</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~curr_and_fields_util -->
+<g id="module~~stretched_grid~~UsedByGraph_edge7" class="edge">
+<title>module~pic_evolve&#45;&gt;module~curr_and_fields_util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M566.2165,-54C549.8407,-54 529.7196,-54 510.4997,-54"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="510.2512,-50.5001 500.2511,-54 510.2511,-57.5001 510.2512,-50.5001"/>
+</g>
+<!-- module~env_evolve -->
+<g id="module~~stretched_grid~~UsedByGraph_node9" class="node">
+<title>module~env_evolve</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node9"><a xlink:href=".././module/env_evolve.html" xlink:title="env_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="637.5,-24 564.5,-24 564.5,0 637.5,0 637.5,-24"/>
+<text text-anchor="middle" x="601" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">env_evolve</text>
+</a>
+</g>
+</g>
+<!-- module~env_evolve&#45;&gt;module~curr_and_fields_util -->
+<g id="module~~stretched_grid~~UsedByGraph_edge8" class="edge">
+<title>module~env_evolve&#45;&gt;module~curr_and_fields_util</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M564.2385,-21.7412C544.4917,-26.9738 519.7481,-33.5305 497.7346,-39.3637"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="496.61,-36.0408 487.8402,-41.9856 498.4031,-42.8073 496.61,-36.0408"/>
+</g>
+<!-- program~aladyn -->
+<g id="module~~stretched_grid~~UsedByGraph_node10" class="node">
+<title>program~aladyn</title>
+<g id="a_module~~stretched_grid~~UsedByGraph_node10"><a xlink:href=".././program/aladyn.html" xlink:title="aladyn">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="756,-87 702,-87 702,-63 756,-63 756,-87"/>
+<text text-anchor="middle" x="729" y="-72.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aladyn</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_out_util -->
+<g id="module~~stretched_grid~~UsedByGraph_edge9" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_out_util</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M713.4175,-87.1626C701.0932,-96.3325 683.161,-108.7051 666,-117 660.1843,-119.8111 653.9008,-122.3766 647.6118,-124.6739"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="646.1043,-121.4914 637.7912,-128.0597 648.3859,-128.1091 646.1043,-121.4914"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~init_beam_part_distrib -->
+<g id="module~~stretched_grid~~UsedByGraph_edge10" class="edge">
+<title>program~aladyn&#45;&gt;module~init_beam_part_distrib</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M701.8545,-79.4536C694.094,-80.7268 685.2368,-82.1799 676.067,-83.6843"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="675.3326,-80.2579 666.0312,-85.3308 676.466,-87.1656 675.3326,-80.2579"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_evolve -->
+<g id="module~~stretched_grid~~UsedByGraph_edge11" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_evolve</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M701.8545,-70.5464C685.6318,-67.8849 664.6166,-64.4371 645.9716,-61.3781"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="646.3373,-57.8914 635.9026,-59.7262 645.204,-64.7991 646.3373,-57.8914"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~env_evolve -->
+<g id="module~~stretched_grid~~UsedByGraph_edge12" class="edge">
+<title>program~aladyn&#45;&gt;module~env_evolve</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M713.4175,-62.8374C701.0932,-53.6675 683.161,-41.2949 666,-33 660.1843,-30.1889 653.9008,-27.6234 647.6118,-25.3261"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="648.3859,-21.8909 637.7912,-21.9403 646.1043,-28.5086 648.3859,-21.8909"/>
+</g>
+</g>
+</svg>
+</div><script>var panmodulestretched_gridUsedByGraph = svgPanZoom('#modulestretched_gridUsedByGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#variable-y_params">y_params</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#variable-z_params">z_params</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#variable-symm_center">SYMM_CENTER</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#types-1">Derived Types</a></h3></div>
+  <div id="types-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#type-str_params">str_params</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#funcs-1">Functions</a></h3></div>
+  <div id="funcs-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-invert_stretched_grid">invert_stretched_grid</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-invert_uniform_grid">invert_uniform_grid</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#subs-1">Subroutines</a></h3></div>
+  <div class="list-group">
+    <div id="subs-1" class="panel-collapse collapse">
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-map2dy_part_sind">map2dy_part_sind</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-map2dz_part_sind">map2dz_part_sind</a>
+      
+      <a class="list-group-item" href="../module/stretched_grid.html#proc-map3d_part_sind">map3d_part_sind</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-y_params"></span>type(<a href='../type/str_params.html'>str_params</a>),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>y_params</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-z_params"></span>type(<a href='../type/str_params.html'>str_params</a>),</td>
+  
+  <td>private</td>
+  <td></td><td>::</td>
+  <td><strong>z_params</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-symm_center"></span>real(kind=dp),</td>
+  
+  <td>private,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>SYMM_CENTER</strong></td><td> =</td><td>zero_dp</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <section>
+     <h2>Derived Types</h2>
+   
+     
+<div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="type-str_params"></span><h3>type, private :: <a href='../type/str_params.html'>str_params</a>
+    
+  </h3></div>
+  <div class="panel-body">
+    
+     
+     <h4>Components</h4>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-const"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>const</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-smin~2"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>smin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-smax~2"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>smax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nl_stretch"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nl_stretch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xs"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xs</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dli_inv"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dli_inv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ratio"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ratio</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dl_inv"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dl_inv</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-init_cell"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>init_cell</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+     
+     
+          
+     
+  </div>
+</div>
+
+     
+    </section>
+  <br>
+    
+    
+     
+    <section>
+    <h2>Functions</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-invert_stretched_grid"></span><h3>
+private pure function <a href='../proc/invert_stretched_grid.html'>invert_stretched_grid</a>(yp_in, params) result(stretched)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>yp_in</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/str_params.html'>str_params</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-invert_uniform_grid"></span><h3>
+private pure function <a href='../proc/invert_uniform_grid.html'>invert_uniform_grid</a>(yp_in, params) result(uniform)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>yp_in</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>type(<a href='../type/str_params.html'>str_params</a>),</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>params</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  
+  
+  
+  
+     <h4>Return Value <small>real(kind=dp)
+  </small></h4>
+  
+    
+
+  </div>
+  </div>
+
+    
+    </section>
+    <br>
+    
+
+    
+    <section>
+    <h2>Subroutines</h2>
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-map2dy_part_sind"></span><h3>
+public subroutine <a href='../proc/map2dy_part_sind.html'>map2dy_part_sind</a>(np, ic1, pt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>np</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ic1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pt</strong>(:,:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-map2dz_part_sind"></span><h3>
+private subroutine <a href='../proc/map2dz_part_sind.html'>map2dz_part_sind</a>(np, ic1, pt)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>np</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ic1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pt</strong>(:,:)</td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    
+  <div class="panel panel-default">
+  <div class="panel-heading codesum"><span class="anchor" id="proc-map3d_part_sind"></span><h3>
+public subroutine <a href='../proc/map3d_part_sind.html'>map3d_part_sind</a>(pt, np, ic1, ic2)
+    
+    
+   
+</h3></div>
+  <div class="panel-body">
+       
+    
+    
+    <h4>Arguments</h4>
+    
+      
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>real(kind=dp),</td>
+  <td>intent(inout)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>pt</strong>(:,:)</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>np</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ic1</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" ></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>ic2</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+      
+    
+    
+
+  </div>
+  </div>
+
+    
+    </section>    
+    <br>
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-08-08 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

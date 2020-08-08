@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>lp_pulse &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>lp_pulse
+      <small>Subroutine</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.0% of total for procedures.">54 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/init_laser_field.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/init_laser_field.f90.html'>init_laser_field.f90</a></li>
+    
+     <li><a href='../module/init_laser_field.html'>init_laser_field</a></li>
+    
+  
+     <li class="active">lp_pulse</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<em>None</em>
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    <h2>
+public subroutine lp_pulse(lp_mod, part_in)
+    
+    
+   
+</h2>
+    
+  
+
+
+    
+
+    <h3>Arguments</h3>
+    
+      
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th>
+<th>Intent</th><th>Optional</th>
+<th>Attributes</th><th></th><th>Name</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_mod"></span>integer,</td>
+  <td>intent(in)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>lp_mod</strong></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-part_in"></span>real(kind=dp),</td>
+  <td>intent(out)</td>
+  <td></td>
+  
+  <td></td><td>::</td>
+  <td><strong>part_in</strong></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    
+    
+    
+    <br>
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Calls</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~lp_pulse~~CallsGraph Pages: 1 -->
+<svg id="proclp_pulseCallsGraph" width="399pt" height="557pt"
+ viewBox="0.00 0.00 399.00 557.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~lp_pulse~~CallsGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 553)">
+<title>proc~~lp_pulse~~CallsGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-553 395,-553 395,4 -4,4"/>
+<!-- proc~lp_pulse -->
+<g id="proc~~lp_pulse~~CallsGraph_node1" class="node">
+<title>proc~lp_pulse</title>
+<polygon fill="none" stroke="#000000" points="56,-213 0,-213 0,-189 56,-189 56,-213"/>
+<text text-anchor="middle" x="28" y="-198.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">lp_pulse</text>
+</g>
+<!-- xf_loc -->
+<g id="proc~~lp_pulse~~CallsGraph_node2" class="node">
+<title>xf_loc</title>
+<polygon fill="#777777" stroke="#777777" points="172,-402 118,-402 118,-378 172,-378 172,-402"/>
+<text text-anchor="middle" x="145" y="-387.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">xf_loc</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;xf_loc -->
+<g id="proc~~lp_pulse~~CallsGraph_edge1" class="edge">
+<title>proc~lp_pulse&#45;&gt;xf_loc</title>
+<path fill="none" stroke="#ff0000" d="M29.3134,-213.3693C33.1908,-243.9071 47.2773,-323.6799 92,-369 96.6078,-373.6694 102.3824,-377.3286 108.4108,-380.1877"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.3789,-383.5457 117.9616,-384.0522 110.0045,-377.0568 107.3789,-383.5457"/>
+</g>
+<!-- proc~init_lp_inc0_fields -->
+<g id="proc~~lp_pulse~~CallsGraph_node3" class="node">
+<title>proc~init_lp_inc0_fields</title>
+<g id="a_proc~~lp_pulse~~CallsGraph_node3"><a xlink:href=".././proc/init_lp_inc0_fields.html" xlink:title="init_lp_inc0_fields">
+<polygon fill="#d9534f" stroke="#d9534f" points="198,-360 92,-360 92,-336 198,-336 198,-360"/>
+<text text-anchor="middle" x="145" y="-345.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_lp_inc0_fields</text>
+</a>
+</g>
+</g>
+<!-- proc~lp_pulse&#45;&gt;proc~init_lp_inc0_fields -->
+<g id="proc~~lp_pulse~~CallsGraph_edge3" class="edge">
+<title>proc~lp_pulse&#45;&gt;proc~init_lp_inc0_fields</title>
+<path fill="none" stroke="#ff0000" d="M31.0416,-213.1818C37.8234,-237.9576 56.4566,-294.6086 92,-327 93.4539,-328.325 95.0015,-329.5708 96.6196,-330.7418"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="94.8331,-333.7519 105.1882,-335.9928 98.4907,-327.7835 94.8331,-333.7519"/>
+</g>
+<!-- xc_loc -->
+<g id="proc~~lp_pulse~~CallsGraph_node4" class="node">
+<title>xc_loc</title>
+<polygon fill="#777777" stroke="#777777" points="172,-318 118,-318 118,-294 172,-294 172,-318"/>
+<text text-anchor="middle" x="145" y="-303.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">xc_loc</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;xc_loc -->
+<g id="proc~~lp_pulse~~CallsGraph_edge2" class="edge">
+<title>proc~lp_pulse&#45;&gt;xc_loc</title>
+<path fill="none" stroke="#ff0000" d="M34.4507,-213.244C44.51,-231.2653 65.5521,-264.9574 92,-285 96.9018,-288.7146 102.5467,-291.8633 108.2851,-294.5018"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.3369,-297.8965 117.9162,-298.4705 110.0039,-291.4245 107.3369,-297.8965"/>
+</g>
+<!-- lp_delay -->
+<g id="proc~~lp_pulse~~CallsGraph_node5" class="node">
+<title>lp_delay</title>
+<polygon fill="#777777" stroke="#777777" points="173.5,-276 116.5,-276 116.5,-252 173.5,-252 173.5,-276"/>
+<text text-anchor="middle" x="145" y="-261.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">lp_delay</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;lp_delay -->
+<g id="proc~~lp_pulse~~CallsGraph_edge4" class="edge">
+<title>proc~lp_pulse&#45;&gt;lp_delay</title>
+<path fill="none" stroke="#ff0000" d="M44.2788,-213.0181C56.8892,-221.9931 75.0162,-234.1796 92,-243 96.7101,-245.4462 101.7725,-247.789 106.833,-249.9644"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="105.8891,-253.3605 116.4689,-253.9247 108.5501,-246.886 105.8891,-253.3605"/>
+</g>
+<!-- lp_end -->
+<g id="proc~~lp_pulse~~CallsGraph_node6" class="node">
+<title>lp_end</title>
+<polygon fill="#777777" stroke="#777777" points="172,-234 118,-234 118,-210 172,-210 172,-234"/>
+<text text-anchor="middle" x="145" y="-219.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">lp_end</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;lp_end -->
+<g id="proc~~lp_pulse~~CallsGraph_edge5" class="edge">
+<title>proc~lp_pulse&#45;&gt;lp_end</title>
+<path fill="none" stroke="#ff0000" d="M56.0244,-206.03C71.4762,-208.8034 90.8636,-212.2832 107.5936,-215.286"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="107.1469,-218.7617 117.6079,-217.0835 108.3836,-211.8718 107.1469,-218.7617"/>
+</g>
+<!-- lpx -->
+<g id="proc~~lp_pulse~~CallsGraph_node7" class="node">
+<title>lpx</title>
+<polygon fill="#777777" stroke="#777777" points="172,-192 118,-192 118,-168 172,-168 172,-192"/>
+<text text-anchor="middle" x="145" y="-177.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">lpx</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;lpx -->
+<g id="proc~~lp_pulse~~CallsGraph_edge6" class="edge">
+<title>proc~lp_pulse&#45;&gt;lpx</title>
+<path fill="none" stroke="#ff0000" d="M56.0244,-195.97C71.4762,-193.1966 90.8636,-189.7168 107.5936,-186.714"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="108.3836,-190.1282 117.6079,-184.9165 107.1469,-183.2383 108.3836,-190.1282"/>
+</g>
+<!-- loc_xgrid -->
+<g id="proc~~lp_pulse~~CallsGraph_node8" class="node">
+<title>loc_xgrid</title>
+<polygon fill="#777777" stroke="#777777" points="175.5,-150 114.5,-150 114.5,-126 175.5,-126 175.5,-150"/>
+<text text-anchor="middle" x="145" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_xgrid</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;loc_xgrid -->
+<g id="proc~~lp_pulse~~CallsGraph_edge7" class="edge">
+<title>proc~lp_pulse&#45;&gt;loc_xgrid</title>
+<path fill="none" stroke="#ff0000" d="M44.2788,-188.9819C56.8892,-180.0069 75.0162,-167.8204 92,-159 96.0623,-156.8902 100.3868,-154.8574 104.7459,-152.9425"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="106.3875,-156.0494 114.2562,-148.9548 103.6807,-149.594 106.3875,-156.0494"/>
+</g>
+<!-- lp_in -->
+<g id="proc~~lp_pulse~~CallsGraph_node9" class="node">
+<title>lp_in</title>
+<polygon fill="#777777" stroke="#777777" points="172,-108 118,-108 118,-84 172,-84 172,-108"/>
+<text text-anchor="middle" x="145" y="-93.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">lp_in</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;lp_in -->
+<g id="proc~~lp_pulse~~CallsGraph_edge8" class="edge">
+<title>proc~lp_pulse&#45;&gt;lp_in</title>
+<path fill="none" stroke="#ff0000" d="M34.4507,-188.756C44.51,-170.7347 65.5521,-137.0426 92,-117 96.9018,-113.2854 102.5467,-110.1367 108.2851,-107.4982"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.0039,-110.5755 117.9162,-103.5295 107.3369,-104.1035 110.0039,-110.5755"/>
+</g>
+<!-- y0_cent -->
+<g id="proc~~lp_pulse~~CallsGraph_node10" class="node">
+<title>y0_cent</title>
+<polygon fill="#777777" stroke="#777777" points="172,-66 118,-66 118,-42 172,-42 172,-66"/>
+<text text-anchor="middle" x="145" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">y0_cent</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;y0_cent -->
+<g id="proc~~lp_pulse~~CallsGraph_edge9" class="edge">
+<title>proc~lp_pulse&#45;&gt;y0_cent</title>
+<path fill="none" stroke="#ff0000" d="M31.0416,-188.8182C37.8234,-164.0424 56.4566,-107.3914 92,-75 96.7527,-70.6688 102.5066,-67.1834 108.4474,-64.3936"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="109.889,-67.5854 117.8199,-60.5603 107.2391,-61.1064 109.889,-67.5854"/>
+</g>
+<!-- z0_cent -->
+<g id="proc~~lp_pulse~~CallsGraph_node11" class="node">
+<title>z0_cent</title>
+<polygon fill="#777777" stroke="#777777" points="172,-24 118,-24 118,0 172,0 172,-24"/>
+<text text-anchor="middle" x="145" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">z0_cent</text>
+</g>
+<!-- proc~lp_pulse&#45;&gt;z0_cent -->
+<g id="proc~~lp_pulse~~CallsGraph_edge10" class="edge">
+<title>proc~lp_pulse&#45;&gt;z0_cent</title>
+<path fill="none" stroke="#ff0000" d="M29.3134,-188.6307C33.1908,-158.0929 47.2773,-78.3201 92,-33 96.6078,-28.3306 102.3824,-24.6714 108.4108,-21.8123"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.0045,-24.9432 117.9616,-17.9478 107.3789,-18.4543 110.0045,-24.9432"/>
+</g>
+<!-- proc~get_laser_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_node12" class="node">
+<title>proc~get_laser_fields_lp</title>
+<g id="a_proc~~lp_pulse~~CallsGraph_node12"><a xlink:href=".././proc/get_laser_fields_lp.html" xlink:title="get_laser_fields_lp">
+<polygon fill="#d9534f" stroke="#d9534f" points="367.5,-549 257.5,-549 257.5,-525 367.5,-525 367.5,-549"/>
+<text text-anchor="middle" x="312.5" y="-534.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">get_laser_fields_lp</text>
+</a>
+</g>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;proc~get_laser_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_edge11" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;proc~get_laser_fields_lp</title>
+<path fill="none" stroke="#ff9900" d="M187.1854,-360.1243C191.2232,-362.5662 194.9437,-365.4932 198,-369 242.1938,-419.7085 186.9446,-467.9351 234,-516 238.0094,-520.0954 242.7231,-523.4198 247.8167,-526.1148"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="246.7638,-529.476 257.3252,-530.3167 249.5932,-523.0733 246.7638,-529.476"/>
+</g>
+<!-- loc_yg -->
+<g id="proc~~lp_pulse~~CallsGraph_node13" class="node">
+<title>loc_yg</title>
+<polygon fill="#777777" stroke="#777777" points="339.5,-507 285.5,-507 285.5,-483 339.5,-483 339.5,-507"/>
+<text text-anchor="middle" x="312.5" y="-492.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_yg</text>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;loc_yg -->
+<g id="proc~~lp_pulse~~CallsGraph_edge12" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;loc_yg</title>
+<path fill="none" stroke="#ff9900" d="M186.3515,-360.104C190.6442,-362.5562 194.6522,-365.4912 198,-369 232.0555,-404.6932 197.9352,-440.3383 234,-474 245.1207,-484.3797 260.8001,-489.7411 275.225,-492.4702"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="275.0102,-495.9779 285.4237,-494.0263 276.0661,-489.0579 275.0102,-495.9779"/>
+</g>
+<!-- loc_ygrid -->
+<g id="proc~~lp_pulse~~CallsGraph_node14" class="node">
+<title>loc_ygrid</title>
+<polygon fill="#777777" stroke="#777777" points="343,-465 282,-465 282,-441 343,-441 343,-465"/>
+<text text-anchor="middle" x="312.5" y="-450.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_ygrid</text>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;loc_ygrid -->
+<g id="proc~~lp_pulse~~CallsGraph_edge13" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;loc_ygrid</title>
+<path fill="none" stroke="#ff9900" d="M184.3786,-360.0502C189.27,-362.5394 193.9624,-365.4982 198,-369 222.3627,-390.1296 208.4549,-412.3163 234,-432 244.7577,-440.2893 258.525,-445.3139 271.5173,-448.357"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="271.2057,-451.864 281.6984,-450.3972 272.5811,-445.0005 271.2057,-451.864"/>
+</g>
+<!-- proc~get_plane_wave_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_node15" class="node">
+<title>proc~get_plane_wave_lp</title>
+<g id="a_proc~~lp_pulse~~CallsGraph_node15"><a xlink:href=".././proc/get_plane_wave_lp.html" xlink:title="get_plane_wave_lp">
+<polygon fill="#d9534f" stroke="#d9534f" points="369,-423 256,-423 256,-399 369,-399 369,-423"/>
+<text text-anchor="middle" x="312.5" y="-408.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">get_plane_wave_lp</text>
+</a>
+</g>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;proc~get_plane_wave_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_edge14" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;proc~get_plane_wave_lp</title>
+<path fill="none" stroke="#ff9900" d="M177.5684,-360.0068C184.4011,-362.7746 191.5026,-365.84 198,-369 214.6577,-377.1013 216.9012,-382.8766 234,-390 239.0463,-392.1023 244.3636,-394.0493 249.7541,-395.8399"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="248.9043,-399.2414 259.4934,-398.8937 250.9987,-392.562 248.9043,-399.2414"/>
+</g>
+<!-- loc_zgrid -->
+<g id="proc~~lp_pulse~~CallsGraph_node16" class="node">
+<title>loc_zgrid</title>
+<polygon fill="#777777" stroke="#777777" points="342.5,-381 282.5,-381 282.5,-357 342.5,-357 342.5,-381"/>
+<text text-anchor="middle" x="312.5" y="-366.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_zgrid</text>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;loc_zgrid -->
+<g id="proc~~lp_pulse~~CallsGraph_edge15" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;loc_zgrid</title>
+<path fill="none" stroke="#ff9900" d="M198.4586,-354.7023C222.4278,-357.7074 250.2228,-361.1921 272.3714,-363.9689"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="272.0742,-367.459 282.432,-365.2303 272.9451,-360.5134 272.0742,-367.459"/>
+</g>
+<!-- proc~get_2dlaser_gprof_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_node17" class="node">
+<title>proc~get_2dlaser_gprof_fields_lp</title>
+<g id="a_proc~~lp_pulse~~CallsGraph_node17"><a xlink:href=".././proc/get_2dlaser_gprof_fields_lp.html" xlink:title="get_2dlaser_gprof_fields_lp">
+<polygon fill="#d9534f" stroke="#d9534f" points="391,-339 234,-339 234,-315 391,-315 391,-339"/>
+<text text-anchor="middle" x="312.5" y="-324.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">get_2dlaser_gprof_fields_lp</text>
+</a>
+</g>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;proc~get_2dlaser_gprof_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_edge16" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;proc~get_2dlaser_gprof_fields_lp</title>
+<path fill="none" stroke="#ff9900" d="M198.4586,-341.2977C206.5787,-340.2797 215.1379,-339.2066 223.7679,-338.1246"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="224.4224,-341.5701 233.9093,-336.8532 223.5515,-334.6244 224.4224,-341.5701"/>
+</g>
+<!-- proc~get_2dlaser_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_node18" class="node">
+<title>proc~get_2dlaser_fields_lp</title>
+<g id="a_proc~~lp_pulse~~CallsGraph_node18"><a xlink:href=".././proc/get_2dlaser_fields_lp.html" xlink:title="get_2dlaser_fields_lp">
+<polygon fill="#d9534f" stroke="#d9534f" points="374.5,-297 250.5,-297 250.5,-273 374.5,-273 374.5,-297"/>
+<text text-anchor="middle" x="312.5" y="-282.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">get_2dlaser_fields_lp</text>
+</a>
+</g>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;proc~get_2dlaser_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_edge17" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;proc~get_2dlaser_fields_lp</title>
+<path fill="none" stroke="#ff9900" d="M177.5684,-335.9932C184.4011,-333.2254 191.5026,-330.16 198,-327 214.6577,-318.8987 216.9012,-313.1234 234,-306 239.0463,-303.8977 244.3636,-301.9507 249.7541,-300.1601"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="250.9987,-303.438 259.4934,-297.1063 248.9043,-296.7586 250.9987,-303.438"/>
+</g>
+<!-- loc_zg -->
+<g id="proc~~lp_pulse~~CallsGraph_node19" class="node">
+<title>loc_zg</title>
+<polygon fill="#777777" stroke="#777777" points="339.5,-255 285.5,-255 285.5,-231 339.5,-231 339.5,-255"/>
+<text text-anchor="middle" x="312.5" y="-240.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_zg</text>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;loc_zg -->
+<g id="proc~~lp_pulse~~CallsGraph_edge18" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;loc_zg</title>
+<path fill="none" stroke="#ff9900" d="M184.3786,-335.9498C189.27,-333.4606 193.9624,-330.5018 198,-327 222.3627,-305.8704 208.4549,-283.6837 234,-264 245.8699,-254.8536 261.404,-249.682 275.5182,-246.7612"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="276.2308,-250.1897 285.4718,-245.0077 275.0162,-243.2959 276.2308,-250.1897"/>
+</g>
+<!-- loc_xg -->
+<g id="proc~~lp_pulse~~CallsGraph_node20" class="node">
+<title>loc_xg</title>
+<polygon fill="#777777" stroke="#777777" points="339.5,-213 285.5,-213 285.5,-189 339.5,-189 339.5,-213"/>
+<text text-anchor="middle" x="312.5" y="-198.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">loc_xg</text>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;loc_xg -->
+<g id="proc~~lp_pulse~~CallsGraph_edge19" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;loc_xg</title>
+<path fill="none" stroke="#ff9900" d="M186.3515,-335.896C190.6442,-333.4438 194.6522,-330.5088 198,-327 232.0555,-291.3068 197.9352,-255.6617 234,-222 245.1207,-211.6203 260.8001,-206.2589 275.225,-203.5298"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="276.0661,-206.9421 285.4237,-201.9737 275.0102,-200.0221 276.0661,-206.9421"/>
+</g>
+<!-- proc~get_laser_gprof_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_node21" class="node">
+<title>proc~get_laser_gprof_fields_lp</title>
+<g id="a_proc~~lp_pulse~~CallsGraph_node21"><a xlink:href=".././proc/get_laser_gprof_fields_lp.html" xlink:title="get_laser_gprof_fields_lp">
+<polygon fill="#d9534f" stroke="#d9534f" points="384.5,-171 240.5,-171 240.5,-147 384.5,-147 384.5,-171"/>
+<text text-anchor="middle" x="312.5" y="-156.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">get_laser_gprof_fields_lp</text>
+</a>
+</g>
+</g>
+<!-- proc~init_lp_inc0_fields&#45;&gt;proc~get_laser_gprof_fields_lp -->
+<g id="proc~~lp_pulse~~CallsGraph_edge20" class="edge">
+<title>proc~init_lp_inc0_fields&#45;&gt;proc~get_laser_gprof_fields_lp</title>
+<path fill="none" stroke="#ff9900" d="M187.1854,-335.8757C191.2232,-333.4338 194.9437,-330.5068 198,-327 242.1938,-276.2915 186.9446,-228.0649 234,-180 235.0794,-178.8974 236.2099,-177.8507 237.3852,-176.8571"/>
+<polygon fill="#ff9900" stroke="#ff9900" points="239.5238,-179.6327 245.7236,-171.0412 235.5193,-173.8913 239.5238,-179.6327"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="599pt" height="32pt"
+ viewBox="0.00 0.00 598.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 594.5,-28 594.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="147.5,-24 89.5,-24 89.5,0 147.5,0 147.5,-24"/>
+<text text-anchor="middle" x="118.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="227,-24 166,-24 166,0 227,0 227,-24"/>
+<text text-anchor="middle" x="196.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="392,-24 245,-24 245,0 392,0 392,-24"/>
+<text text-anchor="middle" x="318.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="468.5,-24 410.5,-24 410.5,0 468.5,0 468.5,-24"/>
+<text text-anchor="middle" x="439.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="590.5,-24 486.5,-24 486.5,0 590.5,0 590.5,-24"/>
+<text text-anchor="middle" x="538.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+     
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Called by</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: proc~~lp_pulse~~CalledByGraph Pages: 1 -->
+<svg id="proclp_pulseCalledByGraph" width="334pt" height="32pt"
+ viewBox="0.00 0.00 334.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="proc~~lp_pulse~~CalledByGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>proc~~lp_pulse~~CalledByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 330,-28 330,4 -4,4"/>
+<!-- proc~lp_pulse -->
+<g id="proc~~lp_pulse~~CalledByGraph_node1" class="node">
+<title>proc~lp_pulse</title>
+<polygon fill="none" stroke="#000000" points="326,-24 270,-24 270,0 326,0 326,-24"/>
+<text text-anchor="middle" x="298" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">lp_pulse</text>
+</g>
+<!-- proc~init -->
+<g id="proc~~lp_pulse~~CalledByGraph_node2" class="node">
+<title>proc~init</title>
+<g id="a_proc~~lp_pulse~~CalledByGraph_node2"><a xlink:href=".././proc/init.html" xlink:title="init">
+<polygon fill="#d9534f" stroke="#d9534f" points="234,-24 180,-24 180,0 234,0 234,-24"/>
+<text text-anchor="middle" x="207" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init</text>
+</a>
+</g>
+</g>
+<!-- proc~init&#45;&gt;proc~lp_pulse -->
+<g id="proc~~lp_pulse~~CalledByGraph_edge1" class="edge">
+<title>proc~init&#45;&gt;proc~lp_pulse</title>
+<path fill="none" stroke="#ff0000" d="M234.303,-12C242.268,-12 251.1237,-12 259.6375,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="259.77,-15.5001 269.77,-12 259.77,-8.5001 259.77,-15.5001"/>
+</g>
+<!-- proc~start -->
+<g id="proc~~lp_pulse~~CalledByGraph_node3" class="node">
+<title>proc~start</title>
+<g id="a_proc~~lp_pulse~~CalledByGraph_node3"><a xlink:href=".././proc/start.html" xlink:title="Start">
+<polygon fill="#d9534f" stroke="#d9534f" points="144,-24 90,-24 90,0 144,0 144,-24"/>
+<text text-anchor="middle" x="117" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Start</text>
+</a>
+</g>
+</g>
+<!-- proc~start&#45;&gt;proc~init -->
+<g id="proc~~lp_pulse~~CalledByGraph_edge2" class="edge">
+<title>proc~start&#45;&gt;proc~init</title>
+<path fill="none" stroke="#ff0000" d="M144.003,-12C152.0277,-12 160.9665,-12 169.5309,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="169.7051,-15.5001 179.705,-12 169.705,-8.5001 169.7051,-15.5001"/>
+</g>
+<!-- program~aladyn -->
+<g id="proc~~lp_pulse~~CalledByGraph_node4" class="node">
+<title>program~aladyn</title>
+<g id="a_proc~~lp_pulse~~CalledByGraph_node4"><a xlink:href=".././program/aladyn.html" xlink:title="aladyn">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aladyn</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;proc~start -->
+<g id="proc~~lp_pulse~~CalledByGraph_edge3" class="edge">
+<title>program~aladyn&#45;&gt;proc~start</title>
+<path fill="none" stroke="#ff0000" d="M54.003,-12C62.0277,-12 70.9665,-12 79.5309,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="79.7051,-15.5001 89.705,-12 79.705,-8.5001 79.7051,-15.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="599pt" height="32pt"
+ viewBox="0.00 0.00 598.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 594.5,-28 594.5,4 -4,4"/>
+<!-- Subroutine -->
+<g id="node1" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node2" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="147.5,-24 89.5,-24 89.5,0 147.5,0 147.5,-24"/>
+<text text-anchor="middle" x="118.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Interface -->
+<g id="node3" class="node">
+<title>Interface</title>
+<polygon fill="#a7506f" stroke="#a7506f" points="227,-24 166,-24 166,0 227,0 227,-24"/>
+<text text-anchor="middle" x="196.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Interface</text>
+</g>
+<!-- Unknown Procedure Type -->
+<g id="node4" class="node">
+<title>Unknown Procedure Type</title>
+<polygon fill="#777777" stroke="#777777" points="392,-24 245,-24 245,0 392,0 392,-24"/>
+<text text-anchor="middle" x="318.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Unknown Procedure Type</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="468.5,-24 410.5,-24 410.5,0 468.5,0 468.5,-24"/>
+<text text-anchor="middle" x="439.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="590.5,-24 486.5,-24 486.5,0 590.5,0 590.5,-24"/>
+<text text-anchor="middle" x="538.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a procedure to one which it calls. Dashed 
+    arrows point from an interface to procedures which implement that interface.
+    This could include the module procedures in a generic interface or the
+    implementation in a submodule of an interface in a parent module. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+     
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<em>None</em>
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+    
+    
+    
+    
+    </div>
+  </div>
+
+
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-08-08 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

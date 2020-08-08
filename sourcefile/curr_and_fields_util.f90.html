@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>curr_and_fields_util.f90 &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>curr_and_fields_util.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 1.0% of total for source files.">235 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/curr_and_fields_util.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">curr_and_fields_util.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/curr_and_fields_util.html">curr_and_fields_util</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/curr_and_fields_util.f90.html#src">curr_and_fields_util.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~curr_and_fields_util.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefilecurr_and_fields_utilf90EfferentGraph" width="641pt" height="193pt"
+ viewBox="0.00 0.00 641.00 192.88" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph" class="graph" transform="scale(.5979 .5979) rotate(0) translate(4 318.5721)">
+<title>sourcefile~~curr_and_fields_util.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-318.5721 1068,-318.5721 1068,4 -4,4"/>
+<!-- sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~curr_and_fields_util.f90</title>
+<polygon fill="none" stroke="#000000" points="1064,-283.1155 928,-283.1155 928,-259.1155 1064,-259.1155 1064,-283.1155"/>
+<text text-anchor="middle" x="996" y="-268.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">curr_and_fields_util.f90</text>
+</g>
+<!-- sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~pstruct_data.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/pstruct_data.f90.html" xlink:title="pstruct_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="544,-240.1155 445,-240.1155 445,-216.1155 544,-216.1155 544,-240.1155"/>
+<text text-anchor="middle" x="494.5" y="-225.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pstruct_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M961.032,-283.1601C927.3186,-293.8733 874.6187,-308.2742 827.5,-311.1155"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-311.1155C751.0859,-315.7234 734.7255,-287.3095 659.5,-273.1155"/>
+</g>
+<!-- sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~fstruct_data.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node3"><a xlink:href=".././sourcefile/fstruct_data.f90.html" xlink:title="fstruct_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="542.5,-282.1155 446.5,-282.1155 446.5,-258.1155 542.5,-258.1155 542.5,-282.1155"/>
+<text text-anchor="middle" x="494.5" y="-267.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fstruct_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-311.1155C752.9687,-315.6099 734.0207,-315.7815 659.5,-311.1155"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~mpi_field_interface.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node4"><a xlink:href=".././sourcefile/mpi_field_interface.f90.html" xlink:title="mpi_field_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="727,-203.1155 592,-203.1155 592,-179.1155 727,-179.1155 727,-203.1155"/>
+<text text-anchor="middle" x="659.5" y="-188.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_field_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-149.1155C816.096,-145.4654 753.8249,-162.6234 708.413,-176.1051"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="707.2945,-172.7863 698.7157,-179.0037 709.2993,-179.4931 707.2945,-172.7863"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~init_grid_fields.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node5"><a xlink:href=".././sourcefile/init_grid_fields.f90.html" xlink:title="init_grid_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="714,-245.1155 605,-245.1155 605,-221.1155 714,-221.1155 714,-245.1155"/>
+<text text-anchor="middle" x="659.5" y="-230.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_grid_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-149.1155C777.2918,-133.0454 774.9011,-190.1019 727,-212.1155 722.6962,-214.0934 718.1559,-215.9522 713.5483,-217.6829"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="712.3045,-214.4103 704.0502,-221.0524 714.6449,-221.0075 712.3045,-214.4103"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~mpi_curr_interface.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node6"><a xlink:href=".././sourcefile/mpi_curr_interface.f90.html" xlink:title="mpi_curr_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="726,-161.1155 593,-161.1155 593,-137.1155 726,-137.1155 726,-161.1155"/>
+<text text-anchor="middle" x="659.5" y="-146.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_curr_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-149.1155C798.6755,-139.8896 765.6164,-138.1429 736.4913,-139.328"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="736.1686,-135.84 726.3669,-139.8619 736.5373,-142.8303 736.1686,-135.84"/>
+</g>
+<!-- sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~grid_param.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node7"><a xlink:href=".././sourcefile/grid_param.f90.html" xlink:title="grid_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="383.5,-160.1155 289.5,-160.1155 289.5,-136.1155 383.5,-136.1155 383.5,-160.1155"/>
+<text text-anchor="middle" x="336.5" y="-145.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-149.1155C727.4194,-117.0827 696.4914,-116.9902 592,-128.1155 547.9221,-132.8085 538.6575,-145.242 494.5,-149.1155"/>
+</g>
+<!-- sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node8" class="node">
+<title>sourcefile~grid_fields.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node8"><a xlink:href=".././sourcefile/grid_fields.f90.html" xlink:title="grid_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="703.5,-81.1155 615.5,-81.1155 615.5,-57.1155 703.5,-57.1155 703.5,-81.1155"/>
+<text text-anchor="middle" x="659.5" y="-66.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M984.8398,-258.9226C959.8003,-232.592 895.9506,-171.0245 827.5,-149.1155"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M827.5,-149.1155C779.2072,-133.6584 773.0825,-116.27 727,-95.1155 719.2071,-91.5381 710.7693,-88.0194 702.5849,-84.7826"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="703.7365,-81.4753 693.1475,-81.1256 701.2073,-88.0024 703.7365,-81.4753"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node9" class="node">
+<title>sourcefile~grid_part_connect.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node9"><a xlink:href=".././sourcefile/grid_part_connect.f90.html" xlink:title="grid_part_connect.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="892,-283.1155 763,-283.1155 763,-259.1155 892,-259.1155 892,-283.1155"/>
+<text text-anchor="middle" x="827.5" y="-268.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_connect.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_part_connect.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_part_connect.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M927.9503,-271.1155C919.5736,-271.1155 910.9749,-271.1155 902.5025,-271.1155"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="902.254,-267.6156 892.254,-271.1155 902.2539,-274.6156 902.254,-267.6156"/>
+</g>
+<!-- sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node11" class="node">
+<title>sourcefile~precision_def.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node11"><a xlink:href=".././sourcefile/precision_def.f90.html" xlink:title="precision_def.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="106,-178.1155 0,-178.1155 0,-154.1155 106,-154.1155 106,-178.1155"/>
+<text text-anchor="middle" x="53" y="-163.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pstruct_data.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~pstruct_data.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M336.5,-230.1155C269.8182,-234.6483 255.7025,-284.8664 191,-268.1155"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M191,-268.1155C168.3878,-262.2614 161.7872,-261.5271 142,-249.1155 114.062,-231.5913 87.1051,-204.5795 70.3198,-186.1652"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="72.6301,-183.498 63.3563,-178.3746 67.411,-188.1629 72.6301,-183.498"/>
+</g>
+<!-- sourcefile~struct_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node13" class="node">
+<title>sourcefile~struct_def.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node13"><a xlink:href=".././sourcefile/struct_def.f90.html" xlink:title="struct_def.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="233.5,-240.1155 148.5,-240.1155 148.5,-216.1155 233.5,-216.1155 233.5,-240.1155"/>
+<text text-anchor="middle" x="191" y="-225.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">struct_def.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pstruct_data.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~pstruct_data.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M444.9841,-227.3417C413.8159,-227.2013 372.7647,-227.6504 336.5,-230.1155"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M336.5,-230.1155C305.8813,-232.1968 271.5578,-231.8525 243.9404,-230.9159"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="243.8301,-227.4094 233.7059,-230.5318 243.5675,-234.4045 243.8301,-227.4094"/>
+</g>
+<!-- sourcefile~fstruct_data.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~fstruct_data.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M446.2533,-276.9476C385.5827,-283.9248 278.7378,-290.8301 191,-268.1155"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M605.9292,-203.1283C589.3317,-206.8502 570.9455,-210.9732 553.9728,-214.7792"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="553.1589,-211.3747 544.1671,-216.978 554.6907,-218.2051 553.1589,-211.3747"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M610.2941,-203.2325C603.9177,-205.7113 597.6487,-208.6495 592,-212.1155 572.4441,-224.1149 575.3895,-236.849 556,-249.1155 553.3676,-250.7809 550.5876,-252.3313 547.7226,-253.7722"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="546.0276,-250.6974 538.359,-258.0079 548.9127,-257.0752 546.0276,-250.6974"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M617.996,-179.0251C573.2642,-166.2389 506.7938,-148.0371 494.5,-149.1155"/>
+</g>
+<!-- sourcefile~parallel.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node10" class="node">
+<title>sourcefile~parallel.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node10"><a xlink:href=".././sourcefile/parallel.f90.html" xlink:title="parallel.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="532.5,-79.1155 456.5,-79.1155 456.5,-55.1155 532.5,-55.1155 532.5,-79.1155"/>
+<text text-anchor="middle" x="494.5" y="-64.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">parallel.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M605.2453,-178.9976C600.4521,-176.5601 595.9347,-173.6323 592,-170.1155 562.3237,-143.5917 585.3098,-115.0439 556,-88.1155 551.8978,-84.3466 547.0903,-81.2504 542.002,-78.7075"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="543.2027,-75.4144 532.6318,-74.7022 540.4513,-81.851 543.2027,-75.4144"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge16" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M604.5574,-231.4506C588.4094,-230.9612 570.6701,-230.4237 554.2378,-229.9257"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="554.3027,-226.4262 544.2012,-229.6216 554.0906,-233.423 554.3027,-226.4262"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge17" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M605.9292,-245.1283C588.8597,-248.9561 569.8984,-253.208 552.5284,-257.1031"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="551.5033,-253.746 542.5115,-259.3493 553.035,-260.5763 551.5033,-253.746"/>
+</g>
+<!-- sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node12" class="node">
+<title>sourcefile~grid_field_param.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node12"><a xlink:href=".././sourcefile/grid_field_param.f90.html" xlink:title="grid_field_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="556,-121.1155 433,-121.1155 433,-97.1155 556,-97.1155 556,-121.1155"/>
+<text text-anchor="middle" x="494.5" y="-106.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_field_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge19" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M605.6671,-221.0684C600.7325,-218.6167 596.0685,-215.6662 592,-212.1155 563.5372,-187.2754 583.2073,-161.3248 556,-135.1155 552.431,-131.6774 548.339,-128.6626 543.9982,-126.0255"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="545.2963,-122.751 534.8264,-121.1284 541.9993,-128.9259 545.2963,-122.751"/>
+</g>
+<!-- sourcefile~phys_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node15" class="node">
+<title>sourcefile~phys_param.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node15"><a xlink:href=".././sourcefile/phys_param.f90.html" xlink:title="phys_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="240,-198.1155 142,-198.1155 142,-174.1155 240,-174.1155 240,-198.1155"/>
+<text text-anchor="middle" x="191" y="-183.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">phys_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~phys_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge18" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~phys_param.f90</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M619.0606,-221.0739C600.0862,-215.9112 577.0611,-210.3372 556,-207.1155 449.104,-190.7637 322.8284,-186.8755 250.3128,-186.1039"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="250.0435,-182.6014 240.0125,-186.0115 249.9807,-189.6011 250.0435,-182.6014"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge20" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M615.3732,-161.2003C607.4693,-163.8265 599.3989,-166.8191 592,-170.1155 566.6841,-181.3945 539.7408,-197.7978 520.6079,-210.2844"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="518.5506,-207.4489 512.1428,-215.8864 522.4137,-213.2864 518.5506,-207.4489"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge21" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M605.6313,-161.1218C600.7037,-163.5815 596.0512,-166.545 592,-170.1155 563.0533,-195.6278 584.5941,-223.2086 556,-249.1155 554.5264,-250.4507 552.9641,-251.7015 551.3325,-252.8733"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="549.4337,-249.9313 542.6846,-258.0983 553.0537,-255.9226 549.4337,-249.9313"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge22" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M592.7493,-146.4677C562.6733,-145.9554 526.746,-146.2869 494.5,-149.1155"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge23" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M641.4172,-136.9197C621.2271,-123.6736 587.2701,-102.4873 556,-88.1155 551.6175,-86.1013 546.9837,-84.1742 542.3046,-82.3613"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="543.2961,-78.9963 532.703,-78.809 540.8673,-85.5614 543.2961,-78.9963"/>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge24" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M289.4283,-143.9012C260.8315,-142.2243 223.6596,-141.6167 191,-146.1155"/>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge25" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M318.4543,-160.2326C299.3993,-172.7668 268.2631,-192.5153 240,-207.1155 236.9048,-208.7144 233.6605,-210.2971 230.3779,-211.8338"/>
+<polygon fill="#003fff" stroke="#003fff" points="228.7888,-208.7111 221.117,-216.0181 231.6711,-215.0902 228.7888,-208.7111"/>
+</g>
+<!-- sourcefile~grid_fields.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge26" class="edge">
+<title>sourcefile~grid_fields.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M615.283,-68.5795C592.9322,-68.3086 565.7645,-67.9793 542.8597,-67.7017"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="542.7102,-64.1997 532.6685,-67.5782 542.6253,-71.1992 542.7102,-64.1997"/>
+</g>
+<!-- sourcefile~grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge27" class="edge">
+<title>sourcefile~grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M615.283,-79.8348C596.415,-84.4088 574.1142,-89.8151 553.8431,-94.7293"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="552.9727,-91.3388 544.0788,-97.0964 554.622,-98.1418 552.9727,-91.3388"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge28" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M762.7605,-277.8184C731.3337,-279.5702 693.179,-279.4703 659.5,-273.1155"/>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M659.5,-273.1155C619.1762,-265.5069 574.3021,-252.9984 541.5429,-243.098"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="542.3699,-239.691 531.7837,-240.1175 540.3253,-246.3858 542.3699,-239.691"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge30" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M799.414,-283.1615C766.4131,-296.0529 709.7713,-314.2631 659.5,-311.1155"/>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M659.5,-311.1155C617.1845,-308.466 570.4084,-295.8818 537.4994,-285.3456"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="538.3445,-281.9395 527.7518,-282.1548 536.1667,-288.5922 538.3445,-281.9395"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node14" class="node">
+<title>sourcefile~grid_part_lib.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node14"><a xlink:href=".././sourcefile/grid_part_lib.f90.html" xlink:title="grid_part_lib.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="709,-38.1155 610,-38.1155 610,-14.1155 709,-14.1155 709,-38.1155"/>
+<text text-anchor="middle" x="659.5" y="-23.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_lib.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge29" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~grid_part_lib.f90</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M818.9598,-258.9958C805.5558,-239.5396 779.4178,-199.793 763,-163.1155 741.1187,-114.2324 764.6485,-86.2067 727,-48.1155 724.3303,-45.4144 721.3254,-43.0448 718.1047,-40.9661"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="719.6163,-37.8044 709.157,-36.1148 716.2798,-43.9581 719.6163,-37.8044"/>
+</g>
+<!-- sourcefile~common_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node16" class="node">
+<title>sourcefile~common_param.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node16"><a xlink:href=".././sourcefile/common_param.f90.html" xlink:title="common_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="397,-34.1155 276,-34.1155 276,-10.1155 397,-10.1155 397,-34.1155"/>
+<text text-anchor="middle" x="336.5" y="-19.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">common_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~parallel.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge33" class="edge">
+<title>sourcefile~parallel.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M456.2526,-56.2223C435.9775,-50.4477 410.7708,-43.2686 388.7209,-36.9886"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="389.4174,-33.5478 378.8411,-34.1747 387.4999,-40.2801 389.4174,-33.5478"/>
+</g>
+<!-- sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node17" class="node">
+<title>sourcefile~mpi_var.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node17"><a xlink:href=".././sourcefile/mpi_var.f90.html" xlink:title="mpi_var.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="374,-76.1155 299,-76.1155 299,-52.1155 374,-52.1155 374,-76.1155"/>
+<text text-anchor="middle" x="336.5" y="-61.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_var.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~parallel.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge32" class="edge">
+<title>sourcefile~parallel.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M456.2526,-66.3893C434.6311,-65.9788 407.4013,-65.4617 384.3723,-65.0245"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="384.1869,-61.5204 374.1223,-64.8299 384.054,-68.5192 384.1869,-61.5204"/>
+</g>
+<!-- sourcefile~util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node19" class="node">
+<title>sourcefile~util.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node19"><a xlink:href=".././sourcefile/util.f90.html" xlink:title="util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="363.5,-118.1155 309.5,-118.1155 309.5,-94.1155 363.5,-94.1155 363.5,-118.1155"/>
+<text text-anchor="middle" x="336.5" y="-103.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~parallel.f90&#45;&gt;sourcefile~util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge31" class="edge">
+<title>sourcefile~parallel.f90&#45;&gt;sourcefile~util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M456.2526,-76.5563C431.0479,-82.7777 398.2219,-90.8804 373.3136,-97.0286"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="372.3795,-93.654 363.5097,-99.4486 374.0571,-100.4501 372.3795,-93.654"/>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge35" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M445.8056,-121.135C429.282,-125.2136 410.6735,-129.8069 393.5576,-134.0317"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="392.5493,-130.6754 383.6795,-136.4699 394.2269,-137.4714 392.5493,-130.6754"/>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge36" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M449.3657,-97.0674C443.603,-94.5779 437.9848,-91.6184 433,-88.1155 412.0443,-73.3894 417.9185,-57.8944 397,-43.1155 394.7781,-41.5457 392.4282,-40.0842 389.9951,-38.7245"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="391.4171,-35.5233 380.9008,-34.2356 388.3188,-41.8003 391.4171,-35.5233"/>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge34" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M452.1589,-97.0563C431.0734,-91.051 405.511,-83.7705 383.7856,-77.5829"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="384.6797,-74.1985 374.1035,-74.8254 382.7623,-80.9307 384.6797,-74.1985"/>
+</g>
+<!-- sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge37" class="edge">
+<title>sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M162.4424,-216.0292C155.7224,-213.1429 148.5967,-210.0479 142,-207.1155 124.0669,-199.1438 104.2236,-190.031 87.833,-182.4244"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="89.1653,-179.184 78.6221,-178.1397 86.2129,-185.5309 89.1653,-179.184"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge39" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M609.9874,-36.7785C603.441,-39.6915 597.2066,-43.3986 592,-48.1155 562.5027,-74.8383 585.7025,-103.621 556,-130.1155 534.651,-149.1587 522.9986,-146.6156 494.5,-149.1155"/>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M494.5,-149.1155C461.256,-152.0316 423.9267,-151.9503 393.9025,-151.0619"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="393.7173,-147.5539 383.6059,-150.7176 393.4833,-154.5499 393.7173,-147.5539"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge40" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M613.2038,-14.1117C595.446,-10.0794 574.909,-6.103 556,-4.1155 501.6328,1.5988 487.4345,.9179 433,-4.1155 422.7119,-5.0668 411.8847,-6.577 401.3507,-8.3281"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="400.6173,-4.9031 391.368,-10.0703 401.8209,-11.7988 400.6173,-4.9031"/>
+</g>
+<!-- sourcefile~stretched_grid.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node18" class="node">
+<title>sourcefile~stretched_grid.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node18"><a xlink:href=".././sourcefile/stretched_grid.f90.html" xlink:title="stretched_grid.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="549,-37.1155 440,-37.1155 440,-13.1155 549,-13.1155 549,-37.1155"/>
+<text text-anchor="middle" x="494.5" y="-22.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stretched_grid.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~stretched_grid.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge38" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~stretched_grid.f90</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M609.9946,-25.8155C594.1153,-25.7192 576.2836,-25.6112 559.4703,-25.5093"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="559.1808,-22.0075 549.1597,-25.4468 559.1383,-29.0074 559.1808,-22.0075"/>
+</g>
+<!-- sourcefile~phys_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge41" class="edge">
+<title>sourcefile~phys_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff00ff" stroke-dasharray="5,2" d="M141.9578,-179.0079C133.6055,-177.7975 124.8262,-176.5251 116.1702,-175.2706"/>
+<polygon fill="#ff00ff" stroke="#ff00ff" points="116.4971,-171.7815 106.0984,-173.8109 115.493,-178.7091 116.4971,-171.7815"/>
+</g>
+<!-- sourcefile~common_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge42" class="edge">
+<title>sourcefile~common_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M284.7328,-34.1274C256.517,-41.3991 221.2762,-51.673 191,-64.1155"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M191,-64.1155C169.085,-73.1218 161.9267,-72.2972 142,-85.1155 114.7251,-102.6608 87.8045,-128.7096 70.8366,-146.4989"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="68.0613,-144.3417 63.7753,-154.0309 73.1681,-149.1293 68.0613,-144.3417"/>
+</g>
+<!-- sourcefile~mpi_var.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge43" class="edge">
+<title>sourcefile~mpi_var.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M298.8174,-56.4833C268.5145,-52.1103 225.4624,-49.9526 191,-64.1155"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge45" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M445.9747,-37.2542C441.2688,-39.691 436.8297,-42.6129 433,-46.1155 403.9293,-72.703 426.0036,-100.4548 397,-127.1155 395.5266,-128.4699 393.9613,-129.7376 392.3244,-130.9242"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="390.3624,-128.0209 383.6355,-136.2062 393.9986,-134.0023 390.3624,-128.0209"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge46" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M439.6827,-24.0747C429.281,-23.8772 418.2604,-23.6679 407.4433,-23.4625"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="407.2262,-19.9579 397.1615,-23.2673 407.0932,-26.9566 407.2262,-19.9579"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge44" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M445.8056,-37.135C426.1934,-41.976 403.6442,-47.5419 384.1397,-52.3563"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="383.1191,-49.0031 374.2492,-54.7977 384.7966,-55.7992 383.1191,-49.0031"/>
+</g>
+<!-- sourcefile~util.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge47" class="edge">
+<title>sourcefile~util.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M309.3274,-115.9006C280.4319,-125.7549 233.1729,-140.3062 191,-146.1155"/>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M191,-146.1155C166.5579,-149.4824 139.7048,-153.3384 116.2344,-156.7604"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="115.4445,-153.3386 106.0559,-158.2481 116.4569,-160.265 115.4445,-153.3386"/>
+</g>
+<!-- sourcefile~code_util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node20" class="node">
+<title>sourcefile~code_util.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~EfferentGraph_node20"><a xlink:href=".././sourcefile/code_util.f90.html" xlink:title="code_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="231.5,-118.1155 150.5,-118.1155 150.5,-94.1155 231.5,-94.1155 231.5,-118.1155"/>
+<text text-anchor="middle" x="191" y="-103.7155" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">code_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~util.f90&#45;&gt;sourcefile~code_util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge48" class="edge">
+<title>sourcefile~util.f90&#45;&gt;sourcefile~code_util.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M309.4736,-106.1155C290.5163,-106.1155 264.5932,-106.1155 241.8288,-106.1155"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="241.6281,-102.6156 231.6281,-106.1155 241.628,-109.6156 241.6281,-102.6156"/>
+</g>
+<!-- sourcefile~code_util.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~EfferentGraph_edge49" class="edge">
+<title>sourcefile~code_util.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M163.0736,-118.2574C142.1241,-127.3659 113.2321,-139.9276 90.305,-149.8959"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="88.66,-146.7946 80.8848,-153.9917 91.4511,-153.2141 88.66,-146.7946"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefilecurr_and_fields_utilf90EfferentGraph = svgPanZoom('#sourcefilecurr_and_fields_utilf90EfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+    
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~curr_and_fields_util.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilecurr_and_fields_utilf90AfferentGraph" width="429pt" height="74pt"
+ viewBox="0.00 0.00 429.00 74.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 70)">
+<title>sourcefile~~curr_and_fields_util.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-70 425,-70 425,4 -4,4"/>
+<!-- sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~curr_and_fields_util.f90</title>
+<polygon fill="none" stroke="#000000" points="136,-45 0,-45 0,-21 136,-21 136,-45"/>
+<text text-anchor="middle" x="68" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">curr_and_fields_util.f90</text>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~env_evolve_in_time.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/env_evolve_in_time.f90.html" xlink:title="env_evolve_in_time.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="309,-66 172,-66 172,-42 309,-42 309,-66"/>
+<text text-anchor="middle" x="240.5" y="-51.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">env_evolve_in_time.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~env_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M171.8278,-45.6399C163.3866,-44.6123 154.7107,-43.5561 146.1426,-42.513"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="146.504,-39.0313 136.1543,-41.297 145.658,-45.98 146.504,-39.0313"/>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node3" class="node">
+<title>sourcefile~pic_evolve_in_time.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node3"><a xlink:href=".././sourcefile/pic_evolve_in_time.f90.html" xlink:title="pic_evolve_in_time.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="307,-24 174,-24 174,0 307,0 307,-24"/>
+<text text-anchor="middle" x="240.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_evolve_in_time.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_edge2" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M173.807,-20.1191C164.7558,-21.221 155.4014,-22.3598 146.1714,-23.4835"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="145.7287,-20.0114 136.2249,-24.6944 146.5747,-26.9601 145.7287,-20.0114"/>
+</g>
+<!-- sourcefile~aladyn.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node4" class="node">
+<title>sourcefile~aladyn.f90</title>
+<g id="a_sourcefile~~curr_and_fields_util.f90~~AfferentGraph_node4"><a xlink:href=".././sourcefile/aladyn.f90.html" xlink:title="ALaDyn.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="421,-45 345,-45 345,-21 421,-21 421,-45"/>
+<text text-anchor="middle" x="383" y="-30.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ALaDyn.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~env_evolve_in_time.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_edge3" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~env_evolve_in_time.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M344.8126,-38.6276C336.7861,-39.8105 328.0404,-41.0993 319.1391,-42.4111"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="318.4361,-38.9768 309.0533,-43.8974 319.4567,-45.902 318.4361,-38.9768"/>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~curr_and_fields_util.f90~~AfferentGraph_edge4" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_evolve_in_time.f90</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M344.8126,-27.3724C336.1852,-26.101 326.7268,-24.7071 317.1375,-23.2939"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="317.5298,-19.814 307.1264,-21.8186 316.5092,-26.7392 317.5298,-19.814"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/curr_and_fields_util.html">curr_and_fields_util</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/curr_and_fields_util.f90.html#src">curr_and_fields_util.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-2"></a><span class="c">!                            Copyright 2008-2020  The ALaDyn Collaboration                            !</span>
+<a name="ln-3"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-4"></a>
+<a name="ln-5"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-6"></a><span class="c">!  This file is part of ALaDyn.                                                                       !</span>
+<a name="ln-7"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-8"></a><span class="c">!  ALaDyn is free software: you can redistribute it and/or modify                                     !</span>
+<a name="ln-9"></a><span class="c">!  it under the terms of the GNU General Public License as published by                               !</span>
+<a name="ln-10"></a><span class="c">!  the Free Software Foundation, either version 3 of the License, or                                  !</span>
+<a name="ln-11"></a><span class="c">!  (at your option) any later version.                                                                !</span>
+<a name="ln-12"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-13"></a><span class="c">!  ALaDyn is distributed in the hope that it will be useful,                                          !</span>
+<a name="ln-14"></a><span class="c">!  but WITHOUT ANY WARRANTY; without even the implied warranty of                                     !</span>
+<a name="ln-15"></a><span class="c">!  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                      !</span>
+<a name="ln-16"></a><span class="c">!  GNU General Public License for more details.                                                       !</span>
+<a name="ln-17"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-18"></a><span class="c">!  You should have received a copy of the GNU General Public License                                  !</span>
+<a name="ln-19"></a><span class="c">!  along with ALaDyn.  If not, see &lt;http://www.gnu.org/licenses/&gt;.                                    !</span>
+<a name="ln-20"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a> <span class="k">module </span><span class="n">curr_and_fields_util</span>
+<a name="ln-23"></a>  <span class="k">use </span><span class="n">pstruct_data</span>
+<a name="ln-24"></a>  <span class="k">use </span><span class="n">fstruct_data</span>
+<a name="ln-25"></a>  <span class="k">use </span><span class="n">grid_param</span>
+<a name="ln-26"></a>  <span class="k">use </span><span class="n">mpi_curr_interface</span>
+<a name="ln-27"></a>  <span class="k">use </span><span class="n">mpi_field_interface</span>
+<a name="ln-28"></a>  <span class="k">use </span><span class="n">grid_part_connect</span>
+<a name="ln-29"></a>  <span class="k">use </span><span class="n">grid_fields</span>
+<a name="ln-30"></a>  <span class="k">use </span><span class="n">init_grid_field</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a>  <span class="k">implicit none</span>
+<a name="ln-33"></a>  <span class="c">!===============================</span>
+<a name="ln-34"></a>  <span class="c">! MOVING WINDOW SECTION</span>
+<a name="ln-35"></a>  <span class="c">!=============================</span>
+<a name="ln-36"></a> <span class="k">contains</span>
+<a name="ln-37"></a>  <span class="c">!============================</span>
+<a name="ln-38"></a>  <span class="k">subroutine </span><span class="n">set_lpf_acc</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">sp_loc</span><span class="p">,</span> <span class="n">apt</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">nf</span><span class="p">)</span>
+<a name="ln-39"></a>
+<a name="ln-40"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ef</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-41"></a>   <span class="k">type</span><span class="p">(</span><span class="n">species</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">sp_loc</span>
+<a name="ln-42"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">apt</span><span class="p">(:,</span> <span class="p">:)</span>
+<a name="ln-43"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">np</span><span class="p">,</span> <span class="n">nf</span>
+<a name="ln-44"></a>
+<a name="ln-45"></a>   <span class="c">! Uses alternating order quadratic or linear shapes</span>
+<a name="ln-46"></a>
+<a name="ln-47"></a>   <span class="k">select case</span> <span class="p">(</span><span class="n">ndim</span><span class="p">)</span>
+<a name="ln-48"></a>   <span class="k">case</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-49"></a>    <span class="k">call </span><span class="n">set_part1d_acc</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">sp_loc</span><span class="p">,</span> <span class="n">apt</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">nf</span><span class="p">)</span>
+<a name="ln-50"></a>   <span class="k">case</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-51"></a>    <span class="k">call </span><span class="n">set_part2d_hcell_acc</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">sp_loc</span><span class="p">,</span> <span class="n">apt</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">nf</span><span class="p">)</span>
+<a name="ln-52"></a>   <span class="k">case</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-53"></a>    <span class="k">call </span><span class="n">set_part3d_hcell_acc</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">sp_loc</span><span class="p">,</span> <span class="n">apt</span><span class="p">,</span> <span class="n">np</span><span class="p">)</span>
+<a name="ln-54"></a>   <span class="k">end select</span>
+<a name="ln-55"></a><span class="k">  end subroutine</span>
+<a name="ln-56"></a>
+<a name="ln-57"></a><span class="k">  subroutine </span><span class="n">field_charge_multiply</span><span class="p">(</span><span class="n">sp_loc</span><span class="p">,</span> <span class="n">apt</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">ncmp</span><span class="p">)</span>
+<a name="ln-58"></a>
+<a name="ln-59"></a>   <span class="k">type</span><span class="p">(</span><span class="n">species</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">sp_loc</span>
+<a name="ln-60"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">apt</span><span class="p">(:,</span> <span class="p">:)</span>
+<a name="ln-61"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">np</span><span class="p">,</span> <span class="n">ncmp</span>
+<a name="ln-62"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">p</span><span class="p">,</span> <span class="n">ch</span>
+<a name="ln-63"></a>
+<a name="ln-64"></a>   <span class="n">ch</span> <span class="o">=</span> <span class="n">size</span><span class="p">(</span><span class="n">apt</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-65"></a>   <span class="c">!==========================</span>
+<a name="ln-66"></a>   <span class="k">do </span><span class="n">p</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">np</span>
+<a name="ln-67"></a>    <span class="n">wgh_cmp</span> <span class="o">=</span> <span class="n">sp_loc</span><span class="p">%</span><span class="n">part</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">ch</span><span class="p">)</span>
+<a name="ln-68"></a>    <span class="n">apt</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="n">ncmp</span><span class="p">)</span> <span class="o">=</span> <span class="n">charge</span><span class="o">*</span><span class="n">apt</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="n">ncmp</span><span class="p">)</span>
+<a name="ln-69"></a>   <span class="k">end do</span>
+<a name="ln-70"></a>   <span class="c">! EXIT p-assigned (E,B) fields multiplied by charge</span>
+<a name="ln-71"></a>  <span class="k">end subroutine</span>
+<a name="ln-72"></a>
+<a name="ln-73"></a><span class="k">  subroutine </span><span class="n">curr_accumulate</span><span class="p">(</span><span class="n">sp_loc</span><span class="p">,</span> <span class="n">pdata</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">npt</span><span class="p">)</span>
+<a name="ln-74"></a>   <span class="k">type</span><span class="p">(</span><span class="n">species</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">sp_loc</span>
+<a name="ln-75"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">pdata</span><span class="p">(:,</span> <span class="p">:),</span> <span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-76"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">npt</span>
+<a name="ln-77"></a>   <span class="c">! real(dp),intent(in) :: dtloc</span>
+<a name="ln-78"></a>   <span class="c">!=========================</span>
+<a name="ln-79"></a>   <span class="c">! charge preserving for iform=0, 1</span>
+<a name="ln-80"></a>   <span class="c">!iform=0 =&gt; (D_xJx,D_yJy,D_zJz) inverted on each particle=&gt; (Jx,Jy,Jz)</span>
+<a name="ln-81"></a>   <span class="c">!iform=1    as iform=0</span>
+<a name="ln-82"></a>   <span class="c">!iform=2    no charge preserving</span>
+<a name="ln-83"></a>   <span class="c">!=========================</span>
+<a name="ln-84"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">npt</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span>
+<a name="ln-85"></a><span class="k">   if</span> <span class="p">(</span><span class="n">ndim</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-86"></a><span class="k">    if</span> <span class="p">(</span><span class="n">iform</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-87"></a><span class="k">     call </span><span class="n">esirkepov_2d_curr</span><span class="p">(</span><span class="n">sp_loc</span><span class="p">,</span> <span class="n">pdata</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">npt</span><span class="p">)</span>
+<a name="ln-88"></a>    <span class="k">else</span>
+<a name="ln-89"></a><span class="k">     call </span><span class="n">ncdef_2d_curr</span><span class="p">(</span><span class="n">sp_loc</span><span class="p">,</span> <span class="n">pdata</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">npt</span><span class="p">)</span>
+<a name="ln-90"></a>    <span class="k">end if</span>
+<a name="ln-91"></a><span class="k">    return</span>
+<a name="ln-92"></a><span class="k">   end if</span>
+<a name="ln-93"></a><span class="k">   if</span> <span class="p">(</span><span class="n">iform</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-94"></a><span class="k">    call </span><span class="n">esirkepov_3d_curr</span><span class="p">(</span><span class="n">sp_loc</span><span class="p">,</span> <span class="n">pdata</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">npt</span><span class="p">)</span>
+<a name="ln-95"></a>   <span class="k">else</span>
+<a name="ln-96"></a><span class="k">    call </span><span class="n">ncdef_3d_curr</span><span class="p">(</span><span class="n">sp_loc</span><span class="p">,</span> <span class="n">pdata</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">npt</span><span class="p">)</span>
+<a name="ln-97"></a>   <span class="k">end if</span>
+<a name="ln-98"></a>   <span class="c">!========================</span>
+<a name="ln-99"></a>   <span class="c">! accumulates for each species currents on curr(i1:n1p,j1:n2p,k1:n3p,1:compnent)</span>
+<a name="ln-100"></a>   <span class="c">!============================</span>
+<a name="ln-101"></a>  <span class="k">end subroutine</span>
+<a name="ln-102"></a>  <span class="c">!==============================</span>
+<a name="ln-103"></a>  <span class="k">subroutine </span><span class="n">curr_mpi_collect</span><span class="p">(</span><span class="n">curr</span><span class="p">)</span>
+<a name="ln-104"></a>
+<a name="ln-105"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-106"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="n">jj</span><span class="p">,</span> <span class="n">kk</span>
+<a name="ln-107"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dery</span><span class="p">,</span> <span class="n">derhy</span><span class="p">,</span> <span class="n">derz</span><span class="p">,</span> <span class="n">derhz</span>
+<a name="ln-108"></a>   <span class="c">!============sums data on ghost points</span>
+<a name="ln-109"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">prl</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-110"></a><span class="k">    call </span><span class="n">fill_curr_yzxbdsdata</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">curr_ndim</span><span class="p">)</span>
+<a name="ln-111"></a>   <span class="k">end if</span>
+<a name="ln-112"></a><span class="k">   call </span><span class="n">jc_xyzbd</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">curr_ndim</span><span class="p">)</span>
+<a name="ln-113"></a>   <span class="c">!=================</span>
+<a name="ln-114"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">iform</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-115"></a><span class="k">    do </span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ndim</span>
+<a name="ln-116"></a>     <span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">)</span> <span class="o">=</span> <span class="n">djc</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">*</span><span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="n">i</span><span class="p">)</span>
+<a name="ln-117"></a>    <span class="k">end do</span>
+<a name="ln-118"></a><span class="k">   end if</span>
+<a name="ln-119"></a><span class="k">   if</span> <span class="p">(</span><span class="n">stretch</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-120"></a><span class="k">    select case</span> <span class="p">(</span><span class="n">curr_ndim</span><span class="p">)</span>
+<a name="ln-121"></a>    <span class="k">case</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a name="ln-122"></a>     <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span>
+<a name="ln-123"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span>
+<a name="ln-124"></a>       <span class="n">jj</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">2</span>
+<a name="ln-125"></a>       <span class="n">dery</span> <span class="o">=</span> <span class="n">loc_yg</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">imody</span><span class="p">)</span>
+<a name="ln-126"></a>       <span class="n">derhy</span> <span class="o">=</span> <span class="n">loc_yg</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">imody</span><span class="p">)</span>
+<a name="ln-127"></a>       <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">ix2</span>
+<a name="ln-128"></a>        <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">dery</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-129"></a>        <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">derhy</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-130"></a>       <span class="k">end do</span>
+<a name="ln-131"></a><span class="k">      end do</span>
+<a name="ln-132"></a><span class="k">     end do</span>
+<a name="ln-133"></a><span class="k">    case</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a name="ln-134"></a>     <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span>
+<a name="ln-135"></a>      <span class="n">kk</span> <span class="o">=</span> <span class="n">k</span> <span class="o">-</span> <span class="mi">2</span>
+<a name="ln-136"></a>      <span class="n">derz</span> <span class="o">=</span> <span class="n">loc_zg</span><span class="p">(</span><span class="n">kk</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">imodz</span><span class="p">)</span>
+<a name="ln-137"></a>      <span class="n">derhz</span> <span class="o">=</span> <span class="n">loc_zg</span><span class="p">(</span><span class="n">kk</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">imodz</span><span class="p">)</span>
+<a name="ln-138"></a>      <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span>
+<a name="ln-139"></a>       <span class="n">jj</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">2</span>
+<a name="ln-140"></a>       <span class="n">dery</span> <span class="o">=</span> <span class="n">loc_yg</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">imody</span><span class="p">)</span>
+<a name="ln-141"></a>       <span class="n">derhy</span> <span class="o">=</span> <span class="n">loc_yg</span><span class="p">(</span><span class="n">jj</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">imody</span><span class="p">)</span>
+<a name="ln-142"></a>       <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">ix2</span>
+<a name="ln-143"></a>        <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">dery</span><span class="o">*</span><span class="n">derz</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-144"></a>        <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="n">derhy</span><span class="o">*</span><span class="n">derz</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-145"></a>        <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">=</span> <span class="n">dery</span><span class="o">*</span><span class="n">derhz</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<a name="ln-146"></a>       <span class="k">end do</span>
+<a name="ln-147"></a><span class="k">      end do</span>
+<a name="ln-148"></a><span class="k">     end do</span>
+<a name="ln-149"></a><span class="k">    end select</span>
+<a name="ln-150"></a><span class="k">   end if</span>
+<a name="ln-151"></a><span class="k">  end subroutine</span>
+<a name="ln-152"></a>  <span class="c">!=================================</span>
+<a name="ln-153"></a>  <span class="c">! END SECTION ON GRID DEFINED PARTICLE VARIABLES</span>
+<a name="ln-154"></a>  <span class="c">!================================================</span>
+<a name="ln-155"></a>  <span class="k">subroutine </span><span class="n">pfields_prepare</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">nc</span><span class="p">,</span> <span class="n">spr</span><span class="p">,</span> <span class="n">spl</span><span class="p">)</span>
+<a name="ln-156"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ef</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-157"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">nc</span><span class="p">,</span> <span class="n">spr</span><span class="p">,</span> <span class="n">spl</span>
+<a name="ln-158"></a>   <span class="c">!===================</span>
+<a name="ln-159"></a>   <span class="c">! Enter fields ef[i1:i2,j1,j2,k1,k2,1:nc)</span>
+<a name="ln-160"></a>   <span class="c">! Exit fields ef[i1:i2,j1,j2,k1,k2,1:nc)</span>
+<a name="ln-161"></a>   <span class="c">!===========================</span>
+<a name="ln-162"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">prl</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-163"></a><span class="k">    call </span><span class="n">fill_ebfield_yzxbdsdata</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nc</span><span class="p">,</span> <span class="n">spr</span><span class="p">,</span> <span class="n">spl</span><span class="p">)</span>
+<a name="ln-164"></a>    <span class="c">!======================</span>
+<a name="ln-165"></a>    <span class="c">! Adds point data =&gt; spl to the left spr to the right</span>
+<a name="ln-166"></a>    <span class="c">! Sets periodic BCs for</span>
+<a name="ln-167"></a>    <span class="c">! iby,ibz,ibx =2</span>
+<a name="ln-168"></a>    <span class="c">!==================</span>
+<a name="ln-169"></a>   <span class="k">end if</span>
+<a name="ln-170"></a><span class="k">   call </span><span class="n">field_xyzbd</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">nc</span><span class="p">)</span>
+<a name="ln-171"></a>   <span class="c">! extends for one point at the box boundaries</span>
+<a name="ln-172"></a>   <span class="c">!==================================================</span>
+<a name="ln-173"></a>  <span class="k">end subroutine</span>
+<a name="ln-174"></a>  <span class="c">!================================</span>
+<a name="ln-175"></a>  <span class="k">subroutine </span><span class="n">advance_lpf_fields</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">ibd</span><span class="p">)</span>
+<a name="ln-176"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ef</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-177"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-178"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ibd</span>
+<a name="ln-179"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">,</span> <span class="n">ik</span>
+<a name="ln-180"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dth</span><span class="p">,</span> <span class="n">dt_lp</span>
+<a name="ln-181"></a>
+<a name="ln-182"></a>   <span class="n">dt_lp</span> <span class="o">=</span> <span class="n">dt_loc</span>
+<a name="ln-183"></a>   <span class="n">dth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">dt_lp</span>
+<a name="ln-184"></a>   <span class="c">!=======================</span>
+<a name="ln-185"></a>   <span class="c">! A LPF order Lpf with time-centered source term</span>
+<a name="ln-186"></a>   <span class="c">!=============================</span>
+<a name="ln-187"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">prl</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-188"></a><span class="k">    </span><span class="n">str</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-189"></a>    <span class="n">stl</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-190"></a>    <span class="k">call </span><span class="n">fill_ebfield_yzxbdsdata</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">curr_ndim</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">)</span>
+<a name="ln-191"></a>    <span class="c">! To fill electric field data</span>
+<a name="ln-192"></a>    <span class="c">! sends stl to the left,</span>
+<a name="ln-193"></a>    <span class="c">! recvs stl points from right at (nyp+stl), (nzp+stl)</span>
+<a name="ln-194"></a>   <span class="k">end if</span>
+<a name="ln-195"></a>   <span class="c">!============== first substep dt/2 advance of B-field</span>
+<a name="ln-196"></a>   <span class="k">call </span><span class="n">ef_bds</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">zero_dp</span><span class="p">,</span> <span class="n">ibd</span><span class="p">)</span>
+<a name="ln-197"></a>   <span class="c">! Uses upper BCs of E fields: ibd=0 for inflow-outflow</span>
+<a name="ln-198"></a>   <span class="c">!                             ibd=1 for symmetric</span>
+<a name="ln-199"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">comoving</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-200"></a><span class="k">    call </span><span class="n">field_xadvect</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dth</span><span class="p">,</span> <span class="o">-</span><span class="n">vbeam</span><span class="p">,</span> <span class="n">curr_ndim</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nfield</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-201"></a>    <span class="c">! Solves for one-half step backward advection B field explicit</span>
+<a name="ln-202"></a>    <span class="c">! B^{n} =&gt; B^{n}+v_b*Dth[Dx]B^n  v_b &gt;0</span>
+<a name="ln-203"></a>   <span class="k">end if</span>
+<a name="ln-204"></a>   <span class="c">!==================================</span>
+<a name="ln-205"></a>   <span class="c">! solves B^{n+1/2}= B^n -Dth[rot E]^n</span>
+<a name="ln-206"></a>   <span class="c">!============================</span>
+<a name="ln-207"></a>   <span class="k">call </span><span class="n">rote</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dth</span><span class="p">)</span>
+<a name="ln-208"></a>   <span class="c">!=============================</span>
+<a name="ln-209"></a>   <span class="c">!============== central step for advance of E-field</span>
+<a name="ln-210"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">prl</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-211"></a><span class="k">    </span><span class="n">str</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-212"></a>    <span class="n">stl</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-213"></a>    <span class="k">call </span><span class="n">fill_ebfield_yzxbdsdata</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">curr_ndim</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nfield</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">)</span>
+<a name="ln-214"></a>    <span class="c">! sends nyp+1-str to the right</span>
+<a name="ln-215"></a>    <span class="c">! recvs str points from left at (1-str)</span>
+<a name="ln-216"></a>   <span class="k">end if</span>
+<a name="ln-217"></a>   <span class="c">!======================</span>
+<a name="ln-218"></a>   <span class="k">call </span><span class="n">bf_bds</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dt_lp</span><span class="p">,</span> <span class="n">ibd</span><span class="p">)</span>
+<a name="ln-219"></a>   <span class="c">! Uses lower BCs for B fields: ibd=0 for inflow-outflow</span>
+<a name="ln-220"></a>   <span class="c">!                             ibd=1 for symmetric</span>
+<a name="ln-221"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">comoving</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-222"></a><span class="k">    call </span><span class="n">field_xadvect</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dth</span><span class="p">,</span> <span class="o">-</span><span class="n">vbeam</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">curr_ndim</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-223"></a>    <span class="c">! Solves for half-step backward advection E field explicit</span>
+<a name="ln-224"></a>    <span class="c">! E^{n} =&gt; E^{n}+v_b*Dth[Dx]E^n</span>
+<a name="ln-225"></a>   <span class="k">end if</span>
+<a name="ln-226"></a>   <span class="c">!=======================</span>
+<a name="ln-227"></a>   <span class="c">! solves E^{n+1}= E^n +DT[rot B]^{n+1/2}- ompe*DT*J^{n+1/2}</span>
+<a name="ln-228"></a>   <span class="c">!==================</span>
+<a name="ln-229"></a>   <span class="k">call </span><span class="n">rotb</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dt_lp</span><span class="p">)</span>
+<a name="ln-230"></a>   <span class="c">!===================</span>
+<a name="ln-231"></a>   <span class="c">! adds currents</span>
+<a name="ln-232"></a>   <span class="k">do </span><span class="n">ik</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">curr_ndim</span>
+<a name="ln-233"></a>    <span class="n">ef</span><span class="p">(</span><span class="n">ix1</span><span class="p">:</span><span class="n">ix2</span><span class="p">,</span> <span class="n">jy1</span><span class="p">:</span><span class="n">jy2</span><span class="p">,</span> <span class="n">kz1</span><span class="p">:</span><span class="n">kz2</span><span class="p">,</span> <span class="n">ik</span><span class="p">)</span> <span class="o">=</span> <span class="n">ef</span><span class="p">(</span><span class="n">ix1</span><span class="p">:</span><span class="n">ix2</span><span class="p">,</span> <span class="n">jy1</span><span class="p">:</span><span class="n">jy2</span><span class="p">,</span> <span class="n">kz1</span><span class="p">:</span><span class="n">kz2</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-234"></a>                                           <span class="n">ik</span><span class="p">)</span> <span class="o">-</span> <span class="n">ompe</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">ix1</span><span class="p">:</span><span class="n">ix2</span><span class="p">,</span> <span class="n">jy1</span><span class="p">:</span><span class="n">jy2</span><span class="p">,</span> <span class="n">kz1</span><span class="p">:</span><span class="n">kz2</span><span class="p">,</span> <span class="n">ik</span><span class="p">)</span>
+<a name="ln-235"></a>   <span class="k">end do</span>
+<a name="ln-236"></a><span class="k">   if</span> <span class="p">(</span><span class="n">comoving</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-237"></a><span class="k">    call </span><span class="n">field_xadvect</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dth</span><span class="p">,</span> <span class="o">-</span><span class="n">vbeam</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">curr_ndim</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-238"></a>    <span class="c">! Solves for backward advection E field implicit</span>
+<a name="ln-239"></a>    <span class="c">! E^{n+1} =&gt; E^{n}+v_b*Dth[Dx]E^{n+1}</span>
+<a name="ln-240"></a>   <span class="k">end if</span>
+<a name="ln-241"></a>   <span class="c">!============== second substep dt/2 advance of B-field</span>
+<a name="ln-242"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">prl</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-243"></a><span class="k">    </span><span class="n">str</span> <span class="o">=</span> <span class="mi">1</span>
+<a name="ln-244"></a>    <span class="n">stl</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-245"></a>    <span class="k">call </span><span class="n">fill_ebfield_yzxbdsdata</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">curr_ndim</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">)</span>
+<a name="ln-246"></a>   <span class="k">end if</span>
+<a name="ln-247"></a>   <span class="c">! E field gets stl points from right (nyp+stl), (nzp+stl)</span>
+<a name="ln-248"></a>   <span class="k">call </span><span class="n">ef_bds</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dt_lp</span><span class="p">,</span> <span class="n">ibd</span><span class="p">)</span>
+<a name="ln-249"></a>   <span class="c">! solves B^{n+1}= B^{n+1/2} -Dth[rot E]^{n+1}</span>
+<a name="ln-250"></a>   <span class="c">!===================</span>
+<a name="ln-251"></a>   <span class="k">call </span><span class="n">rote</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dth</span><span class="p">)</span>
+<a name="ln-252"></a>   <span class="c">!==============</span>
+<a name="ln-253"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">comoving</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-254"></a><span class="k">    call </span><span class="n">field_xadvect</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">dth</span><span class="p">,</span> <span class="o">-</span><span class="n">vbeam</span><span class="p">,</span> <span class="n">curr_ndim</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nfield</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-255"></a>    <span class="c">! Solves for one-half step backward advection B field implicit</span>
+<a name="ln-256"></a>    <span class="c">! B^{n+1} =&gt; B^{n+1/2}+v_b*Dth[Dx]B^{n+1}</span>
+<a name="ln-257"></a>   <span class="k">end if</span>
+<a name="ln-258"></a>   <span class="c">!===============</span>
+<a name="ln-259"></a>  <span class="k">end subroutine</span>
+<a name="ln-260"></a>  <span class="c">!======================</span>
+<a name="ln-261"></a>  <span class="k">subroutine </span><span class="n">advance_lpf_envelope</span><span class="p">(</span><span class="n">curr</span><span class="p">,</span> <span class="n">evf</span><span class="p">,</span> <span class="n">omg</span><span class="p">)</span>
+<a name="ln-262"></a>
+<a name="ln-263"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:),</span> <span class="n">evf</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-264"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">omg</span>
+<a name="ln-265"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span>
+<a name="ln-266"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">,</span> <span class="n">cind</span><span class="p">,</span> <span class="n">ib</span>
+<a name="ln-267"></a>   <span class="c">!====== enter env(3:4)=A^{n-1} and env(1:2)= A^{n}</span>
+<a name="ln-268"></a>   <span class="c">! enters jc(3)=&lt;wgh*n/gamp&gt; &gt;0</span>
+<a name="ln-269"></a>   <span class="n">str</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-270"></a>   <span class="n">stl</span> <span class="o">=</span> <span class="mi">2</span>
+<a name="ln-271"></a>   <span class="c">!ord=2</span>
+<a name="ln-272"></a>   <span class="n">cind</span> <span class="o">=</span> <span class="mi">1</span> <span class="c">!cind=0 FFT cind=1 grid deriv</span>
+<a name="ln-273"></a>   <span class="n">ib</span> <span class="o">=</span> <span class="mi">2</span> <span class="c">!ib=1 implicit ib=2 optimazid explicit</span>
+<a name="ln-274"></a>   <span class="c">!optimized advection scheme</span>
+<a name="ln-275"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">comoving</span><span class="p">)</span> <span class="n">ib</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-276"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">prl</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-277"></a><span class="k">    call </span><span class="n">fill_ebfield_yzxbdsdata</span><span class="p">(</span><span class="n">evf</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">)</span>
+<a name="ln-278"></a>   <span class="k">end if</span>
+<a name="ln-279"></a><span class="k">   call </span><span class="n">env_bds</span><span class="p">(</span><span class="n">evf</span><span class="p">,</span> <span class="n">str</span><span class="p">,</span> <span class="n">stl</span><span class="p">)</span>
+<a name="ln-280"></a>
+<a name="ln-281"></a>   <span class="k">do </span><span class="n">k</span> <span class="o">=</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span>
+<a name="ln-282"></a>    <span class="k">do </span><span class="n">j</span> <span class="o">=</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span>
+<a name="ln-283"></a>     <span class="k">do </span><span class="n">i</span> <span class="o">=</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">ix2</span>
+<a name="ln-284"></a>      <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">ompe</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">evf</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-285"></a>      <span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="o">=</span> <span class="o">-</span><span class="n">ompe</span><span class="o">*</span><span class="n">curr</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">evf</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">k</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-286"></a>     <span class="k">end do</span>
+<a name="ln-287"></a><span class="k">    end do</span>
+<a name="ln-288"></a><span class="k">   end do</span>
+<a name="ln-289"></a>   <span class="c">!  curr(1:2)=-ompe*chi*env(1:2)  the J_{env} source term</span>
+<a name="ln-290"></a>   <span class="c">!==================================</span>
+<a name="ln-291"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ib</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-292"></a><span class="k">    call </span><span class="n">env_lpf_solve</span><span class="p">(</span><span class="n">jc</span><span class="p">,</span> <span class="n">evf</span><span class="p">,</span> <span class="n">ib</span><span class="p">,</span> <span class="n">omg</span><span class="p">,</span> <span class="n">dt_loc</span><span class="p">)</span>
+<a name="ln-293"></a>   <span class="k">else</span>
+<a name="ln-294"></a>    <span class="c">!=================== second order in time full wave equation</span>
+<a name="ln-295"></a>    <span class="k">call </span><span class="n">env_maxw_solve</span><span class="p">(</span><span class="n">jc</span><span class="p">,</span> <span class="n">evf</span><span class="p">,</span> <span class="n">omg</span><span class="p">,</span> <span class="n">dt_loc</span><span class="p">)</span>
+<a name="ln-296"></a>   <span class="k">end if</span>
+<a name="ln-297"></a>   <span class="c">! =================================</span>
+<a name="ln-298"></a>  <span class="k">end subroutine</span>
+<a name="ln-299"></a>  <span class="c">!========================================================</span>
+<a name="ln-300"></a>
+<a name="ln-301"></a>  <span class="k">subroutine </span><span class="n">wave_field_left_inject</span><span class="p">(</span><span class="n">ef</span><span class="p">,</span> <span class="n">x_left</span><span class="p">)</span>
+<a name="ln-302"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ef</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-303"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">x_left</span>
+<a name="ln-304"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">tnew</span><span class="p">,</span> <span class="n">xm</span>
+<a name="ln-305"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">wmodel_id</span><span class="p">,</span> <span class="n">ic</span>
+<a name="ln-306"></a>
+<a name="ln-307"></a>   <span class="n">wmodel_id</span> <span class="o">=</span> <span class="n">model_id</span>
+<a name="ln-308"></a>   <span class="n">xm</span> <span class="o">=</span> <span class="n">xmn</span>
+<a name="ln-309"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">plane_wave</span><span class="p">)</span> <span class="n">wmodel_id</span> <span class="o">=</span> <span class="mi">0</span>
+<a name="ln-310"></a>   <span class="n">tnew</span> <span class="o">=</span> <span class="n">tnow</span> <span class="c">!Set inflow values [B_z{n}(i1-1/2) E_y{n}(i-1}</span>
+<a name="ln-311"></a>   <span class="n">lp_inject</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-312"></a>   <span class="k">do </span><span class="n">ic</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nb_laser</span>
+<a name="ln-313"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">lp_in</span><span class="p">(</span><span class="n">ic</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">x_left</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-314"></a><span class="k">     if</span> <span class="p">(</span><span class="n">lp_end</span><span class="p">(</span><span class="n">ic</span><span class="p">)</span> <span class="o">&gt;=</span> <span class="n">xm</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-315"></a><span class="k">      </span><span class="n">lp_inject</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-316"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">model_id</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span> <span class="k">call </span><span class="n">inflow_lp_fields</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">lp_amp</span><span class="p">,</span> <span class="n">tnew</span><span class="p">,</span> <span class="n">t0_lp</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-317"></a>                                              <span class="n">w0_x</span><span class="p">,</span> <span class="n">w0_y</span><span class="p">,</span> <span class="n">xf_loc</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">oml</span><span class="p">,</span> <span class="n">wmodel_id</span><span class="p">,</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span><span class="p">,</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span><span class="p">)</span>
+<a name="ln-318"></a>      <span class="k">if</span> <span class="p">(</span><span class="n">model_id</span> <span class="o">==</span> <span class="mi">3</span><span class="p">)</span> <span class="k">call </span><span class="n">inflow_cp_fields</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">lp_amp</span><span class="p">,</span> <span class="n">tnew</span><span class="p">,</span> <span class="n">t0_lp</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-319"></a>                                               <span class="n">w0_x</span><span class="p">,</span> <span class="n">w0_y</span><span class="p">,</span> <span class="n">xf_loc</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">wmodel_id</span><span class="p">,</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span><span class="p">,</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span><span class="p">)</span>
+<a name="ln-320"></a>     <span class="k">end if</span>
+<a name="ln-321"></a><span class="k">    end if</span>
+<a name="ln-322"></a><span class="k">    </span><span class="n">lp_in</span><span class="p">(</span><span class="n">ic</span><span class="p">)</span> <span class="o">=</span> <span class="n">lp_in</span><span class="p">(</span><span class="n">ic</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt_loc</span>
+<a name="ln-323"></a>    <span class="n">lp_end</span><span class="p">(</span><span class="n">ic</span><span class="p">)</span> <span class="o">=</span> <span class="n">lp_end</span><span class="p">(</span><span class="n">ic</span><span class="p">)</span> <span class="o">+</span> <span class="n">dt_loc</span>
+<a name="ln-324"></a>   <span class="k">end do</span>
+<a name="ln-325"></a><span class="k">   if</span> <span class="p">(</span><span class="n">Two_color</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-326"></a><span class="k">    if</span> <span class="p">(</span><span class="n">lp_ionz_in</span> <span class="o">&lt;</span> <span class="n">x_left</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-327"></a><span class="k">     if</span> <span class="p">(</span><span class="n">lp_ionz_end</span> <span class="o">&gt;=</span> <span class="n">xm</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-328"></a><span class="k">      </span><span class="n">lp_inject</span> <span class="o">=</span> <span class="p">.</span><span class="n">true</span><span class="p">.</span>
+<a name="ln-329"></a>      <span class="k">call </span><span class="n">inflow_lp_fields</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">lp1_amp</span><span class="p">,</span> <span class="n">tnew</span><span class="p">,</span> <span class="n">t1_lp</span><span class="p">,</span> <span class="n">w1_x</span><span class="p">,</span> <span class="n">w1_y</span><span class="p">,</span> <span class="n">xf1</span><span class="p">,</span> <span class="p">&amp;</span>
+<a name="ln-330"></a>                            <span class="n">om1</span><span class="p">,</span> <span class="n">model_id</span><span class="p">,</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span><span class="p">,</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span><span class="p">)</span>
+<a name="ln-331"></a>     <span class="k">end if</span>
+<a name="ln-332"></a><span class="k">    end if</span>
+<a name="ln-333"></a><span class="k">    </span><span class="n">lp_ionz_in</span> <span class="o">=</span> <span class="n">lp_ionz_in</span> <span class="o">+</span> <span class="n">dt_loc</span>
+<a name="ln-334"></a>    <span class="n">lp_ionz_end</span> <span class="o">=</span> <span class="n">lp_ionz_end</span> <span class="o">+</span> <span class="n">dt_loc</span>
+<a name="ln-335"></a>   <span class="k">end if</span>
+<a name="ln-336"></a><span class="k">  end subroutine</span>
+<a name="ln-337"></a>  <span class="c">!===================================================</span>
+<a name="ln-338"></a>  <span class="k">subroutine </span><span class="n">advect_bunch_fields</span><span class="p">(</span><span class="n">fb</span><span class="p">,</span> <span class="n">curr</span><span class="p">,</span> <span class="n">v_b</span><span class="p">)</span>
+<a name="ln-339"></a>
+<a name="ln-340"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">inout</span><span class="p">)</span> <span class="kd">::</span> <span class="n">fb</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:),</span> <span class="n">curr</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span>
+<a name="ln-341"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">v_b</span>
+<a name="ln-342"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">dth</span>
+<a name="ln-343"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ix</span><span class="p">,</span> <span class="n">iy</span><span class="p">,</span> <span class="n">iz</span>
+<a name="ln-344"></a>
+<a name="ln-345"></a>   <span class="n">dth</span> <span class="o">=</span> <span class="mf">0.5</span><span class="o">*</span><span class="n">dt_loc</span>
+<a name="ln-346"></a>   <span class="c">!In 2D nfield=3 nbfield=4=nfield+1   in fb(4)=Jx[i+1/2,j,k] at t=0</span>
+<a name="ln-347"></a>   <span class="c">!fb=[Ex,Ey,Ez,Jx,By,Bz]</span>
+<a name="ln-348"></a>   <span class="c">!================================================</span>
+<a name="ln-349"></a>   <span class="k">call </span><span class="n">fill_ebfield_xbdsdata</span><span class="p">(</span><span class="n">fb</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nbfield</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-350"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">initial_time</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-351"></a><span class="k">    call </span><span class="n">field_xadvect</span><span class="p">(</span><span class="n">fb</span><span class="p">,</span> <span class="n">dth</span><span class="p">,</span> <span class="o">-</span><span class="n">v_b</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-352"></a>    <span class="n">fb</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">4</span><span class="p">)</span> <span class="o">=</span> <span class="n">dt_loc</span><span class="o">*</span><span class="n">fb</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="mi">4</span><span class="p">)</span>
+<a name="ln-353"></a>   <span class="k">end if</span>
+<a name="ln-354"></a><span class="k">   call </span><span class="n">field_xadvect</span><span class="p">(</span><span class="n">fb</span><span class="p">,</span> <span class="n">dt_loc</span><span class="p">,</span> <span class="n">v_b</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nbfield</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<a name="ln-355"></a>   <span class="k">do </span><span class="n">iz</span> <span class="o">=</span> <span class="n">kz1</span><span class="p">,</span> <span class="n">kz2</span>
+<a name="ln-356"></a>    <span class="k">do </span><span class="n">iy</span> <span class="o">=</span> <span class="n">jy1</span><span class="p">,</span> <span class="n">jy2</span>
+<a name="ln-357"></a>     <span class="k">do </span><span class="n">ix</span> <span class="o">=</span> <span class="n">ix1</span><span class="p">,</span> <span class="n">ix2</span>
+<a name="ln-358"></a>      <span class="n">curr</span><span class="p">(</span><span class="n">ix</span><span class="p">,</span> <span class="n">iy</span><span class="p">,</span> <span class="n">iz</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">curr</span><span class="p">(</span><span class="n">ix</span><span class="p">,</span> <span class="n">iy</span><span class="p">,</span> <span class="n">iz</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">fb</span><span class="p">(</span><span class="n">ix</span><span class="p">,</span> <span class="n">iy</span><span class="p">,</span> <span class="n">iz</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<a name="ln-359"></a>     <span class="k">end do</span>
+<a name="ln-360"></a><span class="k">    end do</span>
+<a name="ln-361"></a><span class="k">   end do</span>
+<a name="ln-362"></a>   <span class="c">! Subtracts from the longitudinal bunch current the advected initial bunch</span>
+<a name="ln-363"></a>   <span class="c">! current</span>
+<a name="ln-364"></a>  <span class="k">end subroutine</span>
+<a name="ln-365"></a>  <span class="c">!============================</span>
+<a name="ln-366"></a> <span class="k">end module</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-08-08 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

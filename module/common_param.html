@@ -1,0 +1,6053 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>common_param &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>common_param 
+    <small>Module</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for modules and submodules.">62 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/common_param.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+     <li><a href='../sourcefile/common_param.f90.html'>common_param.f90</a></li>
+    
+  
+     <li class="active">common_param</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-0">Variables</a></h3></div>
+  <div id="vars-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ref_nlayer">ref_nlayer</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ref_nlas">ref_nlas</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ref_nspec">ref_nspec</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nx">nx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ny">ny</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nz">nz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ny_targ">ny_targ</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n1ft">n1ft</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n2ft">n2ft</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n3ft">n3ft</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n1ft_loc">n1ft_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n2ft_loc">n2ft_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n3ft_loc">n3ft_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-k0">k0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-yx_rat">yx_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zx_rat">zx_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ibx">ibx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-iby">iby</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ibz">ibz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ibeam">ibeam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpf_ord">lpf_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-der_ord">der_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-str_flag">str_flag</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-iform">iform</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-model_id">model_id</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dmodel_id">dmodel_id</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsp">nsp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsb">nsb</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ionz_lev">ionz_lev</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ionz_model">ionz_model</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ion_min">ion_min</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ion_max">ion_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-atomic_number">atomic_number</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n_mol_atoms~2">n_mol_atoms</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_laser">nb_laser</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_1">nb_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_xc">np_per_xc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_yc">np_per_yc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mass_number">mass_number</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t0_pl">t0_pl</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpx">lpx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpy">lpy</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n_over_nc">n_over_nc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np1">np1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np2">np2</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-r_c">r_c</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t0_lp">t0_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc_lp">xc_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tau_fwhm">tau_fwhm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w0_y">w0_y</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-a0">a0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lam0">lam0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_delay">lp_delay</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_offset">lp_offset</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t1_lp">t1_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tau1_fwhm">tau1_fwhm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w1_y">w1_y</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-a1">a1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lam1">lam1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-a_symm_rat">a_symm_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc_1">xc_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-gam_1">gam_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-sxb_1">sxb_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-syb_1">syb_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-epsy_1">epsy_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-epsz_1">epsz_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dg_1">dg_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-charge_1">charge_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ap1_twiss">ap1_twiss</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-bt1_twiss">bt1_twiss</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_inject">t_inject</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nouts">nouts</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-iene">iene</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nvout">nvout</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nden">nden</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-npout">npout</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nbout">nbout</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-jump">jump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pjump">pjump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-new_sim">new_sim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-id_new">id_new</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dump">dump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-gam_min">gam_min</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xp0_out">xp0_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xp1_out">xp1_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-yp_out">yp_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w_speed">w_speed</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wi_time">wi_time</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wf_time">wf_time</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tnow">tnow</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tmax">tmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tscale">tscale</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dt_loc">dt_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dt">dt</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-cfl">cfl</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-initial_time">initial_time</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tkjump">tkjump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nkjump">nkjump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-track_tot_nstep">track_tot_nstep</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-txmin">txmin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-txmax">txmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tymin">tymin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tymax">tymax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tzmin">tzmin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tzmax">tzmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_in">t_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_out">t_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nprocx">nprocx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nprocy">nprocy</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nprocz">nprocz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-g_prof">g_prof</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-p_tracking">p_tracking</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-comoving">comoving</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-beam">beam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-hybrid">hybrid</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wake">wake</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-envelope">envelope</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-solid_target">solid_target</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ionization">ionization</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ions">ions</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-part~4">part</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-stretch">stretch</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-channel">channel</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-inject_beam">inject_beam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_active">lp_active</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_inject">lp_inject</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-plane_wave">plane_wave</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lin_lp">lin_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-circ_lp">circ_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-relativistic">relativistic</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-two_color">Two_color</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-enable_ionization">enable_ionization</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-symmetrization_pulse">symmetrization_pulse</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-charge_cons">charge_cons</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-high_gamma">high_gamma</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-test">test</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nx_loc">nx_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ny_loc">ny_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nz_loc">nz_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-npty">npty</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptz">nptz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptx_max">nptx_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ncmp_max">ncmp_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nx_alloc">nx_alloc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_npty">loc_npty</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nptz">loc_nptz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptx">nptx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nptx">loc_nptx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-sptx_max">sptx_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nxf">nxf</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-npt_buffer">npt_buffer</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-sh_targ">sh_targ</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mp_per_cell">mp_per_cell</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nref">nref</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_zc">np_per_zc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ppc">ppc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nyc_max">loc_nyc_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nzc_max">loc_nzc_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nxc_max">loc_nxc_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ndim_max">ndim_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-djc">djc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ratio_mpc">ratio_mpc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pavg_npart">pavg_npart</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wgh_ion">wgh_ion</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-concentration">concentration</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mass">mass</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mass_rat">mass_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-charge_to_mass">charge_to_mass</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-unit_charge">unit_charge</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lorentz_fact">lorentz_fact</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n0_ref">n0_ref</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pmass">pmass</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ompe">ompe</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-vbeam">vbeam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-curr_max">curr_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-j0_norm">j0_norm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ratio_mpfluid">ratio_mpfluid</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-chann_fact">chann_fact</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n_plasma">n_plasma</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-gam0">gam0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-bet0">bet0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-u0_b">u0_b</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_over_np">nb_over_np</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-b_charge">b_charge</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-oml">oml</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-e0">e0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_pow">lp_pow</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zr">zr</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_intensity">lp_intensity</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_xsize">lp_xsize</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-p_c">p_c</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w0_x">w0_x</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_amp">lp_amp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xf">xf</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_max">lp_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-eb_max">eb_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_energy">lp_energy</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_rad">lp_rad</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc1_lp">xc1_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xf1">xf1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zr1">zr1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp1_rad">lp1_rad</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp1_amp">lp1_amp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-om1">om1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w1_x">w1_x</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t0_b">t0_b</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-el_lp">el_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-el_d">el_d</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lambda_p">lambda_p</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-omega_p">omega_p</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpvol">lpvol</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nc0">nc0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ncrit">ncrit</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n1_over_n">n1_over_n</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n2_over_n">n2_over_n</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_cell">np_per_cell</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_nmacro">np_per_nmacro</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nmacro">nmacro</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-targ_in">targ_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-targ_end">targ_end</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lx_fwhm">lx_fwhm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_in">lp_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_end">lp_end</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_ionz_in">lp_ionz_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_ionz_end">lp_ionz_end</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xf_loc">xf_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc_loc">xc_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-y0_cent">y0_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-z0_cent">z0_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-y1_cent">y1_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-z1_cent">z1_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-incid_angle">incid_angle</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ymin_t">ymin_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ymax_t">ymax_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zmin_t">zmin_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zmax_t">zmax_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-rmin_t">rmin_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-rmax_t">rmax_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-track_tot_part">track_tot_part</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pot_ndim">pot_ndim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_max">nb_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pe_nbmax">pe_nbmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_min">nb_min</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pe_nbmin">pe_nbmin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tsc_ord">tsc_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_ord">t_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-spl_ord">spl_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsp_run">nsp_run</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsp_ionz">nsp_ionz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ndim">ndim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-curr_ndim">curr_ndim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nj_dim">nj_dim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nd2">nd2</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nfield">nfield</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nbfield">nbfield</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nfcomp">nfcomp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mod_ord">mod_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w_sh">w_sh</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-macro_charge">macro_charge</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-energy_in_targ">energy_in_targ</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptot_global">nptot_global</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+    </div>
+    
+    <div class="col-md-9" id='text'>
+    
+      <br>
+    
+  
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Uses</h3>
+      </div>
+      <ul class="list-group">
+      
+      <li class="list-group-item">
+  <ul class="list-inline">
+    
+    <li><a href='../module/precision_def.html'>precision_def</a></li>
+    
+  </ul>
+      </li>
+      
+      
+      
+      <li class="list-group-item">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~common_param~~UsesGraph Pages: 1 -->
+<svg id="modulecommon_paramUsesGraph" width="228pt" height="32pt"
+ viewBox="0.00 0.00 228.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~common_param~~UsesGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>module~~common_param~~UsesGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 224,-28 224,4 -4,4"/>
+<!-- module~common_param -->
+<g id="module~~common_param~~UsesGraph_node1" class="node">
+<title>module~common_param</title>
+<polygon fill="none" stroke="#000000" points="220,-24 120,-24 120,0 220,0 220,-24"/>
+<text text-anchor="middle" x="170" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">common_param</text>
+</g>
+<!-- module~precision_def -->
+<g id="module~~common_param~~UsesGraph_node2" class="node">
+<title>module~precision_def</title>
+<g id="a_module~~common_param~~UsesGraph_node2"><a xlink:href=".././module/precision_def.html" xlink:title="precision_def">
+<polygon fill="#337ab7" stroke="#337ab7" points="84,-24 0,-24 0,0 84,0 84,-24"/>
+<text text-anchor="middle" x="42" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def</text>
+</a>
+</g>
+</g>
+<!-- module~common_param&#45;&gt;module~precision_def -->
+<g id="module~~common_param~~UsesGraph_edge1" class="edge">
+<title>module~common_param&#45;&gt;module~precision_def</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M119.7784,-12C111.4131,-12 102.7181,-12 94.3025,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="94.2168,-8.5001 84.2168,-12 94.2168,-15.5001 94.2168,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </li>
+      
+      </ul>
+    </div>
+    
+
+    
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Used by</h3>
+      </div>
+      <ul class="list-group">
+  
+  
+  <li class="list-group-item">
+    <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: module~~common_param~~UsedByGraph Pages: 1 -->
+<svg id="modulecommon_paramUsedByGraph" width="641pt" height="610pt"
+ viewBox="0.00 0.00 641.00 609.88" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="module~~common_param~~UsedByGraph" class="graph" transform="scale(.6834 .6834) rotate(0) translate(4 888.4595)">
+<title>module~~common_param~~UsedByGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-888.4595 934,-888.4595 934,4 -4,4"/>
+<!-- module~common_param -->
+<g id="module~~common_param~~UsedByGraph_node1" class="node">
+<title>module~common_param</title>
+<polygon fill="none" stroke="#000000" points="100,-392 0,-392 0,-368 100,-368 100,-392"/>
+<text text-anchor="middle" x="50" y="-377.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">common_param</text>
+</g>
+<!-- module~read_input -->
+<g id="module~~common_param~~UsedByGraph_node2" class="node">
+<title>module~read_input</title>
+<g id="a_module~~common_param~~UsedByGraph_node2"><a xlink:href=".././module/read_input.html" xlink:title="read_input">
+<polygon fill="#337ab7" stroke="#337ab7" points="222.5,-150 152.5,-150 152.5,-126 222.5,-126 222.5,-150"/>
+<text text-anchor="middle" x="187.5" y="-135.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">read_input</text>
+</a>
+</g>
+</g>
+<!-- module~read_input&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge2" class="edge">
+<title>module~read_input&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M178.4433,-150.1593C167.7509,-164.7402 149.6929,-190.086 136,-213 105.659,-263.7732 75.1428,-326.4276 59.9291,-358.6426"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="56.6276,-357.4392 55.5469,-367.9788 62.9643,-360.4135 56.6276,-357.4392"/>
+</g>
+<!-- module~boris_push -->
+<g id="module~~common_param~~UsedByGraph_node3" class="node">
+<title>module~boris_push</title>
+<g id="a_module~~common_param~~UsedByGraph_node3"><a xlink:href=".././module/boris_push.html" xlink:title="boris_push">
+<polygon fill="#337ab7" stroke="#337ab7" points="649,-374 579,-374 579,-350 649,-350 649,-374"/>
+<text text-anchor="middle" x="614" y="-359.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">boris_push</text>
+</a>
+</g>
+</g>
+<!-- module~boris_push&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge3" class="edge">
+<title>module~boris_push&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M598.8468,-349.9414C584.6799,-338.419 563.189,-320.2929 546,-303 528.6679,-285.5632 531.8055,-272.3563 510,-261 433.5537,-221.1867 402.0601,-228.0747 317,-242"/>
+</g>
+<!-- module~grid_part_lib -->
+<g id="module~~common_param~~UsedByGraph_node4" class="node">
+<title>module~grid_part_lib</title>
+<g id="a_module~~common_param~~UsedByGraph_node4"><a xlink:href=".././module/grid_part_lib.html" xlink:title="grid_part_lib">
+<polygon fill="#337ab7" stroke="#337ab7" points="356.5,-554 277.5,-554 277.5,-530 356.5,-530 356.5,-554"/>
+<text text-anchor="middle" x="317" y="-539.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_lib</text>
+</a>
+</g>
+</g>
+<!-- module~grid_part_lib&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge4" class="edge">
+<title>module~grid_part_lib&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M301.5113,-529.6612C293.0558,-522.449 282.7602,-512.8475 275,-503 254.8002,-477.3669 264.3664,-459.5336 239,-439 228.2384,-430.2887 156.1608,-409.1729 104.2096,-394.7169"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="105.009,-391.3066 94.4375,-392.01 103.1402,-398.0526 105.009,-391.3066"/>
+</g>
+<!-- module~stretched_grid -->
+<g id="module~~common_param~~UsedByGraph_node13" class="node">
+<title>module~stretched_grid</title>
+<g id="a_module~~common_param~~UsedByGraph_node13"><a xlink:href=".././module/stretched_grid.html" xlink:title="stretched_grid">
+<polygon fill="#337ab7" stroke="#337ab7" points="232,-472 143,-472 143,-448 232,-448 232,-472"/>
+<text text-anchor="middle" x="187.5" y="-457.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stretched_grid</text>
+</a>
+</g>
+</g>
+<!-- module~grid_part_lib&#45;&gt;module~stretched_grid -->
+<g id="module~~common_param~~UsedByGraph_edge37" class="edge">
+<title>module~grid_part_lib&#45;&gt;module~stretched_grid</title>
+<path fill="none" stroke="#6500ff" stroke-dasharray="5,2" d="M304.0108,-529.9905C289.1551,-516.7133 263.6875,-495.3141 239,-481 236.1599,-479.3533 233.1658,-477.7736 230.1087,-476.2721"/>
+<polygon fill="#6500ff" stroke="#6500ff" points="231.3874,-473.0079 220.8393,-472.0136 228.4651,-479.3687 231.3874,-473.0079"/>
+</g>
+<!-- module~window -->
+<g id="module~~common_param~~UsedByGraph_node5" class="node">
+<title>module~window</title>
+<g id="a_module~~common_param~~UsedByGraph_node5"><a xlink:href=".././module/window.html" xlink:title="window">
+<polygon fill="#337ab7" stroke="#337ab7" points="641,-416 587,-416 587,-392 641,-392 641,-416"/>
+<text text-anchor="middle" x="614" y="-401.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">window</text>
+</a>
+</g>
+</g>
+<!-- module~window&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge5" class="edge">
+<title>module~window&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M586.7818,-396.8625C574.1789,-393.2372 559.1238,-388.4463 546,-383 475.8526,-353.889 454.308,-350.4411 395,-303 360.6333,-275.5097 360.4649,-235.1012 317,-242"/>
+</g>
+<!-- module~run_data_info -->
+<g id="module~~common_param~~UsedByGraph_node10" class="node">
+<title>module~run_data_info</title>
+<g id="a_module~~common_param~~UsedByGraph_node10"><a xlink:href=".././module/run_data_info.html" xlink:title="run_data_info">
+<polygon fill="#337ab7" stroke="#337ab7" points="495,-294 410,-294 410,-270 495,-270 495,-294"/>
+<text text-anchor="middle" x="452.5" y="-279.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">run_data_info</text>
+</a>
+</g>
+</g>
+<!-- module~window&#45;&gt;module~run_data_info -->
+<g id="module~~common_param~~UsedByGraph_edge31" class="edge">
+<title>module~window&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00cbff" stroke-dasharray="5,2" d="M586.7807,-399.0421C573.7508,-395.8344 558.3393,-390.766 546,-383 541.4018,-380.1061 496.1329,-330.333 470.3111,-301.7609"/>
+<polygon fill="#00cbff" stroke="#00cbff" points="472.893,-299.3977 463.5937,-294.3208 467.6973,-304.0887 472.893,-299.3977"/>
+</g>
+<!-- module~mpi_part_interface -->
+<g id="module~~common_param~~UsedByGraph_node17" class="node">
+<title>module~mpi_part_interface</title>
+<g id="a_module~~common_param~~UsedByGraph_node17"><a xlink:href=".././module/mpi_part_interface.html" xlink:title="mpi_part_interface">
+<polygon fill="#337ab7" stroke="#337ab7" points="509,-454 396,-454 396,-430 509,-430 509,-454"/>
+<text text-anchor="middle" x="452.5" y="-439.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_part_interface</text>
+</a>
+</g>
+</g>
+<!-- module~window&#45;&gt;module~mpi_part_interface -->
+<g id="module~~common_param~~UsedByGraph_edge49" class="edge">
+<title>module~window&#45;&gt;module~mpi_part_interface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M586.9685,-410.3603C566.9919,-415.0607 538.9879,-421.6499 513.704,-427.599"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="512.7367,-424.231 503.8042,-429.9284 514.34,-431.0449 512.7367,-424.231"/>
+</g>
+<!-- module~mpi_field_interface -->
+<g id="module~~common_param~~UsedByGraph_node31" class="node">
+<title>module~mpi_field_interface</title>
+<g id="a_module~~common_param~~UsedByGraph_node31"><a xlink:href=".././module/mpi_field_interface.html" xlink:title="mpi_field_interface">
+<polygon fill="#337ab7" stroke="#337ab7" points="510,-614 395,-614 395,-590 510,-590 510,-614"/>
+<text text-anchor="middle" x="452.5" y="-599.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_field_interface</text>
+</a>
+</g>
+</g>
+<!-- module~window&#45;&gt;module~mpi_field_interface -->
+<g id="module~~common_param~~UsedByGraph_edge76" class="edge">
+<title>module~window&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M594.9414,-416.0703C579.6414,-426.688 558.6871,-443.4709 546,-463 516.1291,-508.9799 547.7094,-541.1952 510,-581 508.9493,-582.1091 507.8354,-583.1598 506.6685,-584.1552"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="504.5308,-581.3784 498.3103,-589.9549 508.5215,-587.1295 504.5308,-581.3784"/>
+</g>
+<!-- module~grid_field_param -->
+<g id="module~~common_param~~UsedByGraph_node6" class="node">
+<title>module~grid_field_param</title>
+<g id="a_module~~common_param~~UsedByGraph_node6"><a xlink:href=".././module/grid_field_param.html" xlink:title="grid_field_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="239,-392 136,-392 136,-368 239,-368 239,-392"/>
+<text text-anchor="middle" x="187.5" y="-377.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_field_param</text>
+</a>
+</g>
+</g>
+<!-- module~grid_field_param&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge6" class="edge">
+<title>module~grid_field_param&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M135.9089,-380C127.5658,-380 118.8625,-380 110.3346,-380"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="110.0555,-376.5001 100.0555,-380 110.0554,-383.5001 110.0555,-376.5001"/>
+</g>
+<!-- module~ionize -->
+<g id="module~~common_param~~UsedByGraph_node7" class="node">
+<title>module~ionize</title>
+<g id="a_module~~common_param~~UsedByGraph_node7"><a xlink:href=".././module/ionize.html" xlink:title="ionize">
+<polygon fill="#337ab7" stroke="#337ab7" points="641,-294 587,-294 587,-270 641,-270 641,-294"/>
+<text text-anchor="middle" x="614" y="-279.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ionize</text>
+</a>
+</g>
+</g>
+<!-- module~ionize&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge7" class="edge">
+<title>module~ionize&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M597.3875,-269.9006C577.6855,-256.3681 543.3039,-235.2641 510,-227 426.496,-206.2792 401.5214,-225.9251 317,-242"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M317,-242C254.2085,-249.5808 247.2609,-280.2907 187.5,-301"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M187.5,-301C145.1978,-315.6593 101.1558,-343.5719 74.6537,-361.9851"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="72.5193,-359.2075 66.3663,-367.8325 76.555,-364.9271 72.5193,-359.2075"/>
+</g>
+<!-- module~set_init_param -->
+<g id="module~~common_param~~UsedByGraph_node8" class="node">
+<title>module~set_init_param</title>
+<g id="a_module~~common_param~~UsedByGraph_node8"><a xlink:href=".././module/set_init_param.html" xlink:title="set_init_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="659.5,-63 568.5,-63 568.5,-39 659.5,-39 659.5,-63"/>
+<text text-anchor="middle" x="614" y="-48.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">set_init_param</text>
+</a>
+</g>
+</g>
+<!-- module~set_init_param&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge8" class="edge">
+<title>module~set_init_param&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M568.3587,-45.4403C509.5235,-39.5683 404.3914,-33.4787 317,-52"/>
+</g>
+<!-- module~set_grid_param -->
+<g id="module~~common_param~~UsedByGraph_node9" class="node">
+<title>module~set_grid_param</title>
+<g id="a_module~~common_param~~UsedByGraph_node9"><a xlink:href=".././module/set_grid_param.html" xlink:title="set_grid_param">
+<polygon fill="#337ab7" stroke="#337ab7" points="500,-24 405,-24 405,0 500,0 500,-24"/>
+<text text-anchor="middle" x="452.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">set_grid_param</text>
+</a>
+</g>
+</g>
+<!-- module~set_init_param&#45;&gt;module~set_grid_param -->
+<g id="module~~common_param~~UsedByGraph_edge29" class="edge">
+<title>module~set_init_param&#45;&gt;module~set_grid_param</title>
+<path fill="none" stroke="#00ffcb" stroke-dasharray="5,2" d="M568.1526,-39.9285C550.0466,-35.5561 529.0416,-30.4837 509.9399,-25.8709"/>
+<polygon fill="#00ffcb" stroke="#00ffcb" points="510.6921,-22.452 500.1499,-23.5068 509.0489,-29.2565 510.6921,-22.452"/>
+</g>
+<!-- module~set_grid_param&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge9" class="edge">
+<title>module~set_grid_param&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M424.6112,-24.0546C397.6677,-34.7751 355.4055,-49.1809 317,-52"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M317,-52C231.7549,-58.2573 195.5649,-55.6983 136,-117 68.9295,-186.0261 54.166,-308.0924 50.9167,-357.9028"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="47.4209,-357.7311 50.3594,-367.9102 54.4101,-358.1203 47.4209,-357.7311"/>
+</g>
+<!-- module~run_data_info&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge10" class="edge">
+<title>module~run_data_info&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M409.9685,-291.4878C382.7444,-298.3007 347.0267,-308.6336 317,-322"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M317,-322C263.732,-345.7123 242.5932,-281.9082 187.5,-301"/>
+</g>
+<!-- module~parallel -->
+<g id="module~~common_param~~UsedByGraph_node15" class="node">
+<title>module~parallel</title>
+<g id="a_module~~common_param~~UsedByGraph_node15"><a xlink:href=".././module/parallel.html" xlink:title="parallel">
+<polygon fill="#337ab7" stroke="#337ab7" points="214.5,-514 160.5,-514 160.5,-490 214.5,-490 214.5,-514"/>
+<text text-anchor="middle" x="187.5" y="-499.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">parallel</text>
+</a>
+</g>
+</g>
+<!-- module~run_data_info&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge45" class="edge">
+<title>module~run_data_info&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M317,-322C245.0911,-354.0103 293.3091,-424.0256 239,-481 234.8174,-485.3879 229.5889,-488.8866 224.0791,-491.6683"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="222.4854,-488.5435 214.6759,-495.7034 225.2458,-494.9763 222.4854,-488.5435"/>
+</g>
+<!-- module~psolve -->
+<g id="module~~common_param~~UsedByGraph_node11" class="node">
+<title>module~psolve</title>
+<g id="a_module~~common_param~~UsedByGraph_node11"><a xlink:href=".././module/psolve.html" xlink:title="psolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="479.5,-778 425.5,-778 425.5,-754 479.5,-754 479.5,-778"/>
+<text text-anchor="middle" x="452.5" y="-763.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">psolve</text>
+</a>
+</g>
+</g>
+<!-- module~psolve&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge13" class="edge">
+<title>module~psolve&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M425.0864,-774.9844C364.7269,-793.9871 222.8913,-834.1267 187.5,-804"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M187.5,-804C123.1358,-749.628 68.7822,-480.9709 53.9794,-401.9184"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="57.4172,-401.2605 52.1563,-392.0641 50.534,-402.534 57.4172,-401.2605"/>
+</g>
+<!-- module~grid_fields -->
+<g id="module~~common_param~~UsedByGraph_node24" class="node">
+<title>module~grid_fields</title>
+<g id="a_module~~common_param~~UsedByGraph_node24"><a xlink:href=".././module/grid_fields.html" xlink:title="grid_fields">
+<polygon fill="#337ab7" stroke="#337ab7" points="350.5,-494 283.5,-494 283.5,-470 350.5,-470 350.5,-494"/>
+<text text-anchor="middle" x="317" y="-479.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_fields</text>
+</a>
+</g>
+</g>
+<!-- module~psolve&#45;&gt;module~grid_fields -->
+<g id="module~~common_param~~UsedByGraph_edge64" class="edge">
+<title>module~psolve&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ff9f" stroke-dasharray="5,2" d="M425.2831,-762.177C414.3164,-759.2546 402.5089,-754.0982 395,-745 330.8167,-667.2323 406.5334,-609.9263 359,-521 354.9762,-513.4723 348.9333,-506.6104 342.6761,-500.8134"/>
+<polygon fill="#00ff9f" stroke="#00ff9f" points="344.651,-497.8976 334.7717,-494.0701 340.1078,-503.223 344.651,-497.8976"/>
+</g>
+<!-- module~prl_fft -->
+<g id="module~~common_param~~UsedByGraph_node27" class="node">
+<title>module~prl_fft</title>
+<g id="a_module~~common_param~~UsedByGraph_node27"><a xlink:href=".././module/prl_fft.html" xlink:title="prl_fft">
+<polygon fill="#337ab7" stroke="#337ab7" points="344,-736 290,-736 290,-712 344,-712 344,-736"/>
+<text text-anchor="middle" x="317" y="-721.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">prl_fft</text>
+</a>
+</g>
+</g>
+<!-- module~psolve&#45;&gt;module~prl_fft -->
+<g id="module~~common_param~~UsedByGraph_edge69" class="edge">
+<title>module~psolve&#45;&gt;module~prl_fft</title>
+<path fill="none" stroke="#003fff" stroke-dasharray="5,2" d="M425.4052,-757.6016C404.8189,-751.2206 376.2855,-742.3763 353.6596,-735.3631"/>
+<polygon fill="#003fff" stroke="#003fff" points="354.6358,-732.0015 344.0478,-732.3838 352.5632,-738.6877 354.6358,-732.0015"/>
+</g>
+<!-- module~pic_out -->
+<g id="module~~common_param~~UsedByGraph_node12" class="node">
+<title>module~pic_out</title>
+<g id="a_module~~common_param~~UsedByGraph_node12"><a xlink:href=".././module/pic_out.html" xlink:title="pic_out">
+<polygon fill="#337ab7" stroke="#337ab7" points="344,-856 290,-856 290,-832 344,-832 344,-856"/>
+<text text-anchor="middle" x="317" y="-841.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out</text>
+</a>
+</g>
+</g>
+<!-- module~pic_out&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge11" class="edge">
+<title>module~pic_out&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M289.9708,-841.8745C261.4941,-838.3377 216.7959,-828.938 187.5,-804"/>
+</g>
+<!-- module~pic_out&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge43" class="edge">
+<title>module~pic_out&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M307.555,-831.8554C298.2402,-819.4096 284.1119,-799.2129 275,-780 231.9539,-689.2352 203.0484,-572.0504 192.2404,-524.0143"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="195.6231,-523.1011 190.0461,-514.093 188.7883,-524.6129 195.6231,-523.1011"/>
+</g>
+<!-- module~stretched_grid&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge12" class="edge">
+<title>module~stretched_grid&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M162.3683,-447.8986C153.9021,-443.6675 144.4595,-438.7776 136,-434 115.7944,-422.5887 93.6316,-408.6363 76.8658,-397.7727"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="78.4415,-394.6218 68.1534,-392.0909 74.6177,-400.4852 78.4415,-394.6218"/>
+</g>
+<!-- module~pic_dump -->
+<g id="module~~common_param~~UsedByGraph_node14" class="node">
+<title>module~pic_dump</title>
+<g id="a_module~~common_param~~UsedByGraph_node14"><a xlink:href=".././module/pic_dump.html" xlink:title="pic_dump">
+<polygon fill="#337ab7" stroke="#337ab7" points="349,-294 285,-294 285,-270 349,-270 349,-294"/>
+<text text-anchor="middle" x="317" y="-279.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_dump</text>
+</a>
+</g>
+</g>
+<!-- module~pic_dump&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge1" class="edge">
+<title>module~pic_dump&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M284.8081,-283.3729C258.1122,-285.2962 219.4913,-289.9138 187.5,-301"/>
+</g>
+<!-- module~pic_dump&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge47" class="edge">
+<title>module~pic_dump&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M290.3207,-294.0007C284.512,-297.7334 278.9349,-302.38 275,-308 229.9561,-372.3347 289.2564,-420.6494 239,-481 235.0417,-485.7534 229.8394,-489.4428 224.2636,-492.3031"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="222.5155,-489.243 214.6811,-496.3755 225.2535,-495.6854 222.5155,-489.243"/>
+</g>
+<!-- module~parallel&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge14" class="edge">
+<title>module~parallel&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M160.3003,-493.7025C152.0614,-490.4743 143.2754,-486.2636 136,-481 105.1691,-458.6944 78.3099,-423.1062 63.1395,-400.6744"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="65.9873,-398.6354 57.5549,-392.2209 60.1468,-402.4939 65.9873,-398.6354"/>
+</g>
+<!-- module~init_part_distrib -->
+<g id="module~~common_param~~UsedByGraph_node16" class="node">
+<title>module~init_part_distrib</title>
+<g id="a_module~~common_param~~UsedByGraph_node16"><a xlink:href=".././module/init_part_distrib.html" xlink:title="init_part_distrib">
+<polygon fill="#337ab7" stroke="#337ab7" points="234.5,-246 140.5,-246 140.5,-222 234.5,-222 234.5,-246"/>
+<text text-anchor="middle" x="187.5" y="-231.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_part_distrib</text>
+</a>
+</g>
+</g>
+<!-- module~init_part_distrib&#45;&gt;module~common_param -->
+<g id="module~~common_param~~UsedByGraph_edge15" class="edge">
+<title>module~init_part_distrib&#45;&gt;module~common_param</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M175.55,-246.1268C165.0565,-256.816 149.4163,-272.8469 136,-287 112.1717,-312.1369 85.1112,-341.5454 67.815,-360.4547"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="65.1988,-358.1292 61.038,-367.8729 70.3669,-362.8506 65.1988,-358.1292"/>
+</g>
+<!-- module~mpi_part_interface&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge39" class="edge">
+<title>module~mpi_part_interface&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M395.7597,-442.3385C360.3198,-443.9418 314.1461,-448.5955 275,-461 257.5517,-466.529 255.5039,-473.0858 239,-481 234.2781,-483.2643 229.2455,-485.5117 224.2458,-487.6478"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="222.6503,-484.5207 214.7619,-491.5935 225.3392,-490.9837 222.6503,-484.5207"/>
+</g>
+<!-- module~diag_part_and_fields -->
+<g id="module~~common_param~~UsedByGraph_node18" class="node">
+<title>module~diag_part_and_fields</title>
+<g id="a_module~~common_param~~UsedByGraph_node18"><a xlink:href=".././module/diag_part_and_fields.html" xlink:title="diag_part_and_fields">
+<polygon fill="#337ab7" stroke="#337ab7" points="840,-786 718,-786 718,-762 840,-762 840,-786"/>
+<text text-anchor="middle" x="779" y="-771.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">diag_part_and_fields</text>
+</a>
+</g>
+</g>
+<!-- module~diag_part_and_fields&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge40" class="edge">
+<title>module~diag_part_and_fields&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M742.1558,-786.0646C649.0367,-813.9895 402.6146,-871.477 275,-745 211.9042,-682.4666 194.0625,-571.1858 189.22,-524.0604"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="192.6976,-523.6558 188.2894,-514.0216 185.7275,-524.302 192.6976,-523.6558"/>
+</g>
+<!-- module~pic_in -->
+<g id="module~~common_param~~UsedByGraph_node19" class="node">
+<title>module~pic_in</title>
+<g id="a_module~~common_param~~UsedByGraph_node19"><a xlink:href=".././module/pic_in.html" xlink:title="pic_in">
+<polygon fill="#337ab7" stroke="#337ab7" points="641,-160 587,-160 587,-136 641,-136 641,-160"/>
+<text text-anchor="middle" x="614" y="-145.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_in</text>
+</a>
+</g>
+</g>
+<!-- module~pic_in&#45;&gt;module~init_part_distrib -->
+<g id="module~~common_param~~UsedByGraph_edge48" class="edge">
+<title>module~pic_in&#45;&gt;module~init_part_distrib</title>
+<path fill="none" stroke="#ff0066" stroke-dasharray="5,2" d="M586.6943,-145.4086C544.9251,-142.1349 462.8667,-138.4331 395,-152 329.7697,-165.0398 258.6786,-197.4857 218.9444,-217.4332"/>
+<polygon fill="#ff0066" stroke="#ff0066" points="217.3406,-214.3221 210.0119,-221.9733 220.5123,-220.5624 217.3406,-214.3221"/>
+</g>
+<!-- module~init_laser_field -->
+<g id="module~~common_param~~UsedByGraph_node35" class="node">
+<title>module~init_laser_field</title>
+<g id="a_module~~common_param~~UsedByGraph_node35"><a xlink:href=".././module/init_laser_field.html" xlink:title="init_laser_field">
+<polygon fill="#337ab7" stroke="#337ab7" points="497,-412 408,-412 408,-388 497,-388 497,-412"/>
+<text text-anchor="middle" x="452.5" y="-397.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_laser_field</text>
+</a>
+</g>
+</g>
+<!-- module~pic_in&#45;&gt;module~init_laser_field -->
+<g id="module~~common_param~~UsedByGraph_edge83" class="edge">
+<title>module~pic_in&#45;&gt;module~init_laser_field</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M586.853,-159.1674C572.8745,-166.1608 556.5895,-176.4386 546,-190 513.5599,-231.5441 531.5773,-254.9096 510,-303 497.6033,-330.6291 479.1938,-360.2848 466.5642,-379.4301"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="463.5299,-377.6713 460.8802,-387.9295 469.3486,-381.5626 463.5299,-377.6713"/>
+</g>
+<!-- module~init_beam_part_distrib -->
+<g id="module~~common_param~~UsedByGraph_node20" class="node">
+<title>module~init_beam_part_distrib</title>
+<g id="a_module~~common_param~~UsedByGraph_node20"><a xlink:href=".././module/init_beam_part_distrib.html" xlink:title="init_beam_part_distrib">
+<polygon fill="#337ab7" stroke="#337ab7" points="679,-674 549,-674 549,-650 679,-650 679,-674"/>
+<text text-anchor="middle" x="614" y="-659.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_beam_part_distrib</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~psolve -->
+<g id="module~~common_param~~UsedByGraph_edge35" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~psolve</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M560.7758,-674.0654C555.4921,-676.5159 550.4474,-679.4611 546,-683 521.0666,-702.8402 534.4232,-724.535 510,-745 504.0637,-749.9742 496.8476,-753.8182 489.5614,-756.7723"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="487.9504,-753.63 479.6958,-760.2717 490.2905,-760.2273 487.9504,-753.63"/>
+</g>
+<!-- module~init_grid_field -->
+<g id="module~~common_param~~UsedByGraph_node22" class="node">
+<title>module~init_grid_field</title>
+<g id="a_module~~common_param~~UsedByGraph_node22"><a xlink:href=".././module/init_grid_field.html" xlink:title="init_grid_field">
+<polygon fill="#337ab7" stroke="#337ab7" points="359,-412 275,-412 275,-388 359,-388 359,-412"/>
+<text text-anchor="middle" x="317" y="-397.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_grid_field</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~init_grid_field -->
+<g id="module~~common_param~~UsedByGraph_edge58" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~init_grid_field</title>
+<path fill="none" stroke="#1fff00" stroke-dasharray="5,2" d="M548.9954,-658.2714C492.578,-653.6704 416.6426,-643.7432 395,-623 341.7517,-571.9646 388.4558,-528.6192 359,-461 352.6166,-446.3462 342.529,-431.54 333.8398,-420.1849"/>
+<polygon fill="#1fff00" stroke="#1fff00" points="336.5005,-417.9068 327.5523,-412.2339 331.0098,-422.2488 336.5005,-417.9068"/>
+</g>
+<!-- module~mpi_curr_interface -->
+<g id="module~~common_param~~UsedByGraph_node23" class="node">
+<title>module~mpi_curr_interface</title>
+<g id="a_module~~common_param~~UsedByGraph_node23"><a xlink:href=".././module/mpi_curr_interface.html" xlink:title="mpi_curr_interface">
+<polygon fill="#337ab7" stroke="#337ab7" points="509,-694 396,-694 396,-670 509,-670 509,-694"/>
+<text text-anchor="middle" x="452.5" y="-679.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_curr_interface</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~mpi_curr_interface -->
+<g id="module~~common_param~~UsedByGraph_edge62" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~mpi_curr_interface</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M548.7773,-670.0771C539.0312,-671.2841 528.9716,-672.5298 519.1955,-673.7405"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="518.6295,-670.2838 509.1355,-674.9863 519.4899,-677.2307 518.6295,-670.2838"/>
+</g>
+<!-- module~grid_part_util -->
+<g id="module~~common_param~~UsedByGraph_node29" class="node">
+<title>module~grid_part_util</title>
+<g id="a_module~~common_param~~UsedByGraph_node29"><a xlink:href=".././module/grid_part_util.html" xlink:title="grid_part_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="493.5,-736 411.5,-736 411.5,-712 493.5,-712 493.5,-736"/>
+<text text-anchor="middle" x="452.5" y="-721.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_util</text>
+</a>
+</g>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~grid_part_util -->
+<g id="module~~common_param~~UsedByGraph_edge72" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~grid_part_util</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M570.3476,-674.007C562.148,-676.6751 553.7277,-679.7025 546,-683 529.1652,-690.1835 526.6475,-695.3926 510,-703 505.9765,-704.8386 501.7412,-706.6345 497.4694,-708.353"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="496.184,-705.0974 488.1274,-711.9779 498.7163,-711.6234 496.184,-705.0974"/>
+</g>
+<!-- module~init_beam_part_distrib&#45;&gt;module~mpi_field_interface -->
+<g id="module~~common_param~~UsedByGraph_edge75" class="edge">
+<title>module~init_beam_part_distrib&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M581.3181,-649.8581C556.2811,-640.5564 521.5509,-627.6536 494.4603,-617.589"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="495.4503,-614.2231 484.8574,-614.0213 493.0124,-620.7849 495.4503,-614.2231"/>
+</g>
+<!-- module~start_all -->
+<g id="module~~common_param~~UsedByGraph_node21" class="node">
+<title>module~start_all</title>
+<g id="a_module~~common_param~~UsedByGraph_node21"><a xlink:href=".././module/start_all.html" xlink:title="start_all">
+<polygon fill="#337ab7" stroke="#337ab7" points="806.5,-160 751.5,-160 751.5,-136 806.5,-136 806.5,-160"/>
+<text text-anchor="middle" x="779" y="-145.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">start_all</text>
+</a>
+</g>
+</g>
+<!-- module~start_all&#45;&gt;module~read_input -->
+<g id="module~~common_param~~UsedByGraph_edge16" class="edge">
+<title>module~start_all&#45;&gt;module~read_input</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M751.2418,-140.3406C731.983,-135.4347 705.643,-129.53 682,-127 517.2864,-109.3743 320.0179,-124.5584 232.7879,-133.1133"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="232.3075,-129.6437 222.7052,-134.121 233.0037,-136.609 232.3075,-129.6437"/>
+</g>
+<!-- module~start_all&#45;&gt;module~ionize -->
+<g id="module~~common_param~~UsedByGraph_edge27" class="edge">
+<title>module~start_all&#45;&gt;module~ionize</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M764.0663,-160.1279C735.1064,-183.6469 671.1523,-235.5854 636.8294,-263.4597"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="634.3372,-260.9749 628.781,-269.996 638.7501,-266.4087 634.3372,-260.9749"/>
+</g>
+<!-- module~start_all&#45;&gt;module~set_init_param -->
+<g id="module~~common_param~~UsedByGraph_edge28" class="edge">
+<title>module~start_all&#45;&gt;module~set_init_param</title>
+<path fill="none" stroke="#00ff66" stroke-dasharray="5,2" d="M765.0223,-135.8933C746.8598,-120.618 713.7098,-94.2626 682,-77 675.1314,-73.2608 667.6106,-69.8102 660.1542,-66.7272"/>
+<polygon fill="#00ff66" stroke="#00ff66" points="661.384,-63.4499 650.7977,-63.0246 658.8082,-69.9587 661.384,-63.4499"/>
+</g>
+<!-- module~start_all&#45;&gt;module~set_grid_param -->
+<g id="module~~common_param~~UsedByGraph_edge30" class="edge">
+<title>module~start_all&#45;&gt;module~set_grid_param</title>
+<path fill="none" stroke="#00ffcb" stroke-dasharray="5,2" d="M773.3002,-135.934C760.7951,-111.0081 728.3269,-54.1488 682,-30 628.7304,-2.2322 558.8974,-.8665 510.3152,-4.4718"/>
+<polygon fill="#00ffcb" stroke="#00ffcb" points="509.9587,-.9893 500.2845,-5.3089 510.5409,-7.9651 509.9587,-.9893"/>
+</g>
+<!-- module~start_all&#45;&gt;module~run_data_info -->
+<g id="module~~common_param~~UsedByGraph_edge33" class="edge">
+<title>module~start_all&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00cbff" stroke-dasharray="5,2" d="M614,-204C583.2172,-212.9208 575.1115,-214.5954 546,-228 522.8399,-238.6643 497.8952,-253.2407 479.6005,-264.5615"/>
+<polygon fill="#00cbff" stroke="#00cbff" points="477.5558,-261.7122 470.9381,-269.986 481.271,-267.645 477.5558,-261.7122"/>
+</g>
+<!-- module~start_all&#45;&gt;module~pic_dump -->
+<g id="module~~common_param~~UsedByGraph_edge38" class="edge">
+<title>module~start_all&#45;&gt;module~pic_dump</title>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M751.2168,-158.2876C718.6184,-170.1575 662.8128,-189.8541 614,-204"/>
+<path fill="none" stroke="#cc00ff" stroke-dasharray="5,2" d="M614,-204C517.3986,-231.995 492.2265,-235.2595 395,-261 383.3613,-264.0813 370.7566,-267.4577 359.1427,-270.5847"/>
+<polygon fill="#cc00ff" stroke="#cc00ff" points="357.9847,-267.2719 349.2409,-273.2548 359.8073,-274.0305 357.9847,-267.2719"/>
+</g>
+<!-- module~start_all&#45;&gt;module~pic_in -->
+<g id="module~~common_param~~UsedByGraph_edge53" class="edge">
+<title>module~start_all&#45;&gt;module~pic_in</title>
+<path fill="none" stroke="#ffbf00" stroke-dasharray="5,2" d="M751.3827,-148C723.9729,-148 681.7709,-148 651.3741,-148"/>
+<polygon fill="#ffbf00" stroke="#ffbf00" points="651.1583,-144.5001 641.1583,-148 651.1583,-151.5001 651.1583,-144.5001"/>
+</g>
+<!-- module~init_grid_field&#45;&gt;module~grid_field_param -->
+<g id="module~~common_param~~UsedByGraph_edge23" class="edge">
+<title>module~init_grid_field&#45;&gt;module~grid_field_param</title>
+<path fill="none" stroke="#65ff00" stroke-dasharray="5,2" d="M274.9551,-393.5066C266.7804,-392.2441 258.0528,-390.8962 249.3936,-389.5589"/>
+<polygon fill="#65ff00" stroke="#65ff00" points="249.714,-386.0669 239.2969,-387.9995 248.6455,-392.9849 249.714,-386.0669"/>
+</g>
+<!-- module~mpi_curr_interface&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge41" class="edge">
+<title>module~mpi_curr_interface&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M400.5939,-669.9402C374.903,-663.1581 343.7438,-653.6927 317,-642"/>
+</g>
+<!-- module~grid_fields&#45;&gt;module~grid_field_param -->
+<g id="module~~common_param~~UsedByGraph_edge24" class="edge">
+<title>module~grid_fields&#45;&gt;module~grid_field_param</title>
+<path fill="none" stroke="#65ff00" stroke-dasharray="5,2" d="M306.603,-469.7627C292.4907,-453.6799 265.9294,-425.2239 239,-406 234.4146,-402.7267 229.3579,-399.6365 224.2583,-396.8071"/>
+<polygon fill="#65ff00" stroke="#65ff00" points="225.6063,-393.5619 215.1254,-392.0125 222.3526,-399.7597 225.6063,-393.5619"/>
+</g>
+<!-- module~grid_fields&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge42" class="edge">
+<title>module~grid_fields&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M283.3135,-487.2026C265.4386,-489.9631 243.4247,-493.363 225.0071,-496.2074"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="224.2652,-492.7804 214.9166,-497.7658 225.3337,-499.6984 224.2652,-492.7804"/>
+</g>
+<!-- module~pic_evolve -->
+<g id="module~~common_param~~UsedByGraph_node25" class="node">
+<title>module~pic_evolve</title>
+<g id="a_module~~common_param~~UsedByGraph_node25"><a xlink:href=".././module/pic_evolve.html" xlink:title="pic_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="813.5,-414 744.5,-414 744.5,-390 813.5,-390 813.5,-414"/>
+<text text-anchor="middle" x="779" y="-399.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_evolve</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~boris_push -->
+<g id="module~~common_param~~UsedByGraph_edge17" class="edge">
+<title>module~pic_evolve&#45;&gt;module~boris_push</title>
+<path fill="none" stroke="#ff6600" stroke-dasharray="5,2" d="M744.4106,-393.6147C719.6077,-387.6019 685.9633,-379.4456 659.0604,-372.9237"/>
+<polygon fill="#ff6600" stroke="#ff6600" points="659.6553,-369.4666 649.1121,-370.512 658.006,-376.2696 659.6553,-369.4666"/>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~window -->
+<g id="module~~common_param~~UsedByGraph_edge21" class="edge">
+<title>module~pic_evolve&#45;&gt;module~window</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M744.4106,-402.4193C717.1776,-402.7494 679.2859,-403.2087 651.3619,-403.5471"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="651.1476,-400.0494 641.1908,-403.6704 651.2325,-407.0489 651.1476,-400.0494"/>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~ionize -->
+<g id="module~~common_param~~UsedByGraph_edge25" class="edge">
+<title>module~pic_evolve&#45;&gt;module~ionize</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M769.1971,-389.7001C752.9492,-370.0238 718.584,-331.3176 682,-308 672.371,-301.8627 661.0693,-296.8191 650.4749,-292.8616"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="651.6072,-289.5497 641.0123,-289.5322 649.2838,-296.1529 651.6072,-289.5497"/>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~mpi_part_interface -->
+<g id="module~~common_param~~UsedByGraph_edge50" class="edge">
+<title>module~pic_evolve&#45;&gt;module~mpi_part_interface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M744.4978,-412.4441C703.9951,-424.4091 639.1582,-442.5618 614,-444"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M614,-444C582.9478,-445.7751 548.4849,-445.6365 519.3966,-444.9093"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="519.4398,-441.4092 509.3463,-444.6297 519.2451,-448.4065 519.4398,-441.4092"/>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~init_grid_field -->
+<g id="module~~common_param~~UsedByGraph_edge56" class="edge">
+<title>module~pic_evolve&#45;&gt;module~init_grid_field</title>
+<path fill="none" stroke="#1fff00" stroke-dasharray="5,2" d="M765.4508,-389.9278C747.741,-375.0395 715.0688,-350.5337 682,-341 564.373,-307.0883 419.4382,-356.4454 353.1611,-383.8272"/>
+<polygon fill="#1fff00" stroke="#1fff00" points="351.4491,-380.7504 343.5904,-387.8561 354.165,-387.202 351.4491,-380.7504"/>
+</g>
+<!-- module~fluid_density_momenta -->
+<g id="module~~common_param~~UsedByGraph_node33" class="node">
+<title>module~fluid_density_momenta</title>
+<g id="a_module~~common_param~~UsedByGraph_node33"><a xlink:href=".././module/fluid_density_momenta.html" xlink:title="fluid_density_momenta">
+<polygon fill="#337ab7" stroke="#337ab7" points="682,-538 546,-538 546,-514 682,-514 682,-538"/>
+<text text-anchor="middle" x="614" y="-523.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fluid_density_momenta</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~fluid_density_momenta -->
+<g id="module~~common_param~~UsedByGraph_edge79" class="edge">
+<title>module~pic_evolve&#45;&gt;module~fluid_density_momenta</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M744.3524,-408.5287C734.9388,-411.6509 725.3321,-416.2467 718,-423 688.724,-449.965 711.704,-478.5071 682,-505 680.5131,-506.3261 678.9438,-507.5685 677.3082,-508.7325"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="675.4298,-505.7778 668.6543,-513.9229 679.0303,-511.7808 675.4298,-505.7778"/>
+</g>
+<!-- module~curr_and_fields_util -->
+<g id="module~~common_param~~UsedByGraph_node34" class="node">
+<title>module~curr_and_fields_util</title>
+<g id="a_module~~common_param~~UsedByGraph_node34"><a xlink:href=".././module/curr_and_fields_util.html" xlink:title="curr_and_fields_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="671.5,-496 556.5,-496 556.5,-472 671.5,-472 671.5,-496"/>
+<text text-anchor="middle" x="614" y="-481.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">curr_and_fields_util</text>
+</a>
+</g>
+</g>
+<!-- module~pic_evolve&#45;&gt;module~curr_and_fields_util -->
+<g id="module~~common_param~~UsedByGraph_edge81" class="edge">
+<title>module~pic_evolve&#45;&gt;module~curr_and_fields_util</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M744.2454,-411.0256C735.336,-414.1156 726.0137,-418.0709 718,-423 698.9924,-434.6912 700.8083,-445.9907 682,-458 676.2026,-461.7017 669.797,-465.0046 663.3037,-467.9109"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="661.6667,-464.8015 653.7884,-471.8855 664.3648,-471.2607 661.6667,-464.8015"/>
+</g>
+<!-- module~pic_out_util -->
+<g id="module~~common_param~~UsedByGraph_node26" class="node">
+<title>module~pic_out_util</title>
+<g id="a_module~~common_param~~UsedByGraph_node26"><a xlink:href=".././module/pic_out_util.html" xlink:title="pic_out_util">
+<polygon fill="#337ab7" stroke="#337ab7" points="650.5,-716 577.5,-716 577.5,-692 650.5,-692 650.5,-716"/>
+<text text-anchor="middle" x="614" y="-701.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pic_out_util</text>
+</a>
+</g>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~psolve -->
+<g id="module~~common_param~~UsedByGraph_edge34" class="edge">
+<title>module~pic_out_util&#45;&gt;module~psolve</title>
+<path fill="none" stroke="#0066ff" stroke-dasharray="5,2" d="M584.0411,-716.0434C563.3042,-724.3223 535.0392,-735.4938 510,-745 503.3913,-747.509 496.335,-750.1319 489.5098,-752.6402"/>
+<polygon fill="#0066ff" stroke="#0066ff" points="487.945,-749.4856 479.7547,-756.2063 490.3485,-756.0601 487.945,-749.4856"/>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~mpi_curr_interface -->
+<g id="module~~common_param~~UsedByGraph_edge61" class="edge">
+<title>module~pic_out_util&#45;&gt;module~mpi_curr_interface</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M577.3532,-699.0079C560.1565,-696.6653 539.1104,-693.7983 519.2332,-691.0906"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="519.6637,-687.617 509.2827,-689.7351 518.7188,-694.5529 519.6637,-687.617"/>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~grid_part_util -->
+<g id="module~~common_param~~UsedByGraph_edge71" class="edge">
+<title>module~pic_out_util&#45;&gt;module~grid_part_util</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M577.3532,-708.5383C555.5294,-711.2409 527.506,-714.7113 503.5398,-717.6793"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="503.041,-714.2142 493.547,-718.9168 503.9013,-721.1612 503.041,-714.2142"/>
+</g>
+<!-- module~pic_out_util&#45;&gt;module~mpi_field_interface -->
+<g id="module~~common_param~~UsedByGraph_edge77" class="edge">
+<title>module~pic_out_util&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M577.2166,-695.6628C566.7631,-692.5008 555.6148,-688.3367 546,-683 516.6885,-666.7307 488.36,-640.187 470.7133,-621.947"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="472.8098,-619.0708 463.3919,-614.2175 467.7277,-623.8846 472.8098,-619.0708"/>
+</g>
+<!-- module~prl_fft&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge44" class="edge">
+<title>module~prl_fft&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M309.121,-711.5506C300.5758,-697.978 286.6021,-675.5767 275,-656 247.1109,-608.9414 215.7305,-552.9222 199.1776,-523.1185"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="202.0691,-521.1154 194.1589,-514.067 195.9471,-524.5098 202.0691,-521.1154"/>
+</g>
+<!-- module~grid_part_connect -->
+<g id="module~~common_param~~UsedByGraph_node28" class="node">
+<title>module~grid_part_connect</title>
+<g id="a_module~~common_param~~UsedByGraph_node28"><a xlink:href=".././module/grid_part_connect.html" xlink:title="grid_part_connect">
+<polygon fill="#337ab7" stroke="#337ab7" points="507,-572 398,-572 398,-548 507,-548 507,-572"/>
+<text text-anchor="middle" x="452.5" y="-557.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_connect</text>
+</a>
+</g>
+</g>
+<!-- module~grid_part_connect&#45;&gt;module~grid_part_lib -->
+<g id="module~~common_param~~UsedByGraph_edge20" class="edge">
+<title>module~grid_part_connect&#45;&gt;module~grid_part_lib</title>
+<path fill="none" stroke="#ffcc00" stroke-dasharray="5,2" d="M397.7775,-552.7306C387.4211,-551.3548 376.6427,-549.923 366.46,-548.5703"/>
+<polygon fill="#ffcc00" stroke="#ffcc00" points="366.8876,-545.0965 356.5137,-547.2491 365.9657,-552.0355 366.8876,-545.0965"/>
+</g>
+<!-- module~grid_part_util&#45;&gt;module~grid_part_lib -->
+<g id="module~~common_param~~UsedByGraph_edge19" class="edge">
+<title>module~grid_part_util&#45;&gt;module~grid_part_lib</title>
+<path fill="none" stroke="#ffcc00" stroke-dasharray="5,2" d="M411.3006,-713.4539C405.3906,-710.7137 399.7229,-707.2842 395,-703 367.6139,-678.1582 375.1129,-661.2789 359,-628 348.3467,-605.9972 336.0663,-580.8799 327.5478,-563.4953"/>
+<polygon fill="#ffcc00" stroke="#ffcc00" points="330.5525,-561.6731 323.0076,-554.235 324.2672,-564.7547 330.5525,-561.6731"/>
+</g>
+<!-- module~env_evolve -->
+<g id="module~~common_param~~UsedByGraph_node30" class="node">
+<title>module~env_evolve</title>
+<g id="a_module~~common_param~~UsedByGraph_node30"><a xlink:href=".././module/env_evolve.html" xlink:title="env_evolve">
+<polygon fill="#337ab7" stroke="#337ab7" points="815.5,-456 742.5,-456 742.5,-432 815.5,-432 815.5,-456"/>
+<text text-anchor="middle" x="779" y="-441.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">env_evolve</text>
+</a>
+</g>
+</g>
+<!-- module~env_evolve&#45;&gt;module~boris_push -->
+<g id="module~~common_param~~UsedByGraph_edge18" class="edge">
+<title>module~env_evolve&#45;&gt;module~boris_push</title>
+<path fill="none" stroke="#ff6600" stroke-dasharray="5,2" d="M742.4228,-434.7699C734.0114,-431.7539 725.378,-427.8843 718,-423 698.0566,-409.7974 702.1522,-395.8816 682,-383 674.9688,-378.5056 666.9146,-374.9209 658.8665,-372.0789"/>
+<polygon fill="#ff6600" stroke="#ff6600" points="659.7127,-368.6751 649.1219,-368.9693 657.5846,-375.3438 659.7127,-368.6751"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~window -->
+<g id="module~~common_param~~UsedByGraph_edge22" class="edge">
+<title>module~env_evolve&#45;&gt;module~window</title>
+<path fill="none" stroke="#cbff00" stroke-dasharray="5,2" d="M742.3812,-435.1227C715.1888,-428.5306 678.2456,-419.5747 650.9698,-412.9624"/>
+<polygon fill="#cbff00" stroke="#cbff00" points="651.5731,-409.5073 641.0299,-410.5527 649.9238,-416.3103 651.5731,-409.5073"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~ionize -->
+<g id="module~~common_param~~UsedByGraph_edge26" class="edge">
+<title>module~env_evolve&#45;&gt;module~ionize</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M742.4467,-436.8195C733.6538,-433.7196 724.8378,-429.298 718,-423 688.724,-396.035 705.607,-373.0454 682,-341 670.4079,-325.2642 653.9158,-310.8239 640.0765,-300.1681"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="641.9778,-297.2198 631.87,-294.0446 637.7916,-302.8301 641.9778,-297.2198"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~mpi_part_interface -->
+<g id="module~~common_param~~UsedByGraph_edge51" class="edge">
+<title>module~env_evolve&#45;&gt;module~mpi_part_interface</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M742.2667,-442.8009C708.8063,-441.9937 658.0427,-441.4822 614,-444"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~fluid_density_momenta -->
+<g id="module~~common_param~~UsedByGraph_edge80" class="edge">
+<title>module~env_evolve&#45;&gt;module~fluid_density_momenta</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M762.5908,-456.2075C743.8869,-469.6622 712.0106,-491.22 682,-505 677.6665,-506.9898 673.0941,-508.857 668.4533,-510.5932"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="667.1508,-507.3413 658.8862,-513.9705 669.481,-513.942 667.1508,-507.3413"/>
+</g>
+<!-- module~env_evolve&#45;&gt;module~curr_and_fields_util -->
+<g id="module~~common_param~~UsedByGraph_edge82" class="edge">
+<title>module~env_evolve&#45;&gt;module~curr_and_fields_util</title>
+<path fill="none" stroke="#00ff00" stroke-dasharray="5,2" d="M742.3812,-452.8773C722.2015,-457.7693 696.6519,-463.9632 673.6684,-469.5349"/>
+<polygon fill="#00ff00" stroke="#00ff00" points="672.5531,-466.2038 663.6592,-471.9614 674.2024,-473.0068 672.5531,-466.2038"/>
+</g>
+<!-- module~mpi_field_interface&#45;&gt;module~parallel -->
+<g id="module~~common_param~~UsedByGraph_edge46" class="edge">
+<title>module~mpi_field_interface&#45;&gt;module~parallel</title>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M436.1872,-614.0028C410.2599,-631.5057 358.3518,-660.0795 317,-642"/>
+<path fill="none" stroke="#ff00cb" stroke-dasharray="5,2" d="M317,-642C260.9496,-617.494 218.3503,-555.437 198.982,-522.7968"/>
+<polygon fill="#ff00cb" stroke="#ff00cb" points="201.9661,-520.9653 193.9348,-514.0552 195.9039,-524.4654 201.9661,-520.9653"/>
+</g>
+<!-- program~aladyn -->
+<g id="module~~common_param~~UsedByGraph_node32" class="node">
+<title>program~aladyn</title>
+<g id="a_module~~common_param~~UsedByGraph_node32"><a xlink:href=".././program/aladyn.html" xlink:title="aladyn">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="930,-456 876,-456 876,-432 930,-432 930,-456"/>
+<text text-anchor="middle" x="903" y="-441.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">aladyn</text>
+</a>
+</g>
+</g>
+<!-- program~aladyn&#45;&gt;module~run_data_info -->
+<g id="module~~common_param~~UsedByGraph_edge32" class="edge">
+<title>program~aladyn&#45;&gt;module~run_data_info</title>
+<path fill="none" stroke="#00cbff" stroke-dasharray="5,2" d="M893.9557,-431.8833C866.7484,-396.6242 781.3779,-294.4602 682,-261 620.5801,-240.3201 545.0051,-254.217 497.777,-267.2143"/>
+<polygon fill="#00cbff" stroke="#00cbff" points="496.8012,-263.853 488.1445,-269.9614 498.721,-270.5846 496.8012,-263.853"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_out -->
+<g id="module~~common_param~~UsedByGraph_edge36" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_out</title>
+<path fill="none" stroke="#0000ff" stroke-dasharray="5,2" d="M902.6013,-456.0104C900.4971,-511.8372 888.8509,-745.3539 840,-795 708.2403,-928.9043 449.8906,-879.0393 353.9884,-854.4492"/>
+<polygon fill="#0000ff" stroke="#0000ff" points="354.727,-851.0246 344.1661,-851.872 352.9504,-857.7954 354.727,-851.0246"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~diag_part_and_fields -->
+<g id="module~~common_param~~UsedByGraph_edge52" class="edge">
+<title>program~aladyn&#45;&gt;module~diag_part_and_fields</title>
+<path fill="none" stroke="#ff5f00" stroke-dasharray="5,2" d="M901.8092,-456.2208C897.7608,-493.8933 882.3447,-610.8864 840,-697 829.3959,-718.5648 811.9848,-739.7181 798.4726,-754.3797"/>
+<polygon fill="#ff5f00" stroke="#ff5f00" points="795.7649,-752.1489 791.4349,-761.8185 800.8499,-756.9596 795.7649,-752.1489"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~init_beam_part_distrib -->
+<g id="module~~common_param~~UsedByGraph_edge54" class="edge">
+<title>program~aladyn&#45;&gt;module~init_beam_part_distrib</title>
+<path fill="none" stroke="#dfff00" stroke-dasharray="5,2" d="M901.1351,-456.1243C894.1068,-497.0856 865.0846,-630.6819 779,-683"/>
+<path fill="none" stroke="#dfff00" stroke-dasharray="5,2" d="M779,-683C760.9902,-693.9455 709.8764,-685.5822 669.2638,-676.3705"/>
+<polygon fill="#dfff00" stroke="#dfff00" points="669.99,-672.9461 659.4566,-674.085 668.4012,-679.7634 669.99,-672.9461"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~start_all -->
+<g id="module~~common_param~~UsedByGraph_edge55" class="edge">
+<title>program~aladyn&#45;&gt;module~start_all</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M901.0488,-431.7158C895.3241,-397.7914 876.6248,-300.5272 840,-228 828.7072,-205.637 810.9188,-183.219 797.4592,-167.8282"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="799.7721,-165.1642 790.4957,-160.0457 794.5555,-169.8319 799.7721,-165.1642"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_evolve -->
+<g id="module~~common_param~~UsedByGraph_edge67" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_evolve</title>
+<path fill="none" stroke="#00ffff" stroke-dasharray="5,2" d="M875.7877,-434.7829C860.3886,-429.5671 840.7564,-422.9175 823.2034,-416.9721"/>
+<polygon fill="#00ffff" stroke="#00ffff" points="824.3001,-413.6483 813.7058,-413.7552 822.0544,-420.2783 824.3001,-413.6483"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~pic_out_util -->
+<g id="module~~common_param~~UsedByGraph_edge68" class="edge">
+<title>program~aladyn&#45;&gt;module~pic_out_util</title>
+<path fill="none" stroke="#009fff" stroke-dasharray="5,2" d="M779,-683C743.5539,-704.5424 695.9383,-708.5215 660.9693,-707.8645"/>
+<polygon fill="#009fff" stroke="#009fff" points="660.6587,-704.3527 650.5503,-707.5261 660.4314,-711.349 660.6587,-704.3527"/>
+</g>
+<!-- program~aladyn&#45;&gt;module~env_evolve -->
+<g id="module~~common_param~~UsedByGraph_edge73" class="edge">
+<title>program~aladyn&#45;&gt;module~env_evolve</title>
+<path fill="none" stroke="#df00ff" stroke-dasharray="5,2" d="M875.7877,-444C861.1461,-444 842.6776,-444 825.8081,-444"/>
+<polygon fill="#df00ff" stroke="#df00ff" points="825.5596,-440.5001 815.5596,-444 825.5595,-447.5001 825.5596,-440.5001"/>
+</g>
+<!-- module~fluid_density_momenta&#45;&gt;module~grid_fields -->
+<g id="module~~common_param~~UsedByGraph_edge63" class="edge">
+<title>module~fluid_density_momenta&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ff9f" stroke-dasharray="5,2" d="M545.8265,-517.4007C502.5549,-511.7596 445.4133,-503.9737 395,-496 383.8675,-494.2392 371.8724,-492.1717 360.7068,-490.1741"/>
+<polygon fill="#00ff9f" stroke="#00ff9f" points="361.1978,-486.7061 350.7344,-488.3699 359.9516,-493.5943 361.1978,-486.7061"/>
+</g>
+<!-- module~fluid_density_momenta&#45;&gt;module~mpi_field_interface -->
+<g id="module~~common_param~~UsedByGraph_edge74" class="edge">
+<title>module~fluid_density_momenta&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M593.3028,-538.0231C572.6072,-549.7861 539.6755,-567.8078 510,-581 505.9016,-582.822 501.5917,-584.6139 497.2516,-586.3363"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="495.8504,-583.1251 487.7721,-589.9802 498.3621,-589.659 495.8504,-583.1251"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~init_grid_field -->
+<g id="module~~common_param~~UsedByGraph_edge57" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~init_grid_field</title>
+<path fill="none" stroke="#1fff00" stroke-dasharray="5,2" d="M556.4986,-487.1916C525.514,-487.9324 486.7247,-487.2813 452.5,-482"/>
+<path fill="none" stroke="#1fff00" stroke-dasharray="5,2" d="M452.5,-482C425.9002,-477.8953 418.6291,-475.8865 395,-463 373.2086,-451.1158 351.4931,-432.9246 336.5299,-419.1396"/>
+<polygon fill="#1fff00" stroke="#1fff00" points="338.6328,-416.3122 328.954,-412.0026 333.8328,-421.4073 338.6328,-416.3122"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~mpi_curr_interface -->
+<g id="module~~common_param~~UsedByGraph_edge60" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~mpi_curr_interface</title>
+<path fill="none" stroke="#00ff3f" stroke-dasharray="5,2" d="M557.9127,-496.1456C553.5474,-498.5799 549.4887,-501.4993 546,-505 507.295,-543.8374 537.9229,-575.8117 510,-623 501.0045,-638.202 487.3062,-652.4676 475.5361,-663.1622"/>
+<polygon fill="#00ff3f" stroke="#00ff3f" points="472.9901,-660.7397 467.7772,-669.9634 477.6043,-666.0037 472.9901,-660.7397"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~grid_fields -->
+<g id="module~~common_param~~UsedByGraph_edge65" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ff9f" stroke-dasharray="5,2" d="M452.5,-482C422.1236,-477.3126 387.4584,-477.4098 360.7948,-478.6288"/>
+<polygon fill="#00ff9f" stroke="#00ff9f" points="360.43,-475.1431 350.6283,-479.165 360.7988,-482.1334 360.43,-475.1431"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~grid_part_connect -->
+<g id="module~~common_param~~UsedByGraph_edge70" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~grid_part_connect</title>
+<path fill="none" stroke="#1f00ff" stroke-dasharray="5,2" d="M569.5575,-496.0912C561.5939,-498.7167 553.4605,-501.7074 546,-505 522.2698,-515.4731 497.0098,-530.5969 478.7349,-542.3357"/>
+<polygon fill="#1f00ff" stroke="#1f00ff" points="476.5775,-539.564 470.1114,-547.9569 480.4001,-545.4281 476.5775,-539.564"/>
+</g>
+<!-- module~curr_and_fields_util&#45;&gt;module~mpi_field_interface -->
+<g id="module~~common_param~~UsedByGraph_edge78" class="edge">
+<title>module~curr_and_fields_util&#45;&gt;module~mpi_field_interface</title>
+<path fill="none" stroke="#ff00bf" stroke-dasharray="5,2" d="M559.789,-496.0278C554.8138,-498.4833 550.1087,-501.4399 546,-505 517.7529,-529.4752 537.6185,-555.8175 510,-581 508.6772,-582.2061 507.2796,-583.3444 505.8227,-584.4186"/>
+<polygon fill="#ff00bf" stroke="#ff00bf" points="503.6143,-581.6684 496.9388,-589.8957 507.2879,-587.627 503.6143,-581.6684"/>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~init_grid_field -->
+<g id="module~~common_param~~UsedByGraph_edge59" class="edge">
+<title>module~init_laser_field&#45;&gt;module~init_grid_field</title>
+<path fill="none" stroke="#1fff00" stroke-dasharray="5,2" d="M407.7567,-400C395.5915,-400 382.3034,-400 369.7402,-400"/>
+<polygon fill="#1fff00" stroke="#1fff00" points="369.3983,-396.5001 359.3983,-400 369.3983,-403.5001 369.3983,-396.5001"/>
+</g>
+<!-- module~init_laser_field&#45;&gt;module~grid_fields -->
+<g id="module~~common_param~~UsedByGraph_edge66" class="edge">
+<title>module~init_laser_field&#45;&gt;module~grid_fields</title>
+<path fill="none" stroke="#00ff9f" stroke-dasharray="5,2" d="M414.3236,-412.0253C407.7185,-414.6417 401.0392,-417.6462 395,-421 373.95,-432.6899 352.5852,-449.848 337.5512,-462.9915"/>
+<polygon fill="#00ff9f" stroke="#00ff9f" points="335.0272,-460.5527 329.8925,-469.8202 339.6858,-465.7775 335.0272,-460.5527"/>
+</g>
+</g>
+</svg>
+</div><script>var panmodulecommon_paramUsedByGraph = svgPanZoom('#modulecommon_paramUsedByGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="517pt" height="32pt"
+ viewBox="0.00 0.00 517.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 513,-28 513,4 -4,4"/>
+<!-- Module -->
+<g id="node1" class="node">
+<title>Module</title>
+<polygon fill="#337ab7" stroke="#337ab7" points="54,-24 0,-24 0,0 54,0 54,-24"/>
+<text text-anchor="middle" x="27" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Module</text>
+</g>
+<!-- Submodule -->
+<g id="node2" class="node">
+<title>Submodule</title>
+<polygon fill="#5bc0de" stroke="#5bc0de" points="145.5,-24 72.5,-24 72.5,0 145.5,0 145.5,-24"/>
+<text text-anchor="middle" x="109" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Submodule</text>
+</g>
+<!-- Subroutine -->
+<g id="node3" class="node">
+<title>Subroutine</title>
+<polygon fill="#d9534f" stroke="#d9534f" points="234.5,-24 163.5,-24 163.5,0 234.5,0 234.5,-24"/>
+<text text-anchor="middle" x="199" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Subroutine</text>
+</g>
+<!-- Function -->
+<g id="node4" class="node">
+<title>Function</title>
+<polygon fill="#d94e8f" stroke="#d94e8f" points="311,-24 253,-24 253,0 311,0 311,-24"/>
+<text text-anchor="middle" x="282" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Function</text>
+</g>
+<!-- Program -->
+<g id="node5" class="node">
+<title>Program</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="387,-24 329,-24 329,0 387,0 387,-24"/>
+<text text-anchor="middle" x="358" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Program</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node6" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="509,-24 405,-24 405,0 509,0 509,-24"/>
+<text text-anchor="middle" x="457" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a submodule to the (sub)module which it is
+    descended from. Dashed arrows point from a module or program unit to 
+    modules which it uses. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+  </li>
+  
+      </ul>
+    </div>
+    
+
+    <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#vars-1">Variables</a></h3></div>
+  <div id="vars-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ref_nlayer">ref_nlayer</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ref_nlas">ref_nlas</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ref_nspec">ref_nspec</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nx">nx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ny">ny</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nz">nz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ny_targ">ny_targ</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n1ft">n1ft</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n2ft">n2ft</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n3ft">n3ft</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n1ft_loc">n1ft_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n2ft_loc">n2ft_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n3ft_loc">n3ft_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-k0">k0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-yx_rat">yx_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zx_rat">zx_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ibx">ibx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-iby">iby</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ibz">ibz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ibeam">ibeam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpf_ord">lpf_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-der_ord">der_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-str_flag">str_flag</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-iform">iform</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-model_id">model_id</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dmodel_id">dmodel_id</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsp">nsp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsb">nsb</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ionz_lev">ionz_lev</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ionz_model">ionz_model</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ion_min">ion_min</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ion_max">ion_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-atomic_number">atomic_number</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n_mol_atoms~2">n_mol_atoms</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_laser">nb_laser</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_1">nb_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_xc">np_per_xc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_yc">np_per_yc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mass_number">mass_number</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t0_pl">t0_pl</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpx">lpx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpy">lpy</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n_over_nc">n_over_nc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np1">np1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np2">np2</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-r_c">r_c</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t0_lp">t0_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc_lp">xc_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tau_fwhm">tau_fwhm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w0_y">w0_y</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-a0">a0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lam0">lam0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_delay">lp_delay</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_offset">lp_offset</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t1_lp">t1_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tau1_fwhm">tau1_fwhm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w1_y">w1_y</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-a1">a1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lam1">lam1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-a_symm_rat">a_symm_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc_1">xc_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-gam_1">gam_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-sxb_1">sxb_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-syb_1">syb_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-epsy_1">epsy_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-epsz_1">epsz_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dg_1">dg_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-charge_1">charge_1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ap1_twiss">ap1_twiss</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-bt1_twiss">bt1_twiss</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_inject">t_inject</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nouts">nouts</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-iene">iene</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nvout">nvout</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nden">nden</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-npout">npout</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nbout">nbout</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-jump">jump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pjump">pjump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-new_sim">new_sim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-id_new">id_new</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dump">dump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-gam_min">gam_min</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xp0_out">xp0_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xp1_out">xp1_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-yp_out">yp_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w_speed">w_speed</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wi_time">wi_time</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wf_time">wf_time</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tnow">tnow</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tmax">tmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tscale">tscale</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dt_loc">dt_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-dt">dt</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-cfl">cfl</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-initial_time">initial_time</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tkjump">tkjump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nkjump">nkjump</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-track_tot_nstep">track_tot_nstep</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-txmin">txmin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-txmax">txmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tymin">tymin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tymax">tymax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tzmin">tzmin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tzmax">tzmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_in">t_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_out">t_out</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nprocx">nprocx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nprocy">nprocy</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nprocz">nprocz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-g_prof">g_prof</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-p_tracking">p_tracking</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-comoving">comoving</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-beam">beam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-hybrid">hybrid</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wake">wake</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-envelope">envelope</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-solid_target">solid_target</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ionization">ionization</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ions">ions</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-part~4">part</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-stretch">stretch</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-channel">channel</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-inject_beam">inject_beam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_active">lp_active</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_inject">lp_inject</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-plane_wave">plane_wave</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lin_lp">lin_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-circ_lp">circ_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-relativistic">relativistic</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-two_color">Two_color</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-enable_ionization">enable_ionization</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-symmetrization_pulse">symmetrization_pulse</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-charge_cons">charge_cons</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-high_gamma">high_gamma</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-test">test</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nx_loc">nx_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ny_loc">ny_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nz_loc">nz_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-npty">npty</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptz">nptz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptx_max">nptx_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ncmp_max">ncmp_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nx_alloc">nx_alloc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_npty">loc_npty</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nptz">loc_nptz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptx">nptx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nptx">loc_nptx</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-sptx_max">sptx_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nxf">nxf</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-npt_buffer">npt_buffer</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-sh_targ">sh_targ</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mp_per_cell">mp_per_cell</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nref">nref</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_zc">np_per_zc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ppc">ppc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nyc_max">loc_nyc_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nzc_max">loc_nzc_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-loc_nxc_max">loc_nxc_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ndim_max">ndim_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-djc">djc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ratio_mpc">ratio_mpc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pavg_npart">pavg_npart</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-wgh_ion">wgh_ion</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-concentration">concentration</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mass">mass</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mass_rat">mass_rat</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-charge_to_mass">charge_to_mass</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-unit_charge">unit_charge</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lorentz_fact">lorentz_fact</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n0_ref">n0_ref</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pmass">pmass</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ompe">ompe</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-vbeam">vbeam</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-curr_max">curr_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-j0_norm">j0_norm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ratio_mpfluid">ratio_mpfluid</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-chann_fact">chann_fact</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n_plasma">n_plasma</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-gam0">gam0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-bet0">bet0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-u0_b">u0_b</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_over_np">nb_over_np</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-b_charge">b_charge</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-oml">oml</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-e0">e0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_pow">lp_pow</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zr">zr</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_intensity">lp_intensity</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_xsize">lp_xsize</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-p_c">p_c</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w0_x">w0_x</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_amp">lp_amp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xf">xf</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_max">lp_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-eb_max">eb_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_energy">lp_energy</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_rad">lp_rad</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc1_lp">xc1_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xf1">xf1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zr1">zr1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp1_rad">lp1_rad</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp1_amp">lp1_amp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-om1">om1</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w1_x">w1_x</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t0_b">t0_b</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-el_lp">el_lp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-el_d">el_d</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lambda_p">lambda_p</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-omega_p">omega_p</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lpvol">lpvol</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nc0">nc0</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ncrit">ncrit</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n1_over_n">n1_over_n</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-n2_over_n">n2_over_n</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_cell">np_per_cell</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-np_per_nmacro">np_per_nmacro</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nmacro">nmacro</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-targ_in">targ_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-targ_end">targ_end</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lx_fwhm">lx_fwhm</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_in">lp_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_end">lp_end</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_ionz_in">lp_ionz_in</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-lp_ionz_end">lp_ionz_end</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xf_loc">xf_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-xc_loc">xc_loc</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-y0_cent">y0_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-z0_cent">z0_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-y1_cent">y1_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-z1_cent">z1_cent</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-incid_angle">incid_angle</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ymin_t">ymin_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ymax_t">ymax_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zmin_t">zmin_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-zmax_t">zmax_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-rmin_t">rmin_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-rmax_t">rmax_t</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-track_tot_part">track_tot_part</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pot_ndim">pot_ndim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_max">nb_max</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pe_nbmax">pe_nbmax</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nb_min">nb_min</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-pe_nbmin">pe_nbmin</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-tsc_ord">tsc_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-t_ord">t_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-spl_ord">spl_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsp_run">nsp_run</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nsp_ionz">nsp_ionz</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-ndim">ndim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-curr_ndim">curr_ndim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nj_dim">nj_dim</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nd2">nd2</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nfield">nfield</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nbfield">nbfield</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nfcomp">nfcomp</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-mod_ord">mod_ord</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-w_sh">w_sh</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-macro_charge">macro_charge</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-energy_in_targ">energy_in_targ</a>
+      
+      <a class="list-group-item" href="../module/common_param.html#variable-nptot_global">nptot_global</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    
+
+    
+    <section>
+    <h2>Variables</h2>
+    
+<table class="table table-striped varlist">
+<thead><tr><th>Type</th><th>Visibility</th>
+
+<th>Attributes</th><th></th><th>Name</th><th></th><th>Initial</th><th></th></thead>
+
+
+
+<tbody>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ref_nlayer"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>ref_nlayer</strong></td><td> =</td><td>6</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ref_nlas"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>ref_nlas</strong></td><td> =</td><td>8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ref_nspec"></span>integer,</td>
+  
+  <td>public,</td>
+  <td>parameter</td><td>::</td>
+  <td><strong>ref_nspec</strong></td><td> =</td><td>8</td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nx"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ny"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ny</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nz"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ny_targ"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ny_targ</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1ft"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n1ft</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2ft"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n2ft</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n3ft"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n3ft</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1ft_loc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n1ft_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2ft_loc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n2ft_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n3ft_loc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n3ft_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-k0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>k0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-yx_rat"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>yx_rat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zx_rat"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>zx_rat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ibx"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ibx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iby"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>iby</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ibz"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ibz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ibeam"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ibeam</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lpf_ord"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lpf_ord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-der_ord"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>der_ord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-str_flag"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>str_flag</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iform"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>iform</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-model_id"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>model_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dmodel_id"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dmodel_id</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsp"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nsp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsb"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nsb</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ionz_lev"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ionz_lev</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ionz_model"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ionz_model</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ion_min"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ion_min</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ion_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ion_max</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-atomic_number"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>atomic_number</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n_mol_atoms~2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n_mol_atoms</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nb_laser"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nb_laser</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nb_1"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nb_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np_per_xc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np_per_xc</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np_per_yc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np_per_yc</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mass_number"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mass_number</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t0_pl"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t0_pl</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lpx"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lpx</strong>(7)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lpy"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lpy</strong>(2)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n_over_nc"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n_over_nc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np2"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-r_c"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>r_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t0_lp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t0_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xc_lp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xc_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tau_fwhm"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tau_fwhm</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w0_y"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>w0_y</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-a0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>a0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lam0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lam0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_delay"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_delay</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_offset"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_offset</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t1_lp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t1_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tau1_fwhm"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tau1_fwhm</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w1_y"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>w1_y</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-a1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>a1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lam1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lam1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-a_symm_rat"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>a_symm_rat</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xc_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xc_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gam_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>gam_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sxb_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sxb_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-syb_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>syb_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-epsy_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>epsy_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-epsz_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>epsz_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dg_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dg_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charge_1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>charge_1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ap1_twiss"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ap1_twiss</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bt1_twiss"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bt1_twiss</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t_inject"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t_inject</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nouts"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nouts</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-iene"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>iene</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nvout"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nvout</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nden"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nden</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-npout"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>npout</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbout"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nbout</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-jump"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>jump</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pjump"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pjump</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-new_sim"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>new_sim</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-id_new"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>id_new</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dump"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dump</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gam_min"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>gam_min</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xp0_out"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xp0_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xp1_out"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xp1_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-yp_out"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>yp_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w_speed"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>w_speed</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wi_time"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>wi_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wf_time"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>wf_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tnow"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tnow</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tmax"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tmax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tscale"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tscale</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dt_loc"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dt_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-dt"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>dt</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-cfl"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>cfl</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-initial_time"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>initial_time</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tkjump"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tkjump</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nkjump"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nkjump</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-track_tot_nstep"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>track_tot_nstep</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-txmin"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>txmin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-txmax"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>txmax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tymin"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tymin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tymax"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tymax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tzmin"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tzmin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tzmax"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tzmax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t_in"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t_out"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t_out</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprocx"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nprocx</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprocy"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nprocy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nprocz"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nprocz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-g_prof"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>g_prof</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-p_tracking"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>p_tracking</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-comoving"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>comoving</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-beam"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>beam</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-hybrid"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>hybrid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wake"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>wake</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-envelope"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>envelope</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-solid_target"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>solid_target</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ionization"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ionization</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ions"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ions</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-part~4"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>part</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-stretch"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>stretch</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-channel"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>channel</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-inject_beam"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>inject_beam</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_active"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_active</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_inject"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_inject</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-plane_wave"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>plane_wave</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lin_lp"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lin_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-circ_lp"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>circ_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-relativistic"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>relativistic</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-two_color"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>Two_color</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-enable_ionization"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>enable_ionization</strong>(2)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-symmetrization_pulse"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>symmetrization_pulse</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charge_cons"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>charge_cons</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-high_gamma"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>high_gamma</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-test"></span>logical,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>test</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nx_loc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nx_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ny_loc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ny_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nz_loc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nz_loc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-npty"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>npty</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nptz"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nptz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nptx_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nptx_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncmp_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ncmp_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nx_alloc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nx_alloc</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-loc_npty"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>loc_npty</strong>(ref_nspec)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-loc_nptz"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>loc_nptz</strong>(ref_nspec)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nptx"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nptx</strong>(ref_nspec)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-loc_nptx"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>loc_nptx</strong>(ref_nspec)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sptx_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sptx_max</strong>(ref_nspec)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nxf"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nxf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-npt_buffer"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>npt_buffer</strong>(ref_nspec)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-sh_targ"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>sh_targ</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mp_per_cell"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mp_per_cell</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nref"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nref</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np_per_zc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np_per_zc</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ppc"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ppc</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-loc_nyc_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>loc_nyc_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-loc_nzc_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>loc_nzc_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-loc_nxc_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>loc_nxc_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndim_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ndim_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-djc"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>djc</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ratio_mpc"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ratio_mpc</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pavg_npart"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pavg_npart</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-wgh_ion"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>wgh_ion</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-concentration"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>concentration</strong>(ref_nlayer)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mass"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mass</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mass_rat"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mass_rat</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-charge_to_mass"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>charge_to_mass</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-unit_charge"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>unit_charge</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lorentz_fact"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lorentz_fact</strong>(4)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n0_ref"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n0_ref</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pmass"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pmass</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ompe"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ompe</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-vbeam"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>vbeam</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-curr_max"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>curr_max</strong>(3)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-j0_norm"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>j0_norm</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ratio_mpfluid"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ratio_mpfluid</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-chann_fact"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>chann_fact</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n_plasma"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n_plasma</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-gam0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>gam0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-bet0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>bet0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-u0_b"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>u0_b</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nb_over_np"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nb_over_np</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-b_charge"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>b_charge</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-oml"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>oml</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-e0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>e0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_pow"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_pow</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zr"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>zr</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_intensity"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_intensity</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_xsize"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_xsize</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-p_c"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>p_c</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w0_x"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>w0_x</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_amp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_amp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xf"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xf</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_max"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-eb_max"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>eb_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_energy"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_energy</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_rad"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_rad</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xc1_lp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xc1_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xf1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xf1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zr1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>zr1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp1_rad"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp1_rad</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp1_amp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp1_amp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-om1"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>om1</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w1_x"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>w1_x</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t0_b"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t0_b</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-el_lp"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>el_lp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-el_d"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>el_d</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lambda_p"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lambda_p</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-omega_p"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>omega_p</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lpvol"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lpvol</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nc0"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nc0</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ncrit"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ncrit</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n1_over_n"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n1_over_n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-n2_over_n"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>n2_over_n</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np_per_cell"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np_per_cell</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-np_per_nmacro"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>np_per_nmacro</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nmacro"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nmacro</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-targ_in"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>targ_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-targ_end"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>targ_end</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lx_fwhm"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lx_fwhm</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_in"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_in</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_end"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_end</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_ionz_in"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_ionz_in</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-lp_ionz_end"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>lp_ionz_end</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xf_loc"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xf_loc</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-xc_loc"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>xc_loc</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-y0_cent"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>y0_cent</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-z0_cent"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>z0_cent</strong>(ref_nlas)</td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-y1_cent"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>y1_cent</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-z1_cent"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>z1_cent</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-incid_angle"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>incid_angle</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ymin_t"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ymin_t</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ymax_t"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ymax_t</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zmin_t"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>zmin_t</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-zmax_t"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>zmax_t</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rmin_t"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>rmin_t</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-rmax_t"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>rmax_t</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-track_tot_part"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>track_tot_part</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pot_ndim"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pot_ndim</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nb_max"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nb_max</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pe_nbmax"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pe_nbmax</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nb_min"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nb_min</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-pe_nbmin"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>pe_nbmin</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-tsc_ord"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>tsc_ord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-t_ord"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>t_ord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-spl_ord"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>spl_ord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsp_run"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nsp_run</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nsp_ionz"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nsp_ionz</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-ndim"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>ndim</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-curr_ndim"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>curr_ndim</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nj_dim"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nj_dim</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nd2"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nd2</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nfield"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nfield</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nbfield"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nbfield</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nfcomp"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nfcomp</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-mod_ord"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>mod_ord</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-w_sh"></span>integer,</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>w_sh</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-macro_charge"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>macro_charge</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-energy_in_targ"></span>real(kind=dp),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>energy_in_targ</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+  
+  
+  
+  
+<tr>
+  
+  <td><span class="anchor" id="variable-nptot_global"></span>integer(kind=8),</td>
+  
+  <td>public</td>
+  <td></td><td>::</td>
+  <td><strong>nptot_global</strong></td><td></td><td></td><td></td>
+  
+</tr>
+
+</tbody>
+</table>
+
+    </section>
+    <br>
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-08-08 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>

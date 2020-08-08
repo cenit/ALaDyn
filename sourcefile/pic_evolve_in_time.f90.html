@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+   <meta name="description" content="A High-Accuracy PIC Code for the Maxwell-Vlasov Equations">
+    
+    <meta name="author" content="The ALaDyn Collaboration" >
+    <link rel="icon" href="../favicon.png">
+
+    <title>pic_evolve_in_time.f90 &ndash; ALaDyn</title>
+
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/pygments.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/local.css" rel="stylesheet">
+    
+    <link  href="../tipuesearch/tipuesearch.css" rel="stylesheet">
+    
+    
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script src="../js/jquery-2.1.3.min.js"></script>
+    <script src="../js/svg-pan-zoom.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html">ALaDyn <small>3.0.1</small></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+        
+            <li><a href='../page/index.html'>Guide</a></li>
+      
+            <li class="dropdown hidden-xs visible-sm visible-md hidden-lg">
+              <a href="#" class="dropdown-toggle"
+              data-toggle="dropdown" role="button"
+              aria-haspopup="true"
+     aria-expanded="false">Contents <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          
+              
+            <li><a href="../lists/files.html">Source Files</a></li>
+        
+        
+        
+            <li><a href="../lists/modules.html">Modules</a></li>
+        
+            
+                                
+            <li><a href="../lists/procedures.html">Procedures</a></li>
+        
+               
+            <li><a href="../lists/types.html">Derived Types</a></li>
+        
+        
+            <li><a href="../program/aladyn.html">Program</a></li>
+      
+            </ul>
+            </li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/files.html">Source Files</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/modules.html">Modules</a></li>
+
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/procedures.html">Procedures</a></li>
+
+                             
+<li class="visible-xs hidden-sm visible-lg"><a href="../lists/types.html">Derived Types</a></li>
+
+
+<li class="visible-xs hidden-sm visible-lg"><a href="../program/aladyn.html">Program</a></li>
+
+          </ul>
+        
+        <form action="../search.html" class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search" name="q" id="tipue_search_input" autocomplete="off" required>
+        </div>
+<!--
+        <button type="submit" class="btn btn-default">Submit</button>
+-->
+        </form>
+        
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+    
+  
+  <div class="row">
+    <h1>pic_evolve_in_time.f90
+    <small>Source File</small>
+    
+    </h1>
+    
+<div class="row">
+  <div class="col-lg-12">
+<div class="well well-sm">
+  <ul class="list-inline" style="margin-bottom:0px;display:inline">
+     
+     
+     
+     
+    
+    
+     <li><i class="fa fa-list-ol"></i>
+       <a data-toggle="tooltip"
+    data-placement="bottom" data-html="true"
+    title=" 0.3% of total for source files.">79 statements</a>
+     </li> 
+     
+     
+     
+    <li><i class="fa fa-code"></i><a href="../src/pic_evolve_in_time.f90"> Source File</a></li>
+     
+     
+  </ul>
+  <ol class="breadcrumb in-well text-right">
+  
+    
+  
+     <li class="active">pic_evolve_in_time.f90</li>
+  </ol>
+</div>
+</div>
+</div>
+<script>
+  $(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+  </div>
+  <div class="row">
+    <div class="col-md-3 hidden-xs hidden-sm visible-md visible-lg">
+    
+<div id="sidebar">
+  
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-0">Modules</a></h3></div>
+  <div id="mods-0" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/pic_evolve.html">pic_evolve</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/pic_evolve_in_time.f90.html#src">pic_evolve_in_time.f90</a>
+  </div>
+</div>
+
+
+
+</div>
+
+    </div>
+    <div class="col-md-9" id='text'>
+      
+      <br>
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">This file depends on</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~pic_evolve_in_time.f90~~EfferentGraph Pages: 1 -->
+<svg id="sourcefilepic_evolve_in_timef90EfferentGraph" width="641pt" height="449pt"
+ viewBox="0.00 0.00 641.00 448.57" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph" class="graph" transform="scale(.4886 .4886) rotate(0) translate(4 914.1249)">
+<title>sourcefile~~pic_evolve_in_time.f90~~EfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-914.1249 1308,-914.1249 1308,4 -4,4"/>
+<!-- sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node1" class="node">
+<title>sourcefile~pic_evolve_in_time.f90</title>
+<polygon fill="none" stroke="#000000" points="1304,-466.7183 1171,-466.7183 1171,-442.7183 1304,-442.7183 1304,-466.7183"/>
+<text text-anchor="middle" x="1237.5" y="-452.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">pic_evolve_in_time.f90</text>
+</g>
+<!-- sourcefile~window.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node2" class="node">
+<title>sourcefile~window.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node2"><a xlink:href=".././sourcefile/window.f90.html" xlink:title="window.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1103,-426.7183 1031,-426.7183 1031,-402.7183 1103,-402.7183 1103,-426.7183"/>
+<text text-anchor="middle" x="1067" y="-412.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">window.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~window.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge1" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~window.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1186.3444,-442.717C1163.1224,-437.269 1135.8595,-430.873 1113.2575,-425.5705"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1113.7671,-422.0951 1103.232,-423.2185 1112.1682,-428.9101 1113.7671,-422.0951"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node3" class="node">
+<title>sourcefile~init_grid_fields.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node3"><a xlink:href=".././sourcefile/init_grid_fields.f90.html" xlink:title="init_grid_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="757,-466.7183 648,-466.7183 648,-442.7183 757,-442.7183 757,-466.7183"/>
+<text text-anchor="middle" x="702.5" y="-452.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">init_grid_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge2" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1067,-454.7183C962.3588,-449.0017 840.5675,-450.6812 767.6045,-452.58"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="767.1035,-449.0922 757.2017,-452.8609 767.2925,-456.0896 767.1035,-449.0922"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node4" class="node">
+<title>sourcefile~curr_and_fields_util.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node4"><a xlink:href=".././sourcefile/curr_and_fields_util.f90.html" xlink:title="curr_and_fields_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="1135,-640.7183 999,-640.7183 999,-616.7183 1135,-616.7183 1135,-640.7183"/>
+<text text-anchor="middle" x="1067" y="-626.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">curr_and_fields_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge3" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~curr_and_fields_util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1225.5108,-466.9537C1196.4771,-496.5833 1122.1711,-572.4147 1086.579,-608.7374"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="1083.7032,-606.6714 1079.2042,-616.2636 1088.703,-611.5706 1083.7032,-606.6714"/>
+</g>
+<!-- sourcefile~boris_push.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node5" class="node">
+<title>sourcefile~boris_push.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node5"><a xlink:href=".././sourcefile/boris_push.f90.html" xlink:title="boris_push.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="747.5,-702.7183 657.5,-702.7183 657.5,-678.7183 747.5,-678.7183 747.5,-702.7183"/>
+<text text-anchor="middle" x="702.5" y="-688.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">boris_push.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~boris_push.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge4" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~boris_push.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1067,-873.7183C962.6059,-925.4063 894.8211,-925.088 806,-849.7183 757.6693,-808.707 813.768,-757.5674 770,-711.7183 766.1865,-707.7235 761.6281,-704.4843 756.7043,-701.8584"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="758.0874,-698.6429 747.5291,-697.7635 755.2345,-705.0352 758.0874,-698.6429"/>
+</g>
+<!-- sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node6" class="node">
+<title>sourcefile~mpi_part_interface.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node6"><a xlink:href=".././sourcefile/mpi_part_interface.f90.html" xlink:title="mpi_part_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="951,-426.7183 818,-426.7183 818,-402.7183 951,-402.7183 951,-426.7183"/>
+<text text-anchor="middle" x="884.5" y="-412.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_part_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge5" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~mpi_part_interface.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1170.6502,-456.4036C1139.178,-456.7654 1101.1379,-456.5833 1067,-454.7183"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1067,-454.7183C1020.5209,-452.1791 968.802,-439.9169 932.3238,-429.6306"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="933.0342,-426.193 922.4563,-426.7914 931.0986,-432.9201 933.0342,-426.193"/>
+</g>
+<!-- sourcefile~ionize.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node7" class="node">
+<title>sourcefile~ionize.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node7"><a xlink:href=".././sourcefile/ionize.f90.html" xlink:title="ionize.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="916.5,-210.7183 852.5,-210.7183 852.5,-186.7183 916.5,-186.7183 916.5,-210.7183"/>
+<text text-anchor="middle" x="884.5" y="-196.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ionize.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~ionize.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge6" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~ionize.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1220.9475,-442.7143C1164.332,-401.656 978.1572,-266.6397 909.8875,-217.1296"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="911.5775,-214.0318 901.4274,-210.9943 907.4679,-219.6985 911.5775,-214.0318"/>
+</g>
+<!-- sourcefile~fluid_density_momenta.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node8" class="node">
+<title>sourcefile~fluid_density_momenta.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node8"><a xlink:href=".././sourcefile/fluid_density_momenta.f90.html" xlink:title="fluid_density_momenta.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="963,-786.7183 806,-786.7183 806,-762.7183 963,-762.7183 963,-786.7183"/>
+<text text-anchor="middle" x="884.5" y="-772.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fluid_density_momenta.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~fluid_density_momenta.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge7" class="edge">
+<title>sourcefile~pic_evolve_in_time.f90&#45;&gt;sourcefile~fluid_density_momenta.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1234.8039,-466.8064C1220.1122,-531.3493 1147.4099,-833.9055 1067,-873.7183"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1067,-873.7183C1059.3404,-877.5107 962.8277,-821.3254 913.346,-791.9658"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="915.0701,-788.919 904.686,-786.8164 911.4924,-794.9357 915.0701,-788.919"/>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~mpi_part_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge15" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~mpi_part_interface.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1030.9439,-414.7183C1011.038,-414.7183 985.5191,-414.7183 961.377,-414.7183"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="961.1351,-411.2184 951.1351,-414.7183 961.1351,-418.2184 961.1351,-411.2184"/>
+</g>
+<!-- sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node9" class="node">
+<title>sourcefile~pstruct_data.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node9"><a xlink:href=".././sourcefile/pstruct_data.f90.html" xlink:title="pstruct_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="587,-428.7183 488,-428.7183 488,-404.7183 587,-404.7183 587,-428.7183"/>
+<text text-anchor="middle" x="537.5" y="-414.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">pstruct_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge8" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M884.5,-296.7183C831.1963,-274.7318 823.7787,-336.9207 770,-357.7183 712.8883,-379.8049 644.6797,-395.9841 596.9637,-405.7555"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="596.2152,-402.3359 587.1041,-407.7431 597.5986,-409.1978 596.2152,-402.3359"/>
+</g>
+<!-- sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node10" class="node">
+<title>sourcefile~fstruct_data.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node10"><a xlink:href=".././sourcefile/fstruct_data.f90.html" xlink:title="fstruct_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="585.5,-386.7183 489.5,-386.7183 489.5,-362.7183 585.5,-362.7183 585.5,-386.7183"/>
+<text text-anchor="middle" x="537.5" y="-372.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">fstruct_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge9" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M702.5,-296.7183C671.5404,-300.2974 662.2277,-300.5538 635,-315.7183 616.0376,-326.2795 617.2623,-336.988 599,-348.7183 593.3644,-352.3382 587.1397,-355.6486 580.879,-358.6047"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="579.4531,-355.4083 571.745,-362.6771 582.3036,-361.8016 579.4531,-355.4083"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node11" class="node">
+<title>sourcefile~mpi_field_interface.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node11"><a xlink:href=".././sourcefile/mpi_field_interface.f90.html" xlink:title="mpi_field_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="770,-660.7183 635,-660.7183 635,-636.7183 770,-636.7183 770,-660.7183"/>
+<text text-anchor="middle" x="702.5" y="-646.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_field_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge10" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1030.8112,-423.1912C1019.6732,-427.1278 1007.9909,-432.76 999,-440.7183 973.3939,-463.3835 986.6101,-483.9807 963,-508.7183 894.2168,-580.7864 859.68,-579.3313 770,-622.7183 762.5257,-626.3343 754.4098,-629.8168 746.4821,-632.9936"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="745.007,-629.812 736.9612,-636.7053 747.5496,-636.3339 745.007,-629.812"/>
+</g>
+<!-- sourcefile~run_data_info.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node12" class="node">
+<title>sourcefile~run_data_info.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node12"><a xlink:href=".././sourcefile/run_data_info.f90.html" xlink:title="run_data_info.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="755.5,-268.7183 649.5,-268.7183 649.5,-244.7183 755.5,-244.7183 755.5,-268.7183"/>
+<text text-anchor="middle" x="702.5" y="-254.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">run_data_info.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~run_data_info.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge11" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~run_data_info.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M884.5,-296.7183C846.664,-281.1119 801.776,-271.1616 766.0463,-265.0885"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="766.183,-261.5644 755.7487,-263.4017 765.0514,-268.4723 766.183,-261.5644"/>
+</g>
+<!-- sourcefile~util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node13" class="node">
+<title>sourcefile~util.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node13"><a xlink:href=".././sourcefile/util.f90.html" xlink:title="util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="406.5,-132.7183 352.5,-132.7183 352.5,-108.7183 406.5,-108.7183 406.5,-132.7183"/>
+<text text-anchor="middle" x="379.5" y="-118.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge12" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~util.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M1052.4374,-402.5904C1022.8027,-378.5534 952.5149,-324.7728 884.5,-296.7183"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M884.5,-296.7183C839.3212,-278.0832 838.3841,-256.3198 806,-219.7183 788.5643,-200.0119 792.6871,-186.0466 770,-172.7183 655.621,-105.5225 490.3968,-110.2993 417.0333,-116.5609"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="416.5328,-113.0919 406.8926,-117.4871 417.1696,-120.0629 416.5328,-113.0919"/>
+</g>
+<!-- sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node19" class="node">
+<title>sourcefile~common_param.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node19"><a xlink:href=".././sourcefile/common_param.f90.html" xlink:title="common_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="440,-464.7183 319,-464.7183 319,-440.7183 440,-440.7183 440,-464.7183"/>
+<text text-anchor="middle" x="379.5" y="-450.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">common_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge13" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M884.5,-296.7183C809.7225,-265.8744 782.8537,-287.429 702.5,-296.7183"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M702.5,-296.7183C629.6518,-305.14 603.5383,-264.8323 537.5,-296.7183"/>
+</g>
+<!-- sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node21" class="node">
+<title>sourcefile~grid_param.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node21"><a xlink:href=".././sourcefile/grid_param.f90.html" xlink:title="grid_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="426.5,-549.7183 332.5,-549.7183 332.5,-525.7183 426.5,-525.7183 426.5,-549.7183"/>
+<text text-anchor="middle" x="379.5" y="-535.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~window.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge14" class="edge">
+<title>sourcefile~window.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M702.5,-296.7183C665.1224,-301.0394 568.0419,-312.7423 537.5,-334.7183"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge16" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M650.293,-442.6949C633.4032,-438.8051 614.5464,-434.4623 597.159,-430.458"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="597.6477,-426.979 587.1173,-428.1453 596.0767,-433.8004 597.6477,-426.979"/>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge17" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M683.6149,-442.5027C663.2903,-429.7056 629.7342,-409.5754 599,-395.7183 594.8377,-393.8416 590.4544,-392.0335 586.0242,-390.3192"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="586.9111,-386.9154 576.3179,-386.7258 584.4807,-393.48 586.9111,-386.9154"/>
+</g>
+<!-- sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node14" class="node">
+<title>sourcefile~grid_field_param.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node14"><a xlink:href=".././sourcefile/grid_field_param.f90.html" xlink:title="grid_field_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="599,-550.7183 476,-550.7183 476,-526.7183 599,-526.7183 599,-550.7183"/>
+<text text-anchor="middle" x="537.5" y="-536.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_field_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge19" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M682.6236,-466.7264C662.0412,-478.9532 628.783,-498.1334 599,-512.7183 592.1289,-516.0831 584.713,-519.4411 577.4899,-522.5721"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="575.6618,-519.5461 567.8289,-526.6804 578.4011,-525.9879 575.6618,-519.5461"/>
+</g>
+<!-- sourcefile~phys_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node24" class="node">
+<title>sourcefile~phys_param.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node24"><a xlink:href=".././sourcefile/phys_param.f90.html" xlink:title="phys_param.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="586.5,-268.7183 488.5,-268.7183 488.5,-244.7183 586.5,-244.7183 586.5,-268.7183"/>
+<text text-anchor="middle" x="537.5" y="-254.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">phys_param.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~phys_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge18" class="edge">
+<title>sourcefile~init_grid_fields.f90&#45;&gt;sourcefile~phys_param.f90</title>
+<path fill="none" stroke="#ffda00" stroke-dasharray="5,2" d="M693.1021,-442.583C679.4129,-424.6174 653.597,-389.6236 635,-357.7183 616.3804,-325.7743 625.759,-308.2344 599,-282.7183 595.3192,-279.2085 591.0936,-276.138 586.6181,-273.4594"/>
+<polygon fill="#ffda00" stroke="#ffda00" points="588.2561,-270.3664 577.7809,-268.7788 584.9797,-276.5523 588.2561,-270.3664"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~init_grid_fields.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge23" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~init_grid_fields.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M1055.1381,-616.383C1027.9384,-588.9876 957.7553,-523.2491 884.5,-494.7183"/>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M884.5,-494.7183C846.9109,-480.0785 802.7611,-470.2103 767.3595,-463.9387"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="767.5942,-460.4279 757.1462,-462.1855 766.4098,-467.327 767.5942,-460.4279"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge20" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M998.8216,-628.0301C900.5251,-626.5771 727.9384,-622.1294 702.5,-608.7183"/>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M702.5,-608.7183C670.5146,-591.0186 656.3164,-591.4161 635,-561.7183 601.537,-515.0979 638.6243,-479.2291 599,-437.7183 597.9288,-436.5962 596.7953,-435.534 595.6093,-434.5285"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="597.343,-431.4728 587.1221,-428.6827 593.3722,-437.2376 597.343,-431.4728"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge21" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M884.5,-494.7183C780.8722,-454.3583 726.0271,-539.6067 635,-475.7183 603.0863,-453.3193 627.8322,-421.9653 599,-395.7183 597.5295,-394.3797 595.97,-393.1258 594.3407,-391.9515"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="596.0678,-388.9056 585.7015,-386.7169 592.4404,-394.8924 596.0678,-388.9056"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge22" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M1048.8647,-640.8483C1017.1919,-661.0909 949.0052,-700.5455 884.5,-710.7183"/>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M884.5,-710.7183C831.1069,-719.1387 821.2623,-686.8619 770,-669.7183 764.1186,-667.7514 757.9291,-665.7428 751.7823,-663.7855"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="752.7983,-660.4361 742.2085,-660.7656 750.6924,-667.1118 752.7983,-660.4361"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node20" class="node">
+<title>sourcefile~mpi_curr_interface.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node20"><a xlink:href=".././sourcefile/mpi_curr_interface.f90.html" xlink:title="mpi_curr_interface.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="769,-744.7183 636,-744.7183 636,-720.7183 769,-720.7183 769,-744.7183"/>
+<text text-anchor="middle" x="702.5" y="-730.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_curr_interface.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge24" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~mpi_curr_interface.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M884.5,-710.7183C850.1741,-716.1317 812.0221,-720.9293 779.5516,-724.6517"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="778.7634,-721.2185 769.2209,-725.8219 779.5514,-728.174 778.7634,-721.2185"/>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge25" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M884.5,-835.7183C871.0923,-840.9091 638.9909,-839.4586 635,-837.7183 576.6255,-812.263 595.6305,-758.7261 537.5,-732.7183"/>
+</g>
+<!-- sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node23" class="node">
+<title>sourcefile~grid_fields.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node23"><a xlink:href=".././sourcefile/grid_fields.f90.html" xlink:title="grid_fields.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="746.5,-786.7183 658.5,-786.7183 658.5,-762.7183 746.5,-762.7183 746.5,-786.7183"/>
+<text text-anchor="middle" x="702.5" y="-772.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_fields.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge26" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M1062.2244,-640.7586C1049.8959,-670.532 1014.3351,-748.6053 963,-795.7183 934.1508,-822.1948 921.016,-821.581 884.5,-835.7183"/>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M884.5,-835.7183C834.2311,-855.1801 821.1877,-812.6164 770,-795.7183 764.111,-793.7742 757.9169,-791.7794 751.7676,-789.8297"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="752.781,-786.4795 742.1916,-786.8166 750.68,-793.1567 752.781,-786.4795"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node25" class="node">
+<title>sourcefile~grid_part_connect.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node25"><a xlink:href=".././sourcefile/grid_part_connect.f90.html" xlink:title="grid_part_connect.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="949,-660.7183 820,-660.7183 820,-636.7183 949,-636.7183 949,-660.7183"/>
+<text text-anchor="middle" x="884.5" y="-646.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_connect.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_part_connect.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge27" class="edge">
+<title>sourcefile~curr_and_fields_util.f90&#45;&gt;sourcefile~grid_part_connect.f90</title>
+<path fill="none" stroke="#48ff00" stroke-dasharray="5,2" d="M998.7842,-636.194C985.795,-637.6175 972.1396,-639.114 958.9673,-640.5575"/>
+<polygon fill="#48ff00" stroke="#48ff00" points="958.5669,-637.0803 949.0077,-641.649 959.3295,-644.0387 958.5669,-637.0803"/>
+</g>
+<!-- sourcefile~boris_push.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge28" class="edge">
+<title>sourcefile~boris_push.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M657.3046,-684.2689C648.853,-681.1265 640.8505,-676.5035 635,-669.7183 566.8609,-590.6932 666.0489,-517.6705 599,-437.7183 597.8536,-436.3513 596.6143,-435.0731 595.2977,-433.8779"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="597.1797,-430.9197 587.0243,-427.9001 593.0801,-436.5936 597.1797,-430.9197"/>
+</g>
+<!-- sourcefile~boris_push.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge29" class="edge">
+<title>sourcefile~boris_push.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M657.1828,-684.3727C648.7394,-681.2233 640.771,-676.5712 635,-669.7183 555.883,-575.7698 676.821,-490.7431 599,-395.7183 597.5189,-393.9098 595.8748,-392.2565 594.1036,-390.7451"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="595.8737,-387.7162 585.6366,-384.9861 591.9368,-393.5042 595.8737,-387.7162"/>
+</g>
+<!-- sourcefile~boris_push.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge30" class="edge">
+<title>sourcefile~boris_push.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M657.3582,-683.7795C649.0058,-680.6661 641.0288,-676.1786 635,-669.7183 587.6336,-618.9623 646.4166,-568.4275 599,-517.7183 579.4608,-496.8224 560.4481,-515.8006 537.5,-498.7183"/>
+<path fill="none" stroke="#00ff91" stroke-dasharray="5,2" d="M537.5,-498.7183C535.2649,-497.0545 477.0458,-480.3267 431.9255,-467.5182"/>
+<polygon fill="#00ff91" stroke="#00ff91" points="432.8078,-464.1304 422.2323,-464.7695 430.8981,-470.8649 432.8078,-464.1304"/>
+</g>
+<!-- sourcefile~parallel.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node15" class="node">
+<title>sourcefile~parallel.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node15"><a xlink:href=".././sourcefile/parallel.f90.html" xlink:title="parallel.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="575.5,-470.7183 499.5,-470.7183 499.5,-446.7183 575.5,-446.7183 575.5,-470.7183"/>
+<text text-anchor="middle" x="537.5" y="-456.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">parallel.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge32" class="edge">
+<title>sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M817.9334,-416.6223C767.455,-418.8298 696.507,-423.5711 635,-433.7183 618.735,-436.4017 601.2175,-440.5022 585.5794,-444.6111"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="584.3517,-441.3169 575.6063,-447.2976 586.1725,-448.076 584.3517,-441.3169"/>
+</g>
+<!-- sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node16" class="node">
+<title>sourcefile~array_alloc.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node16"><a xlink:href=".././sourcefile/array_alloc.f90.html" xlink:title="array_alloc.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="748.5,-348.7183 656.5,-348.7183 656.5,-324.7183 748.5,-324.7183 748.5,-348.7183"/>
+<text text-anchor="middle" x="702.5" y="-334.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">array_alloc.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge33" class="edge">
+<title>sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M856.4614,-402.7018C825.1994,-389.3038 774.4926,-367.5723 739.8775,-352.7372"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="741.1407,-349.4708 730.5705,-348.7485 738.3832,-355.9048 741.1407,-349.4708"/>
+</g>
+<!-- sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge31" class="edge">
+<title>sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M869.9918,-426.8353C854.2067,-440.0375 828.2474,-461.8044 806,-480.7183 729.6431,-545.6341 707.212,-558.221 635,-627.7183 589.1149,-671.8784 596.1813,-757.4582 537.5,-732.7183"/>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M537.5,-732.7183C459.6234,-697.876 408.4449,-602.2568 388.6823,-559.2145"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="391.8114,-557.6379 384.5374,-549.9347 385.42,-560.4928 391.8114,-557.6379"/>
+</g>
+<!-- sourcefile~code_util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node22" class="node">
+<title>sourcefile~code_util.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node22"><a xlink:href=".././sourcefile/code_util.f90.html" xlink:title="code_util.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="253,-186.7183 172,-186.7183 172,-162.7183 253,-162.7183 253,-186.7183"/>
+<text text-anchor="middle" x="212.5" y="-172.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">code_util.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~code_util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge34" class="edge">
+<title>sourcefile~mpi_part_interface.f90&#45;&gt;sourcefile~code_util.f90</title>
+<path fill="none" stroke="#0091ff" stroke-dasharray="5,2" d="M873.9827,-402.4867C858.0575,-383.6119 827.416,-345.8813 806,-310.7183 786.7671,-279.1397 800.1756,-257.0852 770,-235.7183 613.6977,-125.0434 368.4535,-148.4317 263.2231,-165.2056"/>
+<polygon fill="#0091ff" stroke="#0091ff" points="262.4855,-161.7798 253.1849,-166.8541 263.62,-168.6873 262.4855,-161.7798"/>
+</g>
+<!-- sourcefile~ionize.f90&#45;&gt;sourcefile~util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge36" class="edge">
+<title>sourcefile~ionize.f90&#45;&gt;sourcefile~util.f90</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M877.4585,-186.5592C856.4162,-151.7119 790.0022,-52.1054 702.5,-22.7183"/>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M702.5,-22.7183C632.9824,.6287 601.2945,13.4485 537.5,-22.7183"/>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M537.5,-22.7183C512.6131,-36.8273 501.2037,-28.1833 476,-41.7183 446.1238,-57.7625 416.6833,-83.7457 398.3286,-101.5006"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="395.838,-99.041 391.1721,-108.5531 400.7514,-104.0269 395.838,-99.041"/>
+</g>
+<!-- sourcefile~ionize.f90&#45;&gt;sourcefile~array_alloc.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge35" class="edge">
+<title>sourcefile~ionize.f90&#45;&gt;sourcefile~array_alloc.f90</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M873.0978,-211.0691C848.9897,-236.9772 793.1617,-295.8392 770,-310.7183 764.2499,-314.4122 757.8941,-317.7105 751.45,-320.6146"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="749.8662,-317.4837 742.0056,-324.5874 752.5804,-323.9361 749.8662,-317.4837"/>
+</g>
+<!-- sourcefile~ionz_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node17" class="node">
+<title>sourcefile~ionz_data.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node17"><a xlink:href=".././sourcefile/ionz_data.f90.html" xlink:title="ionz_data.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="579.5,-74.7183 495.5,-74.7183 495.5,-50.7183 579.5,-50.7183 579.5,-74.7183"/>
+<text text-anchor="middle" x="537.5" y="-60.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ionz_data.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~ionize.f90&#45;&gt;sourcefile~ionz_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge37" class="edge">
+<title>sourcefile~ionize.f90&#45;&gt;sourcefile~ionz_data.f90</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M702.5,-22.7183C679.9301,-15.1384 620.1387,-33.054 579.0909,-47.3058"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="577.8768,-44.0226 569.6089,-50.6478 580.2037,-50.6246 577.8768,-44.0226"/>
+</g>
+<!-- sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node18" class="node">
+<title>sourcefile~mpi_var.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node18"><a xlink:href=".././sourcefile/mpi_var.f90.html" xlink:title="mpi_var.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="417,-507.7183 342,-507.7183 342,-483.7183 417,-483.7183 417,-507.7183"/>
+<text text-anchor="middle" x="379.5" y="-493.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">mpi_var.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~ionize.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge38" class="edge">
+<title>sourcefile~ionize.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M852.4708,-190.0054C775.9546,-171.3269 581.0976,-136.7242 476,-235.7183 398.1255,-309.0702 507.7729,-390.9429 440,-473.7183 436.3714,-478.1502 431.7709,-481.6893 426.7331,-484.5155"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="424.9172,-481.499 417.3082,-488.8715 427.854,-487.8531 424.9172,-481.499"/>
+</g>
+<!-- sourcefile~ionize.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge39" class="edge">
+<title>sourcefile~ionize.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#4800ff" stroke-dasharray="5,2" d="M537.5,-22.7183C512.6131,-36.8273 494.0373,-19.513 476,-41.7183 421.822,-108.4154 490.56,-357.2385 440,-426.7183 437.7487,-429.8121 435.0519,-432.5414 432.0647,-434.9485"/>
+<polygon fill="#4800ff" stroke="#4800ff" points="429.9673,-432.1402 423.5853,-440.5972 433.8482,-437.9659 429.9673,-432.1402"/>
+</g>
+<!-- sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~mpi_field_interface.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge41" class="edge">
+<title>sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~mpi_field_interface.f90</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M859.9524,-762.6293C843.4367,-753.6926 821.8649,-740.3874 806,-724.7183 785.2138,-704.1887 793.3208,-687.3157 770,-669.7183 767.9427,-668.1659 765.7687,-666.7269 763.511,-665.3931"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="764.9534,-662.1995 754.4578,-660.753 761.7606,-668.4289 764.9534,-662.1995"/>
+</g>
+<!-- sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~grid_fields.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge40" class="edge">
+<title>sourcefile~fluid_density_momenta.f90&#45;&gt;sourcefile~grid_fields.f90</title>
+<path fill="none" stroke="#ff00da" stroke-dasharray="5,2" d="M805.9951,-774.7183C789.5015,-774.7183 772.4498,-774.7183 757.0629,-774.7183"/>
+<polygon fill="#ff00da" stroke="#ff00da" points="756.7037,-771.2184 746.7037,-774.7183 756.7036,-778.2184 756.7037,-771.2184"/>
+</g>
+<!-- sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node28" class="node">
+<title>sourcefile~precision_def.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node28"><a xlink:href=".././sourcefile/precision_def.f90.html" xlink:title="precision_def.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="106,-326.7183 0,-326.7183 0,-302.7183 106,-302.7183 106,-326.7183"/>
+<text text-anchor="middle" x="53" y="-312.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">precision_def.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pstruct_data.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge42" class="edge">
+<title>sourcefile~pstruct_data.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M487.6944,-415.0583C456.5937,-414.1208 415.7182,-413.0682 379.5,-412.7183"/>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M379.5,-412.7183C304.8024,-411.9966 284.1127,-414.9755 212.5,-393.7183"/>
+</g>
+<!-- sourcefile~struct_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node29" class="node">
+<title>sourcefile~struct_def.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node29"><a xlink:href=".././sourcefile/struct_def.f90.html" xlink:title="struct_def.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="255,-445.7183 170,-445.7183 170,-421.7183 255,-421.7183 255,-445.7183"/>
+<text text-anchor="middle" x="212.5" y="-431.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">struct_def.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~pstruct_data.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge43" class="edge">
+<title>sourcefile~pstruct_data.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M379.5,-412.7183C341.1367,-412.3477 298.1986,-417.8806 265.4685,-423.3593"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="264.478,-419.9784 255.2192,-425.1286 265.6689,-426.8764 264.478,-419.9784"/>
+</g>
+<!-- sourcefile~fstruct_data.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge44" class="edge">
+<title>sourcefile~fstruct_data.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff5900" stroke-dasharray="5,2" d="M489.4597,-368.9578C457.7906,-366.5596 415.6439,-366.0518 379.5,-374.7183"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge45" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#ffb300" stroke-dasharray="5,2" d="M653.2372,-636.662C646.3297,-633.1379 639.9212,-628.5888 635,-622.7183 581.1875,-558.5256 654.0419,-500.86 599,-437.7183 597.8532,-436.4027 596.6204,-435.1695 595.3163,-434.0134"/>
+<polygon fill="#ffb300" stroke="#ffb300" points="597.3414,-431.1588 587.1681,-428.2001 593.2759,-436.8572 597.3414,-431.1588"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge46" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#ffb300" stroke-dasharray="5,2" d="M684.2659,-636.5037C668.6445,-625.0257 646.848,-606.4001 635,-584.7183 593.9956,-509.6807 655.061,-460.2874 599,-395.7183 597.4975,-393.9878 595.8463,-392.3997 594.0794,-390.9423"/>
+<polygon fill="#ffb300" stroke="#ffb300" points="595.9562,-387.9871 585.6939,-385.3533 592.0738,-393.8118 595.9562,-387.9871"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge48" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#ffb300" stroke-dasharray="5,2" d="M653.8968,-636.558C646.8212,-633.0435 640.1873,-628.5246 635,-622.7183 592.7698,-575.449 640.4612,-532.6636 599,-484.7183 595.0654,-480.1684 590.1991,-476.3948 584.9404,-473.2697"/>
+<polygon fill="#ffb300" stroke="#ffb300" points="586.3118,-470.0398 575.8152,-468.6 583.1229,-476.2713 586.3118,-470.0398"/>
+</g>
+<!-- sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge47" class="edge">
+<title>sourcefile~mpi_field_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ffb300" stroke-dasharray="5,2" d="M657.5523,-660.8197C649.8902,-663.4126 642.1143,-666.3895 635,-669.7183 588.27,-691.5835 585.0401,-752.7611 537.5,-732.7183"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge49" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M654.8488,-268.7857C647.4872,-272.3199 640.5123,-276.8693 635,-282.7183 598.8493,-321.0771 635.8847,-358.0647 599,-395.7183 597.9144,-396.8265 596.768,-397.8763 595.5705,-398.8706"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="593.3406,-396.1538 587.0272,-404.6622 597.2685,-401.948 593.3406,-396.1538"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge50" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M657.8509,-268.7745C649.654,-272.3557 641.6114,-276.9248 635,-282.7183 609.87,-304.7394 623.771,-326.2942 599,-348.7183 595.1247,-352.2264 590.7065,-355.3054 586.0568,-357.9975"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="584.1984,-355.0177 576.9118,-362.709 587.4044,-361.2404 584.1984,-355.0177"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge51" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M653.7611,-268.759C646.7019,-272.2879 640.1086,-276.8426 635,-282.7183 588.5973,-336.0894 646.4245,-385.2532 599,-437.7183 595.0257,-442.1151 590.0928,-445.5916 584.7622,-448.3405"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="583.3208,-445.1504 575.5145,-452.3137 586.0841,-451.5819 583.3208,-445.1504"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~ionz_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge52" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~ionz_data.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M692.1785,-244.5827C664.5145,-212.0566 588.5025,-122.6849 554.4212,-82.6136"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="556.9625,-80.1992 547.8176,-74.8493 551.6303,-84.7344 556.9625,-80.1992"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge53" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M649.2559,-267.0898C608.8692,-275.4273 557.0758,-287.2663 537.5,-296.7183"/>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M537.5,-296.7183C511.0778,-309.476 496.2787,-299.513 476,-320.7183 441.6131,-356.6766 473.774,-390.1837 440,-426.7183 436.9043,-430.0671 433.3044,-433.0035 429.4325,-435.5748"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="427.5418,-432.6244 420.6122,-440.6388 431.0272,-438.695 427.5418,-432.6244"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge55" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M665.5247,-268.7233C655.3544,-272.6187 644.5118,-277.3432 635,-282.7183 617.3529,-292.6905 616.6251,-300.7073 599,-310.7183 573.4873,-325.2094 561.3164,-317.5815 537.5,-334.7183"/>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M537.5,-334.7183C514.2785,-351.427 495.3799,-332.6746 476,-353.7183 425.7413,-408.2918 489.3111,-461.2872 440,-516.7183 438.4689,-518.4394 436.7894,-520.0195 434.9955,-521.4701"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="432.9478,-518.6274 426.5031,-527.0367 436.7853,-524.4818 432.9478,-518.6274"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~code_util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge56" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~code_util.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M649.2506,-244.7064C633.1693,-241.4059 615.4231,-238.0874 599,-235.7183 502.0828,-221.7379 477.2289,-222.8388 379.5,-216.7183"/>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M379.5,-216.7183C357.1114,-214.3907 303.2794,-200.2693 262.7417,-189.0342"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="263.5831,-185.6354 253.0106,-186.3222 261.7038,-192.3784 263.5831,-185.6354"/>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~phys_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge57" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~phys_param.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M649.3847,-256.7183C632.6892,-256.7183 614.1469,-256.7183 597.0364,-256.7183"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="596.5971,-253.2184 586.5971,-256.7183 596.597,-260.2184 596.5971,-253.2184"/>
+</g>
+<!-- sourcefile~control_bunch_input.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node27" class="node">
+<title>sourcefile~control_bunch_input.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node27"><a xlink:href=".././sourcefile/control_bunch_input.f90.html" xlink:title="control_bunch_input.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="283,-228.7183 142,-228.7183 142,-204.7183 283,-204.7183 283,-228.7183"/>
+<text text-anchor="middle" x="212.5" y="-214.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">control_bunch_input.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~run_data_info.f90&#45;&gt;sourcefile~control_bunch_input.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge54" class="edge">
+<title>sourcefile~run_data_info.f90&#45;&gt;sourcefile~control_bunch_input.f90</title>
+<path fill="none" stroke="#f0ff00" stroke-dasharray="5,2" d="M379.5,-216.7183C351.5323,-214.9668 320.8783,-214.5378 293.553,-214.6824"/>
+<polygon fill="#f0ff00" stroke="#f0ff00" points="293.2276,-211.1848 283.2558,-214.7644 293.2834,-218.1846 293.2276,-211.1848"/>
+</g>
+<!-- sourcefile~util.f90&#45;&gt;sourcefile~code_util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge59" class="edge">
+<title>sourcefile~util.f90&#45;&gt;sourcefile~code_util.f90</title>
+<path fill="none" stroke="#96ff00" stroke-dasharray="5,2" d="M352.2969,-129.5145C327.2195,-137.6234 289.4613,-149.8326 259.5049,-159.5191"/>
+<polygon fill="#96ff00" stroke="#96ff00" points="258.1126,-156.2908 249.6745,-162.6978 260.2663,-162.9513 258.1126,-156.2908"/>
+</g>
+<!-- sourcefile~util.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge58" class="edge">
+<title>sourcefile~util.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#96ff00" stroke-dasharray="5,2" d="M352.2309,-109.9358C311.5925,-94.5822 237.2657,-69.4602 212.5,-80.7183"/>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge60" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#3cff00" stroke-dasharray="5,2" d="M493.0677,-526.626C472.4233,-521.0076 447.8559,-514.3215 426.8602,-508.6075"/>
+<polygon fill="#3cff00" stroke="#3cff00" points="427.7516,-505.2228 417.1834,-505.9739 425.9133,-511.9772 427.7516,-505.2228"/>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge62" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#3cff00" stroke-dasharray="5,2" d="M502.0352,-526.6555C493.1516,-522.8603 483.9071,-518.2001 476,-512.7183 456.8808,-499.4635 459.4523,-487.4794 440,-474.7183 436.8724,-472.6665 433.5284,-470.7752 430.0782,-469.0374"/>
+<polygon fill="#3cff00" stroke="#3cff00" points="431.3233,-465.7585 420.7727,-464.7915 428.4175,-472.1269 431.3233,-465.7585"/>
+</g>
+<!-- sourcefile~grid_field_param.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge61" class="edge">
+<title>sourcefile~grid_field_param.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#3cff00" stroke-dasharray="5,2" d="M475.9607,-538.3288C463.2342,-538.2483 449.8714,-538.1637 437.2847,-538.084"/>
+<polygon fill="#3cff00" stroke="#3cff00" points="436.9473,-534.5819 426.9253,-538.0185 436.9029,-541.5818 436.9473,-534.5819"/>
+</g>
+<!-- sourcefile~parallel.f90&#45;&gt;sourcefile~util.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge63" class="edge">
+<title>sourcefile~parallel.f90&#45;&gt;sourcefile~util.f90</title>
+<path fill="none" stroke="#00ff1e" stroke-dasharray="5,2" d="M499.4366,-452.7477C490.5881,-449.6315 482.0103,-444.8994 476,-437.7183 408.1827,-356.6908 480.5458,-300.2923 440,-202.7183 430.1722,-179.0677 412.1128,-155.9436 398.2743,-140.3134"/>
+<polygon fill="#00ff1e" stroke="#00ff1e" points="400.8086,-137.8981 391.4884,-132.8599 395.6325,-142.6107 400.8086,-137.8981"/>
+</g>
+<!-- sourcefile~parallel.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge64" class="edge">
+<title>sourcefile~parallel.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#00ff1e" stroke-dasharray="5,2" d="M499.2526,-467.675C477.5337,-472.761 450.1559,-479.1723 427.0614,-484.5805"/>
+<polygon fill="#00ff1e" stroke="#00ff1e" points="426.0608,-481.2201 417.1223,-486.908 427.6569,-488.0357 426.0608,-481.2201"/>
+</g>
+<!-- sourcefile~parallel.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge65" class="edge">
+<title>sourcefile~parallel.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#00ff1e" stroke-dasharray="5,2" d="M499.2526,-457.2659C484.58,-456.7087 467.3247,-456.0534 450.5521,-455.4165"/>
+<polygon fill="#00ff1e" stroke="#00ff1e" points="450.3242,-451.9054 440.1986,-455.0233 450.0585,-458.9004 450.3242,-451.9054"/>
+</g>
+<!-- sourcefile~array_alloc.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge66" class="edge">
+<title>sourcefile~array_alloc.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#00ff78" stroke-dasharray="5,2" d="M663.8236,-348.7688C654.0699,-352.5642 643.8597,-357.2276 635,-362.7183 616.5506,-374.1521 617.6667,-384.6429 599,-395.7183 595.9981,-397.4994 592.8236,-399.1567 589.5621,-400.6941"/>
+<polygon fill="#00ff78" stroke="#00ff78" points="588.0165,-397.5488 580.2108,-404.7127 590.7803,-403.9801 588.0165,-397.5488"/>
+</g>
+<!-- sourcefile~array_alloc.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge67" class="edge">
+<title>sourcefile~array_alloc.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#00ff78" stroke-dasharray="5,2" d="M656.0992,-347.4046C637.2631,-351.7426 615.2996,-356.8008 595.4288,-361.3771"/>
+<polygon fill="#00ff78" stroke="#00ff78" points="594.5211,-357.9945 585.5617,-363.6495 596.0922,-364.8159 594.5211,-357.9945"/>
+</g>
+<!-- sourcefile~ionz_data.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge68" class="edge">
+<title>sourcefile~ionz_data.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#00ffd1" stroke-dasharray="5,2" d="M495.466,-55.7276C431.2372,-47.0389 306.257,-38.098 212.5,-80.7183"/>
+<path fill="none" stroke="#00ffd1" stroke-dasharray="5,2" d="M212.5,-80.7183C124.5532,-125.535 76.4506,-243.9786 59.7883,-293.0004"/>
+<polygon fill="#00ffd1" stroke="#00ffd1" points="56.4261,-292.0206 56.6249,-302.6135 63.0754,-294.2086 56.4261,-292.0206"/>
+</g>
+<!-- sourcefile~mpi_var.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge69" class="edge">
+<title>sourcefile~mpi_var.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#00d1ff" stroke-dasharray="5,2" d="M341.697,-505.2509C299.6073,-515.033 234.5894,-527.4218 212.5,-516.7183"/>
+<path fill="none" stroke="#00d1ff" stroke-dasharray="5,2" d="M212.5,-516.7183C133.5778,-478.4764 81.9194,-380.1419 62.1088,-336.3338"/>
+<polygon fill="#00d1ff" stroke="#00d1ff" points="65.1923,-334.6511 57.9606,-326.9081 58.7853,-337.4708 65.1923,-334.6511"/>
+</g>
+<!-- sourcefile~common_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge70" class="edge">
+<title>sourcefile~common_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#0078ff" stroke-dasharray="5,2" d="M351.5843,-440.6744C328.0377,-430.6036 296.1337,-417.1891 283,-412.7183 252.2798,-402.2611 243.6097,-402.9528 212.5,-393.7183"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge71" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#001dff" stroke-dasharray="5,2" d="M645.2443,-720.5332C641.4146,-718.0997 637.925,-715.1917 635,-711.7183 555.883,-617.7698 676.821,-532.7431 599,-437.7183 597.8696,-436.3381 596.6443,-435.0482 595.34,-433.8429"/>
+<polygon fill="#001dff" stroke="#001dff" points="597.2543,-430.9066 587.1183,-427.8222 593.1185,-436.5542 597.2543,-430.9066"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge72" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#001dff" stroke-dasharray="5,2" d="M645.1785,-720.5882C641.3633,-718.1425 637.895,-715.2167 635,-711.7183 544.8813,-602.8181 687.6167,-505.8443 599,-395.7183 597.5345,-393.8971 595.9034,-392.2332 594.1431,-390.713"/>
+<polygon fill="#001dff" stroke="#001dff" points="595.9362,-387.6986 585.7105,-384.9261 591.9754,-393.4703 595.9362,-387.6986"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge74" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#001dff" stroke-dasharray="5,2" d="M645.6584,-720.6418C641.6841,-718.1878 638.0513,-715.2452 635,-711.7183 568.1656,-634.4672 661.9561,-565.1615 599,-484.7183 595.1086,-479.746 590.089,-475.7125 584.5974,-472.4436"/>
+<polygon fill="#001dff" stroke="#001dff" points="586.1745,-469.319 575.6737,-467.9107 583.0044,-475.5601 586.1745,-469.319"/>
+</g>
+<!-- sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge73" class="edge">
+<title>sourcefile~mpi_curr_interface.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#001dff" stroke-dasharray="5,2" d="M635.9045,-744.3005C604.8679,-746.8375 568.1192,-745.6273 537.5,-732.7183"/>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge75" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#3c00ff" stroke-dasharray="5,2" d="M332.2257,-539.7025C297.4728,-539.3259 249.973,-534.876 212.5,-516.7183"/>
+</g>
+<!-- sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge76" class="edge">
+<title>sourcefile~grid_param.f90&#45;&gt;sourcefile~struct_def.f90</title>
+<path fill="none" stroke="#3c00ff" stroke-dasharray="5,2" d="M338.6812,-525.6134C331.9424,-523.0355 325.1535,-520.0645 319,-516.7183 286.2754,-498.9233 253.1422,-471.2398 232.7165,-452.8005"/>
+<polygon fill="#3c00ff" stroke="#3c00ff" points="235.0222,-450.1661 225.2848,-445.9908 230.2932,-455.3272 235.0222,-450.1661"/>
+</g>
+<!-- sourcefile~code_util.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge77" class="edge">
+<title>sourcefile~code_util.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#9500ff" stroke-dasharray="5,2" d="M171.7056,-182.1076C161.4136,-185.2102 150.7986,-189.5809 142,-195.7183 105.2519,-221.3515 77.4032,-266.9732 63.2918,-293.6655"/>
+<polygon fill="#9500ff" stroke="#9500ff" points="60.1737,-292.0758 58.7234,-302.5709 66.402,-295.2709 60.1737,-292.0758"/>
+</g>
+<!-- sourcefile~grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge79" class="edge">
+<title>sourcefile~grid_fields.f90&#45;&gt;sourcefile~grid_field_param.f90</title>
+<path fill="none" stroke="#f000ff" stroke-dasharray="5,2" d="M658.1536,-768.3896C649.4378,-765.2516 641.113,-760.5998 635,-753.7183 576.7597,-688.1566 656.3356,-626.0726 599,-559.7183 598.2439,-558.8433 597.4498,-558.0047 596.6218,-557.2009"/>
+<polygon fill="#f000ff" stroke="#f000ff" points="598.4367,-554.1818 588.3732,-550.8686 594.1741,-559.7343 598.4367,-554.1818"/>
+</g>
+<!-- sourcefile~grid_fields.f90&#45;&gt;sourcefile~parallel.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge78" class="edge">
+<title>sourcefile~grid_fields.f90&#45;&gt;sourcefile~parallel.f90</title>
+<path fill="none" stroke="#f000ff" stroke-dasharray="5,2" d="M658.2387,-768.7427C649.4101,-765.5919 641.0167,-760.8456 635,-753.7183 557.1914,-661.5481 672.1836,-580.602 599,-484.7183 595.1691,-479.6992 590.1843,-475.6389 584.71,-472.3565"/>
+<polygon fill="#f000ff" stroke="#f000ff" points="586.2987,-469.2379 575.8001,-467.813 583.1187,-475.4739 586.2987,-469.2379"/>
+</g>
+<!-- sourcefile~phys_param.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge80" class="edge">
+<title>sourcefile~phys_param.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#ff00b4" stroke-dasharray="5,2" d="M502.8644,-268.7865C493.7852,-272.6299 484.2378,-277.3123 476,-282.7183 426.4584,-315.2297 437.1234,-360.9016 379.5,-374.7183"/>
+<path fill="none" stroke="#ff00b4" stroke-dasharray="5,2" d="M379.5,-374.7183C306.858,-392.1362 284.1127,-414.9755 212.5,-393.7183"/>
+<path fill="none" stroke="#ff00b4" stroke-dasharray="5,2" d="M212.5,-393.7183C163.9076,-379.2943 112.1023,-350.9206 81.1513,-332.3955"/>
+<polygon fill="#ff00b4" stroke="#ff00b4" points="82.6068,-329.1848 72.242,-326.9889 78.9752,-335.169 82.6068,-329.1848"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~pstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge81" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~pstruct_data.f90</title>
+<path fill="none" stroke="#ff005a" stroke-dasharray="5,2" d="M821.7655,-636.6377C773.4682,-627.0515 713.1959,-614.3572 702.5,-608.7183"/>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~fstruct_data.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge83" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~fstruct_data.f90</title>
+<path fill="none" stroke="#ff005a" stroke-dasharray="5,2" d="M860.6539,-636.6123C801.4005,-606.3547 651.084,-528.4486 635,-508.7183 601.6957,-467.8638 635.8847,-433.3719 599,-395.7183 597.5493,-394.2373 595.99,-392.8608 594.3451,-391.5813"/>
+<polygon fill="#ff005a" stroke="#ff005a" points="595.8299,-388.3774 585.5149,-385.9584 592.07,-394.2819 595.8299,-388.3774"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node26" class="node">
+<title>sourcefile~grid_part_lib.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node26"><a xlink:href=".././sourcefile/grid_part_lib.f90.html" xlink:title="grid_part_lib.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="752,-828.7183 653,-828.7183 653,-804.7183 752,-804.7183 752,-828.7183"/>
+<text text-anchor="middle" x="702.5" y="-814.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">grid_part_lib.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~grid_part_lib.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge82" class="edge">
+<title>sourcefile~grid_part_connect.f90&#45;&gt;sourcefile~grid_part_lib.f90</title>
+<path fill="none" stroke="#ff005a" stroke-dasharray="5,2" d="M854.9568,-660.846C838.5674,-668.8886 818.9424,-680.8886 806,-696.7183 776.3652,-732.9644 803.8771,-763.4021 770,-795.7183 767.39,-798.208 764.4896,-800.4029 761.3999,-802.3378"/>
+<polygon fill="#ff005a" stroke="#ff005a" points="759.5002,-799.3821 752.2751,-807.1312 762.7557,-805.5791 759.5002,-799.3821"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge86" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M652.7177,-808.551C645.963,-805.5034 639.7381,-801.3552 635,-795.7183 554.8361,-700.3468 679.2582,-613.0105 599,-517.7183 580.5709,-495.8371 560.4481,-515.8006 537.5,-498.7183"/>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge85" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M657.5523,-804.6169C649.8902,-802.024 642.1143,-799.0471 635,-795.7183 588.27,-773.8532 585.0401,-752.7611 537.5,-732.7183"/>
+</g>
+<!-- sourcefile~stretched_grid.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node30" class="node">
+<title>sourcefile~stretched_grid.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_node30"><a xlink:href=".././sourcefile/stretched_grid.f90.html" xlink:title="stretched_grid.f90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="592,-592.7183 483,-592.7183 483,-568.7183 592,-568.7183 592,-592.7183"/>
+<text text-anchor="middle" x="537.5" y="-578.3183" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">stretched_grid.f90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~stretched_grid.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge84" class="edge">
+<title>sourcefile~grid_part_lib.f90&#45;&gt;sourcefile~stretched_grid.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M652.7101,-806.6228C646.2797,-803.831 640.1518,-800.2673 635,-795.7183 633.0247,-793.9742 571.2501,-656.1671 547.0702,-602.1238"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="550.1677,-600.4767 542.8896,-592.7773 543.7778,-603.3349 550.1677,-600.4767"/>
+</g>
+<!-- sourcefile~control_bunch_input.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge87" class="edge">
+<title>sourcefile~control_bunch_input.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#7fff00" stroke-dasharray="5,2" d="M192.9422,-228.735C165.0801,-245.854 113.7839,-277.3715 81.637,-297.1232"/>
+<polygon fill="#7fff00" stroke="#7fff00" points="79.4058,-294.3861 72.7178,-302.6033 83.0703,-300.3503 79.4058,-294.3861"/>
+</g>
+<!-- sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge88" class="edge">
+<title>sourcefile~struct_def.f90&#45;&gt;sourcefile~precision_def.f90</title>
+<path fill="none" stroke="#7f00ff" stroke-dasharray="5,2" d="M169.9881,-421.5807C160.3783,-417.8907 150.5094,-413.2976 142,-407.7183 111.7471,-387.8826 84.1683,-355.9476 67.9779,-335.1455"/>
+<polygon fill="#7f00ff" stroke="#7f00ff" points="70.6038,-332.8167 61.7618,-326.9797 65.034,-337.0566 70.6038,-332.8167"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~mpi_var.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge89" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~mpi_var.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M492.7589,-568.7031C486.8732,-566.201 481.1165,-563.2293 476,-559.7183 455.4488,-545.6158 460.5156,-530.8726 440,-516.7183 435.8175,-513.8327 431.2001,-511.308 426.4364,-509.1075"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="427.7491,-505.8629 417.1711,-505.2655 425.0678,-512.329 427.7491,-505.8629"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~common_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge91" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~common_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M488.9122,-568.6473C484.218,-566.1979 479.7988,-563.2545 476,-559.7183 445.9706,-531.7649 469.7523,-502.9665 440,-474.7183 438.2878,-473.0927 436.4462,-471.5855 434.5082,-470.1884"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="435.865,-466.9187 425.4964,-464.7408 432.2437,-472.9093 435.865,-466.9187"/>
+</g>
+<!-- sourcefile~stretched_grid.f90&#45;&gt;sourcefile~grid_param.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~EfferentGraph_edge90" class="edge">
+<title>sourcefile~stretched_grid.f90&#45;&gt;sourcefile~grid_param.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M493.0677,-568.626C474.569,-563.5915 452.9203,-557.6998 433.514,-552.4183"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="434.1669,-548.9688 423.5988,-549.7199 432.3287,-555.7231 434.1669,-548.9688"/>
+</g>
+</g>
+</svg>
+</div><script>var pansourcefilepic_evolve_in_timef90EfferentGraph = svgPanZoom('#sourcefilepic_evolve_in_timef90EfferentGraph', {zoomEnabled: true,controlIconsEnabled: true, fit: true, center: true,}); </script><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+    
+      
+    <div class="panel panel-default">
+      <div class="panel-heading">
+  <h3 class="panel-title">Files dependent on this one</h3>
+      </div>
+      <div class="panel-body">
+  <div class="depgraph"><?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: sourcefile~~pic_evolve_in_time.f90~~AfferentGraph Pages: 1 -->
+<svg id="sourcefilepic_evolve_in_timef90AfferentGraph" width="253pt" height="32pt"
+ viewBox="0.00 0.00 253.00 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="sourcefile~~pic_evolve_in_time.f90~~AfferentGraph" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>sourcefile~~pic_evolve_in_time.f90~~AfferentGraph</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 249,-28 249,4 -4,4"/>
+<!-- sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~AfferentGraph_node1" class="node">
+<title>sourcefile~pic_evolve_in_time.f90</title>
+<polygon fill="none" stroke="#000000" points="133,-24 0,-24 0,0 133,0 133,-24"/>
+<text text-anchor="middle" x="66.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">pic_evolve_in_time.f90</text>
+</g>
+<!-- sourcefile~aladyn.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~AfferentGraph_node2" class="node">
+<title>sourcefile~aladyn.f90</title>
+<g id="a_sourcefile~~pic_evolve_in_time.f90~~AfferentGraph_node2"><a xlink:href=".././sourcefile/aladyn.f90.html" xlink:title="ALaDyn.F90">
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="245,-24 169,-24 169,0 245,0 245,-24"/>
+<text text-anchor="middle" x="207" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">ALaDyn.F90</text>
+</a>
+</g>
+</g>
+<!-- sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_evolve_in_time.f90 -->
+<g id="sourcefile~~pic_evolve_in_time.f90~~AfferentGraph_edge1" class="edge">
+<title>sourcefile~aladyn.f90&#45;&gt;sourcefile~pic_evolve_in_time.f90</title>
+<path fill="none" stroke="#ff0000" stroke-dasharray="5,2" d="M168.9787,-12C160.9483,-12 152.2006,-12 143.3115,-12"/>
+<polygon fill="#ff0000" stroke="#ff0000" points="143.2461,-8.5001 133.2461,-12 143.246,-15.5001 143.2461,-8.5001"/>
+</g>
+</g>
+</svg>
+</div><div><a type="button" class="graph-help" data-toggle="modal" href="#graph-help-text">Help</a></div><div class="modal fade" id="graph-help-text" tabindex="-1" role="dialog"><div class="modal-dialog modal-lg" role="document"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button><h4 class="modal-title" id="-graph-help-label">Graph Key</h4></div><div class="modal-body">
+    <p>Nodes of different colours represent the following: </p>
+    <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.40.1 (20161225.0304)
+ -->
+<!-- Title: Graph Key Pages: 1 -->
+<svg width="202pt" height="32pt"
+ viewBox="0.00 0.00 201.50 32.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 28)">
+<title>Graph Key</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-28 197.5,-28 197.5,4 -4,4"/>
+<!-- Source File -->
+<g id="node1" class="node">
+<title>Source File</title>
+<polygon fill="#f0ad4e" stroke="#f0ad4e" points="71,-24 0,-24 0,0 71,0 71,-24"/>
+<text text-anchor="middle" x="35.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#ffffff">Source File</text>
+</g>
+<!-- This Page&#39;s Entity -->
+<g id="node2" class="node">
+<title>This Page&#39;s Entity</title>
+<polygon fill="none" stroke="#000000" points="193.5,-24 89.5,-24 89.5,0 193.5,0 193.5,-24"/>
+<text text-anchor="middle" x="141.5" y="-9.6" font-family="Helvetica,sans-Serif" font-size="10.50" fill="#000000">This Page&#39;s Entity</text>
+</g>
+</g>
+</svg>
+
+    
+    <p>Solid arrows point from a file to a file which it depends on. A file
+    is dependent upon another if the latter must be compiled before the former
+    can be. Where possible, edges connecting nodes are given different colours to make them easier to distinguish in large graphs.
+    </p>
+    </div></div></div></div>
+      </div>
+    </div>
+      
+      <br>
+
+    <section class="visible-xs visible-sm hidden-md">
+      
+<h3>Contents</h3>
+ 
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title"><a data-toggle="collapse" href="#mods-1">Modules</a></h3></div>
+  <div id="mods-1" class="panel-collapse collapse">
+    <div class="list-group">
+      
+      <a class="list-group-item" href="../module/pic_evolve.html">pic_evolve</a>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="panel panel-primary">
+  <div class="panel-heading text-left"><h3 class="panel-title">Source Code</h3></div>
+  <div class="list-group">
+    <a class="list-group-item" href="../sourcefile/pic_evolve_in_time.f90.html#src">pic_evolve_in_time.f90</a>
+  </div>
+</div>
+
+
+
+    </section>
+    <br class="visible-xs visible-sm hidden-md">
+
+    <section>
+      <h2><span class="anchor" id="src"></span>Source Code</h2>
+    <div class="hl"><pre><span></span><a name="ln-1"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-2"></a><span class="c">!                            Copyright 2008-2020  The ALaDyn Collaboration                            !</span>
+<a name="ln-3"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-4"></a>
+<a name="ln-5"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-6"></a><span class="c">!  This file is part of ALaDyn.                                                                       !</span>
+<a name="ln-7"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-8"></a><span class="c">!  ALaDyn is free software: you can redistribute it and/or modify                                     !</span>
+<a name="ln-9"></a><span class="c">!  it under the terms of the GNU General Public License as published by                               !</span>
+<a name="ln-10"></a><span class="c">!  the Free Software Foundation, either version 3 of the License, or                                  !</span>
+<a name="ln-11"></a><span class="c">!  (at your option) any later version.                                                                !</span>
+<a name="ln-12"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-13"></a><span class="c">!  ALaDyn is distributed in the hope that it will be useful,                                          !</span>
+<a name="ln-14"></a><span class="c">!  but WITHOUT ANY WARRANTY; without even the implied warranty of                                     !</span>
+<a name="ln-15"></a><span class="c">!  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the                                      !</span>
+<a name="ln-16"></a><span class="c">!  GNU General Public License for more details.                                                       !</span>
+<a name="ln-17"></a><span class="c">!                                                                                                     !</span>
+<a name="ln-18"></a><span class="c">!  You should have received a copy of the GNU General Public License                                  !</span>
+<a name="ln-19"></a><span class="c">!  along with ALaDyn.  If not, see &lt;http://www.gnu.org/licenses/&gt;.                                    !</span>
+<a name="ln-20"></a><span class="c">!*****************************************************************************************************!</span>
+<a name="ln-21"></a>
+<a name="ln-22"></a> <span class="k">module </span><span class="n">pic_evolve</span>
+<a name="ln-23"></a>
+<a name="ln-24"></a>  <span class="k">use </span><span class="n">window</span>
+<a name="ln-25"></a>  <span class="k">use </span><span class="n">boris_push</span>
+<a name="ln-26"></a>  <span class="k">use </span><span class="n">curr_and_fields_util</span>
+<a name="ln-27"></a>  <span class="k">use </span><span class="n">mpi_part_interface</span>
+<a name="ln-28"></a>  <span class="k">use </span><span class="n">init_grid_field</span>
+<a name="ln-29"></a>  <span class="k">use </span><span class="n">ionize</span>
+<a name="ln-30"></a>  <span class="k">use </span><span class="n">fluid_density_momenta</span>
+<a name="ln-31"></a>
+<a name="ln-32"></a>  <span class="k">implicit none</span>
+<a name="ln-33"></a>
+<a name="ln-34"></a><span class="k"> contains</span>
+<a name="ln-35"></a>
+<a name="ln-36"></a><span class="k">  subroutine </span><span class="n">lpf2_evolve</span><span class="p">(</span><span class="n">iter_loc</span><span class="p">)</span>
+<a name="ln-37"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">iter_loc</span>
+<a name="ln-38"></a>   <span class="kt">integer</span> <span class="kd">::</span> <span class="n">ic</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">id_ch</span>
+<a name="ln-39"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">loc_ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-40"></a>   <span class="kt">logical</span><span class="p">,</span> <span class="k">parameter</span> <span class="kd">::</span> <span class="n">mw</span> <span class="o">=</span> <span class="p">.</span><span class="n">false</span><span class="p">.</span>
+<a name="ln-41"></a>   <span class="c">!============================</span>
+<a name="ln-42"></a>   <span class="k">call </span><span class="n">pfields_prepare</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">nfield</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<a name="ln-43"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">ionization</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-44"></a><span class="k">    if</span> <span class="p">(</span><span class="n">iter_loc</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-45"></a><span class="k">     call </span><span class="n">init_random_seed</span><span class="p">(</span><span class="n">mype</span><span class="p">)</span>
+<a name="ln-46"></a>    <span class="k">end if</span>
+<a name="ln-47"></a><span class="k">    </span><span class="n">id_ch</span> <span class="o">=</span> <span class="n">nd2</span> <span class="o">+</span> <span class="mi">1</span>
+<a name="ln-48"></a>    <span class="k">do </span><span class="n">ic</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">nsp_ionz</span>
+<a name="ln-49"></a>     <span class="n">np</span> <span class="o">=</span> <span class="n">loc_npart</span><span class="p">(</span><span class="n">imody</span><span class="p">,</span> <span class="n">imodz</span><span class="p">,</span> <span class="n">imodx</span><span class="p">,</span> <span class="n">ic</span><span class="p">)</span>
+<a name="ln-50"></a>     <span class="k">if</span> <span class="p">(</span><span class="n">np</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-51"></a><span class="k">      call </span><span class="n">set_ion_efield</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">np</span><span class="p">)</span>
+<a name="ln-52"></a>      <span class="k">if</span> <span class="p">(</span><span class="nb">mod</span><span class="p">(</span><span class="n">iter_loc</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span> <span class="c">!refresh ionization tables, if needed</span>
+<a name="ln-53"></a>       <span class="n">loc_ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="nb">maxval</span><span class="p">(</span><span class="n">ebfp</span><span class="p">(</span><span class="mi">1</span><span class="p">:</span><span class="n">np</span><span class="p">,</span> <span class="n">id_ch</span><span class="p">))</span>
+<a name="ln-54"></a>       <span class="n">loc_ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="nb">sqrt</span><span class="p">(</span><span class="n">loc_ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
+<a name="ln-55"></a>       <span class="n">ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">=</span> <span class="n">loc_ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-56"></a>       <span class="c">!if(prl)call allreduce_dpreal(MAXV,loc_ef2_ion,ef2_ion,1)</span>
+<a name="ln-57"></a>       <span class="k">if</span> <span class="p">(</span><span class="n">ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">lp_max</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-58"></a><span class="k">        </span><span class="n">lp_max</span> <span class="o">=</span> <span class="mf">1.1</span><span class="o">*</span><span class="n">ef2_ion</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a name="ln-59"></a>        <span class="k">call </span><span class="n">set_field_ioniz_wfunction</span><span class="p">(</span><span class="n">ion_min</span><span class="p">(</span><span class="n">ic</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="p">&amp;</span>
+<a name="ln-60"></a>                                       <span class="n">atomic_number</span><span class="p">(</span><span class="n">ic</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span> <span class="n">ic</span><span class="p">,</span> <span class="n">ionz_lev</span><span class="p">,</span> <span class="n">ionz_model</span><span class="p">,</span> <span class="n">lp_max</span><span class="p">)</span>
+<a name="ln-61"></a>       <span class="k">end if</span>
+<a name="ln-62"></a><span class="k">      end if</span>
+<a name="ln-63"></a><span class="k">      call </span><span class="n">ionization_cycle</span><span class="p">(</span><span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">ic</span><span class="p">,</span> <span class="n">iter_loc</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">de_inv</span><span class="p">)</span>
+<a name="ln-64"></a>     <span class="k">end if</span>
+<a name="ln-65"></a>     <span class="c">!======== injects new electrons.</span>
+<a name="ln-66"></a>    <span class="k">end do</span>
+<a name="ln-67"></a><span class="k">   end if</span>
+<a name="ln-68"></a>   <span class="c">!===================END IONIZATION MODULE============</span>
+<a name="ln-69"></a>   <span class="c">!    ions enter with new ionization levels and new electrons</span>
+<a name="ln-70"></a>   <span class="c">!                   are injected</span>
+<a name="ln-71"></a>   <span class="c">!=============================================</span>
+<a name="ln-72"></a>   <span class="n">jc</span><span class="p">(:,</span> <span class="p">:,</span> <span class="p">:,</span> <span class="p">:)</span> <span class="o">=</span> <span class="n">zero_dp</span>
+<a name="ln-73"></a>   <span class="c">!curr_clean</span>
+<a name="ln-74"></a>   <span class="k">do </span><span class="n">ic</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">nsp_run</span>
+<a name="ln-75"></a>    <span class="n">np</span> <span class="o">=</span> <span class="n">loc_npart</span><span class="p">(</span><span class="n">imody</span><span class="p">,</span> <span class="n">imodz</span><span class="p">,</span> <span class="n">imodx</span><span class="p">,</span> <span class="n">ic</span><span class="p">)</span>
+<a name="ln-76"></a>    <span class="c">!============</span>
+<a name="ln-77"></a>    <span class="k">call </span><span class="n">set_lpf_acc</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">nfield</span><span class="p">)</span>
+<a name="ln-78"></a>    <span class="k">call </span><span class="n">field_charge_multiply</span><span class="p">(</span><span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">nfield</span><span class="p">)</span>
+<a name="ln-79"></a>
+<a name="ln-80"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">initial_time</span><span class="p">)</span> <span class="k">call </span><span class="n">init_lpf_momenta</span><span class="p">(</span><span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">ic</span><span class="p">)</span>
+<a name="ln-81"></a>    <span class="k">call </span><span class="n">lpf_momenta_and_positions</span><span class="p">(</span><span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">np</span><span class="p">,</span> <span class="n">ic</span><span class="p">)</span>
+<a name="ln-82"></a>    <span class="c">! For each species :</span>
+<a name="ln-83"></a>    <span class="c">! ebfp(1:3) store (X^{n+1}-X_n)=V^{n+1/2}*dt</span>
+<a name="ln-84"></a>    <span class="c">! ebfp(4:7) store old x^n positions and dt/gam at t^{n+1/2}</span>
+<a name="ln-85"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">part</span><span class="p">)</span> <span class="k">call </span><span class="n">cell_part_dist</span><span class="p">(</span><span class="n">mw</span><span class="p">)</span>
+<a name="ln-86"></a>    <span class="c">!</span>
+<a name="ln-87"></a>    <span class="n">np</span> <span class="o">=</span> <span class="n">loc_npart</span><span class="p">(</span><span class="n">imody</span><span class="p">,</span> <span class="n">imodz</span><span class="p">,</span> <span class="n">imodx</span><span class="p">,</span> <span class="n">ic</span><span class="p">)</span>
+<a name="ln-88"></a>    <span class="k">call </span><span class="n">curr_accumulate</span><span class="p">(</span><span class="n">spec</span><span class="p">(</span><span class="n">ic</span><span class="p">),</span> <span class="n">ebfp</span><span class="p">,</span> <span class="n">jc</span><span class="p">,</span> <span class="n">np</span><span class="p">)</span>
+<a name="ln-89"></a>    <span class="c">!================= only old ion charge saved</span>
+<a name="ln-90"></a>   <span class="k">end do</span>
+<a name="ln-91"></a>   <span class="c">!==========================================</span>
+<a name="ln-92"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">part</span><span class="p">)</span> <span class="k">call </span><span class="n">curr_mpi_collect</span><span class="p">(</span><span class="n">jc</span><span class="p">)</span>
+<a name="ln-93"></a>   <span class="c">!================ sums and normalize currents</span>
+<a name="ln-94"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">hybrid</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-95"></a><span class="k">    call </span><span class="n">set_momentum_density_flux</span><span class="p">(</span><span class="n">up</span><span class="p">,</span> <span class="n">flux</span><span class="p">)</span>
+<a name="ln-96"></a>
+<a name="ln-97"></a>    <span class="k">call </span><span class="n">update_adam_bash_fluid_variables</span><span class="p">(</span><span class="n">up</span><span class="p">,</span> <span class="n">up0</span><span class="p">,</span> <span class="n">flux</span><span class="p">,</span> <span class="n">ebf</span><span class="p">)</span>
+<a name="ln-98"></a>    <span class="c">! In flux(1:curr_ndim+1) are stored fluid (P,den) at t^{n+1/2}</span>
+<a name="ln-99"></a>    <span class="k">call </span><span class="n">fluid_curr_accumulate</span><span class="p">(</span><span class="n">flux</span><span class="p">,</span> <span class="n">jc</span><span class="p">)</span>
+<a name="ln-100"></a>    <span class="c">!=====================================</span>
+<a name="ln-101"></a>    <span class="c">! In jc(1:3) exit total current density array Dt*(Jx,Jy,Jz)^{n+1/2}</span>
+<a name="ln-102"></a>   <span class="k">end if</span>
+<a name="ln-103"></a>   <span class="c">!=======================</span>
+<a name="ln-104"></a>   <span class="c">! Inject fields at i=i1-1  for inflow Lp_inject=T</span>
+<a name="ln-105"></a>   <span class="c">!call wave_field_left_inject(xmn)  !(Bz=Ey By=Ez are injected at i1-1 point</span>
+<a name="ln-106"></a>   <span class="k">call </span><span class="n">advance_lpf_fields</span><span class="p">(</span><span class="n">ebf</span><span class="p">,</span> <span class="n">jc</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<a name="ln-107"></a>   <span class="c">!============================</span>
+<a name="ln-108"></a>  <span class="k">end subroutine</span>
+<a name="ln-109"></a>  <span class="c">!===============</span>
+<a name="ln-110"></a>  <span class="c">! END SECTION for Leap-frog one-cycle integrator in LP regime</span>
+<a name="ln-111"></a>  <span class="c">!===============</span>
+<a name="ln-112"></a>  <span class="k">subroutine </span><span class="n">lp_run</span><span class="p">(</span><span class="n">t_loc</span><span class="p">,</span> <span class="n">iter_loc</span><span class="p">)</span>
+<a name="ln-113"></a>
+<a name="ln-114"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">),</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">t_loc</span>
+<a name="ln-115"></a>   <span class="kt">integer</span><span class="p">,</span> <span class="k">intent</span><span class="p">(</span><span class="n">in</span><span class="p">)</span> <span class="kd">::</span> <span class="n">iter_loc</span>
+<a name="ln-116"></a>   <span class="kt">real</span><span class="p">(</span><span class="n">dp</span><span class="p">)</span> <span class="kd">::</span> <span class="n">ts</span>
+<a name="ln-117"></a>   <span class="c">!================================</span>
+<a name="ln-118"></a>
+<a name="ln-119"></a>   <span class="c">!=========================</span>
+<a name="ln-120"></a>   <span class="k">call </span><span class="n">lpf2_evolve</span><span class="p">(</span><span class="n">iter_loc</span><span class="p">)</span>
+<a name="ln-121"></a>   <span class="c">!===================================</span>
+<a name="ln-122"></a>
+<a name="ln-123"></a>   <span class="n">ts</span> <span class="o">=</span> <span class="n">t_loc</span>
+<a name="ln-124"></a>   <span class="k">if</span> <span class="p">(</span><span class="n">w_speed</span> <span class="o">&gt;</span> <span class="mf">0.0</span><span class="p">)</span> <span class="k">then</span> <span class="c">! moves the computational box with w_speed&gt;0.</span>
+<a name="ln-125"></a>    <span class="k">if</span> <span class="p">(</span><span class="n">ts</span> <span class="o">&gt;=</span> <span class="n">wi_time</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">ts</span> <span class="o">&lt;</span> <span class="n">wf_time</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-126"></a><span class="k">     if</span> <span class="p">(</span><span class="nb">mod</span><span class="p">(</span><span class="n">iter_loc</span><span class="p">,</span> <span class="n">w_sh</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-127"></a><span class="k">      call </span><span class="n">lp_window_xshift</span><span class="p">(</span><span class="n">w_sh</span><span class="p">,</span> <span class="n">iter_loc</span><span class="p">)</span>
+<a name="ln-128"></a>     <span class="k">end if</span>
+<a name="ln-129"></a><span class="k">    end if</span>
+<a name="ln-130"></a><span class="k">   end if</span>
+<a name="ln-131"></a><span class="k">   if</span> <span class="p">(</span><span class="n">comoving</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-132"></a><span class="k">    if</span> <span class="p">(</span><span class="n">ts</span> <span class="o">&gt;=</span> <span class="n">wi_time</span> <span class="p">.</span><span class="nb">and</span><span class="p">.</span> <span class="n">ts</span> <span class="o">&lt;</span> <span class="n">wf_time</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-133"></a><span class="k">     if</span> <span class="p">(</span><span class="nb">mod</span><span class="p">(</span><span class="n">iter_loc</span><span class="p">,</span> <span class="n">w_sh</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="k">then</span>
+<a name="ln-134"></a><span class="k">      call </span><span class="n">comoving_coordinate</span><span class="p">(</span><span class="n">vbeam</span><span class="p">,</span> <span class="n">w_sh</span><span class="p">,</span> <span class="n">iter_loc</span><span class="p">)</span>
+<a name="ln-135"></a>     <span class="k">end if</span>
+<a name="ln-136"></a><span class="k">    end if</span>
+<a name="ln-137"></a><span class="k">   end if</span>
+<a name="ln-138"></a>   <span class="c">!==============================</span>
+<a name="ln-139"></a>   <span class="c">!vbeam=-w_speed</span>
+<a name="ln-140"></a>   <span class="c">!vbeam &gt;0 uses the xw=(x+vbeam*t)</span>
+<a name="ln-141"></a>   <span class="c">!x=xi=(xw-vbeam*t) fixed</span>
+<a name="ln-142"></a>   <span class="c">!==============================</span>
+<a name="ln-143"></a>  <span class="k">end subroutine</span>
+<a name="ln-144"></a>
+<a name="ln-145"></a><span class="k"> end module</span>
+</pre></div>
+
+    </section>
+    </div>
+  </div>
+
+  
+    <hr>    
+    </div> <!-- /container -->
+    <footer>
+      <div class="container">
+      <div class="row">
+        <div class="col-xs-6 col-md-4"><p>&copy; 2020 <a rel="license" href="http://www.gnu.org/licenses/old-licenses/fdl-1.2.en.html">GNU Free Documentation License</a>
+                                          </p></div>
+        <div class="col-xs-6 col-md-4 col-md-push-4">
+          <p class="text-right">
+            Documentation generated by 
+            <a href="https://github.com/cmacmackin/ford">FORD</a>
+             on 2020-08-08 
+          </p>
+        </div>
+        <div class="col-xs-12 col-md-4 col-md-pull-4"><p class="text-center"> ALaDyn was developed by The ALaDyn Collaboration</p></div>
+      </div>
+      <br>
+      </div> <!-- /container -->    
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+<!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+    <!-- MathJax JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } },
+        jax: ['input/TeX','input/MathML','output/HTML-CSS'],
+        extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']
+      });
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    
+    <script src="../tipuesearch/tipuesearch_content.js"></script>
+    <script src="../tipuesearch/tipuesearch_set.js"></script>
+    <script src="../tipuesearch/tipuesearch.js"></script>
+    
+    
+  </body>
+</html>
